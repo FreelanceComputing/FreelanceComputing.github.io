@@ -216,39 +216,39 @@ p a:hover {
 	display:block;
 }
 .sidebar div.connect a#fb {
-	background:url(images/icons.png) no-repeat 0 0;
+	background:url(/images/icons.png) no-repeat 0 0;
 	width:26px;
 	height:24px;
 	margin-bottom:20px;
 }
 .sidebar div.connect a#fb:hover {
-	background:url(images/icons.png) no-repeat 0 -276px;
+	background:url(/images/icons.png) no-repeat 0 -276px;
 }
 .sidebar div.connect a#twitter {
-	background:url(images/icons.png) no-repeat 0 -25px;
+	background:url(/images/icons.png) no-repeat 0 -25px;
 	width:26px;
 	height:20px;
 	margin-bottom:17px;
 }
 .sidebar div.connect a#twitter:hover {
-	background:url(images/icons.png) no-repeat 0 -301px;
+	background:url(/images/icons.png) no-repeat 0 -301px;
 }
 .sidebar div.connect a#googleplus {
-	background:url(images/icons.png) no-repeat 0 -46px;
+	background:url(/images/icons.png) no-repeat 0 -46px;
 	width:26px;
 	height:23px;
 	margin-bottom:16px;
 }
 .sidebar div.connect a#googleplus:hover {
-	background:url(images/icons.png) no-repeat 0 -322px;
+	background:url(/images/icons.png) no-repeat 0 -322px;
 }
 .sidebar div.connect a#youtube {
-	background:url(images/icons.png) no-repeat 0 -70px;
+	background:url(/images/icons.png) no-repeat 0 -70px;
 	width:26px;
 	height:24px;
 }
 .sidebar div.connect a#youtube:hover {
-	background:url(images/icons.png) no-repeat 0 -346px;
+	background:url(/images/icons.png) no-repeat 0 -346px;
 }
 /*------------------------- Body ------------------------*/
 .body {
