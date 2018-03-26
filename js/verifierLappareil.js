@@ -1,7 +1,11 @@
 $(document).ready(function () {
     if(isMobile)
     {
-        var url = "/mindex.html";
+        var url = "/homme"; // "/mindex.html";
+        $(location).attr('href', url);
+    }
+    else {
+        var url = "/home";
         $(location).attr('href', url);
     }
 });
