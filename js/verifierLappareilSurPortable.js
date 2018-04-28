@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
+    var existing = $(location).attr('href');
     if (!isMobile) {
-        var url = "/home";
+        var url = existing.replace("homme", "home");
         $(location).attr('href', url);
     }
 });
