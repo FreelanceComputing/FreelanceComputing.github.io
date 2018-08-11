@@ -75,7 +75,9 @@
     <Content Include="font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
     <Content Include="img\landingPage.jpg" />
-    <Content Include="img\landingPage1.jpg" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\logoIcon.png" />
+    <Content Include="img\mission.jpg" />
     <Content Include="index.html" />
     <Content Include="js\functions.js" />
     <Content Include="Web.config" />
