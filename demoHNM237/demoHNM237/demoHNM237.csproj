@@ -74,6 +74,14 @@
     <Content Include="favicon.ico" />
     <Content Include="font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="img\gallery\1.jpg" />
+    <Content Include="img\gallery\2.jpg" />
+    <Content Include="img\gallery\3.jpg" />
+    <Content Include="img\gallery\4.jpg" />
+    <Content Include="img\gallery\5.jpg" />
+    <Content Include="img\gallery\6.jpg" />
+    <Content Include="img\gallery\7.jpg" />
+    <Content Include="img\gallery\8.jpg" />
     <Content Include="img\landingPage.jpg" />
     <Content Include="img\logo.jpg" />
     <Content Include="img\logoIcon.png" />
@@ -155,6 +163,7 @@ copy "$(SolutionDir)css\*.*" "$(ProjectDir)css\"
 copy "$(SolutionDir)css\fonts\*.*" "$(ProjectDir)css\fonts\"
 copy "$(SolutionDir)img\*.*" "$(ProjectDir)img\"
 copy "$(SolutionDir)img\members\*.*" "$(ProjectDir)img\members\"
+copy "$(SolutionDir)img\gallery\*.*" "$(ProjectDir)img\gallery\"
 copy "$(SolutionDir)*.html" "$(ProjectDir)"</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
