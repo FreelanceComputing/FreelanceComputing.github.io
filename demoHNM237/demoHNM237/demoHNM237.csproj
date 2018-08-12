@@ -77,6 +77,20 @@
     <Content Include="img\landingPage.jpg" />
     <Content Include="img\logo.jpg" />
     <Content Include="img\logoIcon.png" />
+    <Content Include="img\members\10nelly.jpg" />
+    <Content Include="img\members\11eneke.jpg" />
+    <Content Include="img\members\12beatrice.jpg" />
+    <Content Include="img\members\13limunga.jpg" />
+    <Content Include="img\members\14beyang.jpg" />
+    <Content Include="img\members\1persis.jpg" />
+    <Content Include="img\members\2mbu.jpg" />
+    <Content Include="img\members\3judith.jpg" />
+    <Content Include="img\members\4adele.jpg" />
+    <Content Include="img\members\5nadege.jpg" />
+    <Content Include="img\members\6mireille.jpg" />
+    <Content Include="img\members\7patience.jpg" />
+    <Content Include="img\members\8arrah.jpg" />
+    <Content Include="img\members\9keleghai.jpg" />
     <Content Include="img\mission.jpg" />
     <Content Include="index.html" />
     <Content Include="js\functions.js" />
@@ -140,6 +154,7 @@
 copy "$(SolutionDir)css\*.*" "$(ProjectDir)css\"
 copy "$(SolutionDir)css\fonts\*.*" "$(ProjectDir)css\fonts\"
 copy "$(SolutionDir)img\*.*" "$(ProjectDir)img\"
+copy "$(SolutionDir)img\members\*.*" "$(ProjectDir)img\members\"
 copy "$(SolutionDir)*.html" "$(ProjectDir)"</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
