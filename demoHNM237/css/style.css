@@ -11,7 +11,7 @@ body, html {
 .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url("/img/landingPage.jpg");
+    background-image: url("../img/landingPage.jpg");
     min-height: 100%;
 }
 
@@ -19,7 +19,7 @@ body, html {
     .bgimg-1 {
         background-position: center;
         background-size: cover;
-        background-image: url("/img/logo.jpg");
+        background-image: url("../img/logo.jpg");
         min-height: 100%;
     }
 }
