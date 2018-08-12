@@ -68,12 +68,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\raleway.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\w3.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="img\gallery\1.jpg" />
+    <Content Include="img\gallery\2.jpg" />
+    <Content Include="img\gallery\3.jpg" />
+    <Content Include="img\gallery\4.jpg" />
+    <Content Include="img\gallery\5.jpg" />
+    <Content Include="img\gallery\6.jpg" />
+    <Content Include="img\gallery\7.jpg" />
+    <Content Include="img\gallery\8.jpg" />
+    <Content Include="img\landingPage.jpg" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\logoIcon.png" />
+    <Content Include="img\members\10nelly.jpg" />
+    <Content Include="img\members\11eneke.jpg" />
+    <Content Include="img\members\12beatrice.jpg" />
+    <Content Include="img\members\13limunga.jpg" />
+    <Content Include="img\members\14beyang.jpg" />
+    <Content Include="img\members\1persis.jpg" />
+    <Content Include="img\members\2mbu.jpg" />
+    <Content Include="img\members\3judith.jpg" />
+    <Content Include="img\members\4adele.jpg" />
+    <Content Include="img\members\5nadege.jpg" />
+    <Content Include="img\members\6mireille.jpg" />
+    <Content Include="img\members\7patience.jpg" />
+    <Content Include="img\members\8arrah.jpg" />
+    <Content Include="img\members\9keleghai.jpg" />
+    <Content Include="img\mission.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\functions.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\fonts\ralewayLatin.woff2" />
+    <Content Include="css\fonts\ralewayLatinExt.woff2" />
+    <Content Include="font-awesome-4.7.0\css\font-awesome.css.map" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="font-awesome-4.7.0\fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -82,6 +124,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -114,6 +157,15 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>copy "$(SolutionDir)js\*.*" "$(ProjectDir)js\"
+copy "$(SolutionDir)css\*.*" "$(ProjectDir)css\"
+copy "$(SolutionDir)css\fonts\*.*" "$(ProjectDir)css\fonts\"
+copy "$(SolutionDir)img\*.*" "$(ProjectDir)img\"
+copy "$(SolutionDir)img\members\*.*" "$(ProjectDir)img\members\"
+copy "$(SolutionDir)img\gallery\*.*" "$(ProjectDir)img\gallery\"
+copy "$(SolutionDir)*.html" "$(ProjectDir)"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
