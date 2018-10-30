@@ -55,3 +55,29 @@ function goBack(id)
 		}
 	}
 }
+
+function loadMoreTagEntries(btn)
+{
+	var disable = false;
+	var count = 0;
+	var entries = document.getElementById('entries').childNodes;
+	for(var i=0; i<entries.length; i++) 
+	{
+		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].style.display == 'none') )
+		{
+		   entries[i].style.display = '';
+		   count = count + 1;
+		}
+		if(i == entries.length-1)
+			disable = true;
+		if(count >= 2)
+			break;
+	}
+	if(disable)
+		btn.className += " w3-disabled";
+	else
+	{
+		btn.style.color = "#fff !important";
+		btn.style.backgroundColor = "#000 !important";
+	}
+}
