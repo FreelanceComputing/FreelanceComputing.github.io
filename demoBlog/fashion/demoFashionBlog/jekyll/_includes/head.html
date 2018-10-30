@@ -25,8 +25,11 @@
 	<meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}">
 	<meta property="og:description" content="{{page.title}}. {% if page.subHeading %}{{ page.subHeading | truncate: 160 | escape_once }}{% else %}{{ site.description }}{% endif %}. ">
 	<!-- Tags -->
-	{% for post in site.posts %}
-		<meta property="article:tag" content="{{post.tags}}">
+	{% if site.tags != "" %}
+		{% include filter-tags.html %}
+	{% endif %}
+	{% for tag in tags %}
+		<meta property="article:tag" content="{{tag}}">
 	{% endfor %}
 	<!-- CSS and JS -->
 	<link rel="stylesheet" href="{{site.url }}/css/w3.css">
