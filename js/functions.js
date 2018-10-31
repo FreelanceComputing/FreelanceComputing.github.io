@@ -83,20 +83,25 @@ function loadMoreTagEntries(btn)
 }
 
 function subscribe(formId){
-	document.getElementById("displayEmailError").style.display = 'none';
+	var formIndex = formId.slice(-1);
+	var displayEmailError = "displayEmailError" + formIndex;
+	var rat = "rat" + formIndex;
+	var email = "email" + formIndex;
+	
+	document.getElementById(displayEmailError).style.display = 'none';
 	
 	var f = $(formId);
 	if(!f[0].email.validity.valid)
 	{
-		document.getElementById("displayEmailError").style.display = '';
+		document.getElementById(displayEmailError).style.display = '';
 		return;
 	}
 	
-	var f_rat = document.getElementById("rat");
+	var f_rat = document.getElementById(rat);
 	if(f_rat.value != "")
 		return;
 		
-	var f_email = document.getElementById("email");
+	var f_email = document.getElementById(email);
 	var  f_data = "Email="+f_email.value;
 	f_email.value = '';
 	
