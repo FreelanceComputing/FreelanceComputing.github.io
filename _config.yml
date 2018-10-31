@@ -1,7 +1,7 @@
 name: "Mohmanyang"
 description: "Mohmanyang. Creative Writing. Opinion pieces. Poetry"
 logo: "/img/logo.jpg"
-url: "http://mohmanyang.com" 
+url: "https://freelancecomputing.github.io" 
 baseurl: ""
 github: [metadata]
 markdown: kramdown
