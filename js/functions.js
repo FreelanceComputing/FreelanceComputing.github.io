@@ -83,8 +83,9 @@ function loadMoreTagEntries(btn)
 }
 
 var message = "";
-$("#subscribeColumn").click(function(){
+$("#subscribeColumn").on("click", function(){
 	message = $("contactForm").serialize();
+	console.log(message);
 	$.ajax({
 		dataType: "json",
 		url: "https://formsapi.jabwn.com/key/RJgPflYOU79fwdeJbPU8",
