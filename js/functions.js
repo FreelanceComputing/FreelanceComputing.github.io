@@ -89,6 +89,7 @@ function subscribe(){
 	if(!f[0].email.validity.valid)
 	{
 		document.getElementById("displayEmailError").style.display = '';
+		document.getElementById("displayEmailError").style.fontColor = 'red';
 		return;
 	}
 	
