@@ -29,6 +29,22 @@
   </div>
 </div>
 
+<!-- No Results Modal -->
+<div id="no-results" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('no-results').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">No Results</h2>
+	  <p></p>
+	  <p style="background-color:#e5877e; line-height:0.5; margin-bottom: 20px !important">&nbsp;</p>
+      <p style="text-align: center;">No results found.</p>
+      <p style="text-align: center;">Please check spelling, spacing, and so on.</p>
+	  <p style="text-align: center;">Make sure you are not searching for common words like "and", "the", "yet" etc.</p>
+	  <p style="text-align: center;">Such words appear throughout the site and are automatically discarded during the search process.</p>
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="w3-container w3-dark-grey" style="padding:32px">
   <p style="text-align: center;"><a href="{{site.url}}" class="w3-button w3-black w3-padding-large w3-margin-bottom" ><i class="fa fa-home w3-margin-right"></i>Home</a></p>
