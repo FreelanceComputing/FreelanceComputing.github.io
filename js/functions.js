@@ -84,7 +84,7 @@ function loadMoreTagEntries(btn)
 
 function subscribe(){
 	var message = "";
-	message = $("contactForm").serialize();
+	message = $("#contactForm").serialize();
 	console.log(message);
 	$.ajax({
 		dataType: "json",
