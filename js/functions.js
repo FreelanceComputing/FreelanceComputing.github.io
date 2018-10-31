@@ -83,14 +83,16 @@ function loadMoreTagEntries(btn)
 }
 
 function subscribe(){
-	$('#displayEmailError').style.display = 'none';
-	var f_email = document.getElementById("email");
+	document.getElementById("displayEmailError").style.display = 'none';
+	
 	var f = $('#contactForm');
 	if(!f[0].email.validity.valid)
 	{
-		$('#displayEmailError').style.display = '';
+		document.getElementById("displayEmailError").style.display = '';
 		return;
 	}
+	
+	var f_email = document.getElementById("email");
 	var  f_data = "Email="+f_email.value;
 	console.log(f_data);
 	$.ajax({
