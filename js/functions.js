@@ -81,3 +81,16 @@ function loadMoreTagEntries(btn)
 		btn.style.backgroundColor = "#000 !important";
 	}
 }
+
+var message = "";
+$("#subscribeColumn").click(function(){
+	message = $("contactForm").serialize();
+	$.ajax({
+		dataType: "json",
+		url: "https://formsapi.jabwn.com/key/RJgPflYOU79fwdeJbPU8",
+		method: "POST",
+		data: {message: message}
+	});
+	$("thank-you").style.display = 'block';
+	return false;
+});
