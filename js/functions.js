@@ -82,14 +82,13 @@ function loadMoreTagEntries(btn)
 	}
 }
 
-function subscribe(){
+function subscribe(formId){
 	document.getElementById("displayEmailError").style.display = 'none';
 	
-	var f = $('#contactForm');
+	var f = $(formId);
 	if(!f[0].email.validity.valid)
 	{
 		document.getElementById("displayEmailError").style.display = '';
-		//document.getElementById("displayEmailError").style.fontColor = 'red';
 		return;
 	}
 	
@@ -99,8 +98,8 @@ function subscribe(){
 		
 	var f_email = document.getElementById("email");
 	var  f_data = "Email="+f_email.value;
-	console.log(f_data);
 	f_email.value = '';
+	
 	$.ajax({
 		dataType: "json",
 		url: "https://formsapi.jabwn.com/key/RJgPflYOU79fwdeJbPU8",
