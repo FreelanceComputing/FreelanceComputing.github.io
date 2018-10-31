@@ -82,8 +82,8 @@ function loadMoreTagEntries(btn)
 	}
 }
 
-var message = "";
-$("#subscribeColumn").on("click", function(){
+function subscribe(){
+	var message = "";
 	message = $("contactForm").serialize();
 	console.log(message);
 	$.ajax({
@@ -92,6 +92,6 @@ $("#subscribeColumn").on("click", function(){
 		method: "POST",
 		data: {message: message}
 	});
-	$("thank-you").style.display = 'block';
+	document.getElementById('thank-you').style.display='block';
 	return false;
-});
+}
