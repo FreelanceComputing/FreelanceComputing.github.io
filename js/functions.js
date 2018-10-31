@@ -83,14 +83,21 @@ function loadMoreTagEntries(btn)
 }
 
 function subscribe(){
-	var message = "";
-	message = $("#contactForm").serialize();
-	console.log(message);
+	$('#displayEmailError').style.display = 'none';
+	var f_email = document.getElementById("email");
+	var f = $('#contactForm');
+	if(!f[0].email.validity.valid)
+	{
+		$('#displayEmailError').style.display = '';
+		return;
+	}
+	var  f_data = "Email="+f_email.value;
+	console.log(f_data);
 	$.ajax({
 		dataType: "json",
 		url: "https://formsapi.jabwn.com/key/RJgPflYOU79fwdeJbPU8",
 		method: "POST",
-		data: {message: message}
+		data: {message: f_data}
 	});
 	document.getElementById('thank-you').style.display='block';
 	return false;
