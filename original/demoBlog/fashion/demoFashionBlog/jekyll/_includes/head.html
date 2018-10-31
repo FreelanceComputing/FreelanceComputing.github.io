@@ -1,0 +1,41 @@
+<head>
+	<!-- Title -->
+	<title>{% if page.title %}{{page.title}}{% else %}Mohmanyang{% endif %}</title>
+	<meta name="author" content="Mohmanyang">
+	<!-- View Port -->
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- SEO -->
+	<meta name="description" content="{{page.title}}. {% if page.subHeading %}{{ page.subHeading | truncate: 160 | escape_once }}{% else %}{{ site.description }}{% endif %}.">
+	{% if page.robots %}
+	  <meta name="robots" content="{{ page.robots }}">
+	{% endif %}
+	<link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.url }}">
+    {% if page.next.url %}
+	  <link rel="next" href="{{ page.next.url | replace:'/index.html','/' | prepend: site.url }}" title="{{ page.next.title }}">
+	{% endif %}
+	{% if page.previous.url %}
+	  <link rel="prev" href="{{ page.previous.url | replace:'/index.html','/' | prepend: site.url }}" title="{{ page.previous.title }}">
+	{% endif %}
+	<!-- Open graph for facebook, google plus and social media -->
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+	<meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+	<meta property="og:url" content="{{ page.url | replace:'/index.html','/' | prepend: site.url }}">
+	<meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}">
+	<meta property="og:description" content="{{page.title}}. {% if page.subHeading %}{{ page.subHeading | truncate: 160 | escape_once }}{% else %}{{ site.description }}{% endif %}. ">
+	<!-- Tags -->
+	{% if site.tags != "" %}
+		{% include filter-tags.html %}
+	{% endif %}
+	{% for tag in tags %}
+		<meta property="article:tag" content="{{tag}}">
+	{% endfor %}
+	<!-- CSS and JS -->
+	<link rel="stylesheet" href="{{site.url }}/css/w3.css">
+	<link rel="stylesheet" href="{{site.url }}/css/kohostylesheet.css">
+	<link rel="stylesheet" href="{{site.url }}/css/raleway.css">
+	<link rel="stylesheet" href="{{site.url }}/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{site.url }}/css/style.css">
+    <script src="{{site.url }}/js/functions.js"></script>
+</head>

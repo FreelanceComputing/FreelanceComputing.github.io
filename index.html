@@ -1,35 +1,49 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Freelance Computing Support">
-	<!--Search engine optimization-->
-	<meta name="description" content="Freelance Computing Support. For all your home computing and software support needs, look no further.">
-	<link rel="canonical" href="http://freelance-computing-support.com">
-	<!--Twitter cards-->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Freelance Computing Support">
-	<meta name="twitter:description" content="For all your home computing and software support needs, look no further.">
-	<meta name="twitter:image" content="/images/logo.png">
-	<meta name="twitter:url" content="http://freelance-computing-support.com">
-	<!--Open graph for facebook and google plus-->
-	<meta property="og:title" content="Freelance Computing Support">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://freelance-computing-support.com">
-	<meta property="og:image" content="/images/logo.png">
-	<meta property="og:description" content="For all your home computing and software support needs, look no further.">
-	
-	<title>Freelance Computing Support</title>
+---
+layout: template
+title: "Mohmanyang"
+subHeading: "Mohmanyang. Creative Writing. Opinion pieces. Poetry"
+---
 
-	<link rel="stylesheet" href="/css/style.css" type="text/css">    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/js/verifierLappareil.js"></script>
-</head>
-<body>
-	<div id="background-green">
-		background
+{% for post in paginator.posts %}
+	<div id="blogEntry{{forloop.index}}" class="w3-card-4 w3-margin w3-white">
+		<img src='{{site.baseurl}}{{post.image}}' alt="{{post.credit}}" style="width:100%">
+		<div class="w3-container">
+			<h3>{{ post.postHeading }}</h3>
+			<h5>{{ post.subHeading }}</h5>
+			<h5><span class="w3-opacity">{{post.date | date_to_string}}</span></h5>
+			<h5>Tags: {% for tag in post.tags limit:3%}<span class="w3-tag w3-black w3-margin-bottom">
+						<a href="{{site.baseurl}}/tag/{{tag}}" title="View posts tagged with &quot;{{tag}}&quot;">
+							{{tag}}
+						</a>
+					</span>&nbsp; {% if forloop.last != true %} {% endif %} {% endfor %}</h5>
+			<p><span class="w3-hide-medium w3-hide-large"><b>Reactions  </b> <span class="w3-tag">{% if post.reactions %}{{post.reactions}}{% else %}0{% endif %}</span></span></p>
+		</div>
+		<div class="w3-container">
+			{{ post.excerpt }}
+			<div id="postExcerpt{{forloop.index}}" class="w3-row w3-show" style="display:none">
+				<div class="w3-col m8 s12">
+				<p><button class="w3-button w3-padding-large w3-white w3-border" onclick="window.location.href='{{ post.url }}'" ><b>READ MORE >></b></button></p>
+				</div>
+				<div class="w3-col m4 w3-hide-small">
+				  <p><span class="w3-padding-large w3-right"><b>Reactions  </b> <span class="w3-tag">{% if post.reactions %}{{post.reactions}}{% else %}0{% endif %}</span></span></p>
+				</div>
+			</div>
+		</div>
 	</div>
-</body>
-</html>
+	<hr>
+{% endfor %}
+
+<footer class="w3-margin">
+	{% if paginator.total_pages > 1 %}
+		{% if paginator.previous_page %}
+			<button class="w3-button w3-black w3-padding-large w3-margin-bottom w3-hide-small" onclick="window.location.href='{{ paginator.previous_page_path }}#entries'" >&larr; Previous</button>
+			<button class="w3-button w3-black w3-padding-large w3-margin-bottom w3-hide-medium w3-hide-large" onclick="window.location.href='{{ paginator.previous_page_path }}#entries'" >&larr; </button>
+		{% endif %}
+		<button class="w3-button w3-padding-large w3-white w3-border w3-margin-bottom" >Page: {{ paginator.page }} of {{ paginator.total_pages }}</button>
+		{% if paginator.next_page %}
+			<button class="w3-button w3-black w3-padding-large w3-margin-bottom w3-hide-small" onclick="window.location.href='{{ paginator.next_page_path }}#entries'" >Next &rarr;</button>
+			<button class="w3-button w3-black w3-padding-large w3-margin-bottom w3-hide-medium w3-hide-large" onclick="window.location.href='{{ paginator.next_page_path }}#entries'" > &rarr;</button>
+		{% endif %}
+	{% endif %}
+</footer>
+

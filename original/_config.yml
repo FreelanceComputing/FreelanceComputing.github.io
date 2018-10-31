@@ -1,0 +1,13 @@
+name: "Freelance Computing Support"
+description: "Freelance Computing Support. For all your home computing and software support needs, look no further."
+logo: "/images/logo.png"
+url: "https://freelancecomputing.github.io" 
+baseurl: ""
+github: [metadata]
+markdown: kramdown
+port: 4003
+input: GFM
+hard_wrap: false
+plugins:
+   - jekyll-coffeescript
+   - jekyll-paginate

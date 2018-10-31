@@ -1,13 +1,17 @@
-name: "Freelance Computing Support"
-description: "Freelance Computing Support. For all your home computing and software support needs, look no further."
-logo: "/images/logo.png"
-url: "https://freelancecomputing.github.io" 
+name: "Mohmanyang"
+description: "Mohmanyang. Creative Writing. Opinion pieces. Poetry"
+logo: "/img/logo.jpg"
+url: "http://mohmanyang.com" 
 baseurl: ""
 github: [metadata]
 markdown: kramdown
-port: 4003
 input: GFM
 hard_wrap: false
 plugins:
    - jekyll-coffeescript
    - jekyll-paginate
+
+paginate: 2
+paginate_path: "page:num"
+excerpt_separator: <!--excerpt-->
+permalink: /:categories/:year/:month/:day/:title
