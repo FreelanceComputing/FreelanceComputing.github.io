@@ -114,7 +114,7 @@ $(function() {
 	  var blogEntry = document.createElement("div");
 	  blogEntry.setAttribute('id', entryId);
 	  blogEntry.setAttribute('class', 'w3-card-4 w3-margin w3-white');
-	  if(index > 4)
+	  if(index > 5)
 		  blogEntry.setAttribute('style', 'display:none');
 	  blogEntry.appendChild(postPreview);
 	  blogEntry.appendChild(divider);
