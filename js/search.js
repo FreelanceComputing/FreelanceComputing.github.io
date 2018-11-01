@@ -1,5 +1,4 @@
 $(function() {
-	var all_results = new Array();
   // Initialize lunr with the fields to be searched, plus the boost.
   window.idx = lunr(function () {
     this.field('id');
@@ -34,23 +33,15 @@ $(function() {
   function display_search_results(results) {
     // Wait for data to load
     window.data.then(function(loaded_data) {
-		// Clear any old results
-        $("#search_results").empty();
-		all_results = [];
-
       // Are there any results?
       if (results.length) { 
+		// Clear any old results
+        $("#search_results").empty();
 		// Hide blog entries
 		$("#entries").hide();
-		// Display more search results button
-		$("#more-results").show();
         // Iterate over the results
         results.forEach(function(result,i) {
-          var item = loaded_data[result.ref];
-		  
-		  // Populate all_results
-		  all_results.push({url:item.url, postHeading:item.postHeading, date:item.date, tags:item.tags, subHeading:item.subHeading});
-          
+          var item = loaded_data[result.ref];		  
 		  // Build a snippet of HTML for this result, add loop index
 		  build_html(i, item.url, item.postHeading, item.subHeading, item.date, item.tags.split(', '));
         });
