@@ -79,7 +79,7 @@ $(function() {
 	  tags__.innerHTML = "Tags: "
 	  for(var i=0; i<tags.length; i++)
 	  {
-		  var tag = tags[0];
+		  var tag = tags[i];
 		  var tagTitle = 'View posts tagged with "' + tag + '"';
 		  var tagUrl = '/tag/' + tag;
 		  var tagUrl_ = document.createElement("a");
