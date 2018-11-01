@@ -19,7 +19,7 @@ subHeading: "Mohmanyang. Creative Writing. Opinion pieces. Poetry"
 			<p><span class="w3-hide-medium w3-hide-large"><b>Reactions  </b> <span class="w3-tag">{% if post.reactions %}{{post.reactions}}{% else %}0{% endif %}</span></span></p>
 		</div>
 		<div class="w3-container">
-			{{ post.excerpt }}
+			<!-- {{ post.excerpt }} -->
 			<div id="postExcerpt{{forloop.index}}" class="w3-row w3-show" style="display:none">
 				<div class="w3-col m8 s12">
 				<p><button class="w3-button w3-padding-large w3-white w3-border" onclick="window.location.href='{{ post.url }}'" ><b>READ MORE >></b></button></p>
