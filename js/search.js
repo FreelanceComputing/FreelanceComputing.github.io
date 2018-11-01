@@ -40,7 +40,7 @@ $(function() {
 		// Hide blog entries
 		$("#entries").hide();
 		// Clear search box field
-		$("#search_box").val = "";
+		$("#search_box").empty();
         // Iterate over the results
         results.forEach(function(result,i) {
           var item = loaded_data[result.ref];		  
