@@ -39,6 +39,8 @@ $(function() {
         $("#search_results").empty();
 		// Hide blog entries
 		$("#entries").hide();
+		// Clear search box field
+		$("#search_box").val = "";
         // Iterate over the results
         results.forEach(function(result,i) {
           var item = loaded_data[result.ref];		  
@@ -47,6 +49,8 @@ $(function() {
         });
 		// Create load more button
 		build_load_more_button();
+		// Redirect to search_results div
+		window.location.href = "/#search_results";
       } else {
         // If there are no results, let the user know.
 		$("#no-results").css('display', 'block');
