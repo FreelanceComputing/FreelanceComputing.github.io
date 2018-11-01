@@ -50,7 +50,7 @@ $(function() {
 		// Create load more button
 		build_load_more_button();
 		// Redirect to search_results div
-		window.location.href = "/#search_results";
+		window.location.href = "#search_results";
       } else {
         // If there are no results, let the user know.
 		$("#no-results").css('display', 'block');
