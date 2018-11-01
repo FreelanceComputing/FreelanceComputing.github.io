@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: fiction"
+title: "Mohmanyang fiction tag"
 tag: fiction
 ---

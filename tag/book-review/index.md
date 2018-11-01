@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: book-review"
+title: "Mohmanyang book-review tag"
 tag: book-review
 ---

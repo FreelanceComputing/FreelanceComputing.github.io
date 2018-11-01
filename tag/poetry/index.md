@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: poetry"
+title: "Mohmanyang poetry tag"
 tag: poetry
 ---

@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: entrepreneurship"
+title: "Mohmanyang entrepreneurship tag"
 tag: entrepreneurship
 ---

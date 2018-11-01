@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: creative-writing"
+title: "Mohmanyang creative-writing tag"
 tag: creative-writing
 ---

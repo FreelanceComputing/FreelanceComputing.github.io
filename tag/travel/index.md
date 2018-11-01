@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: travel"
+title: "Mohmanyang travel tag"
 tag: travel
 ---

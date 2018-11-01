@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: spirituality"
+title: "Mohmanyang spirituality tag"
 tag: spirituality
 ---

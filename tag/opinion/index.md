@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: opinion"
+title: "Mohmanyang opinion tag"
 tag: opinion
 ---

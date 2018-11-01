@@ -1,5 +1,5 @@
 ---
 layout: tag-template
-title: "Tag: depression"
+title: "Mohmanyang depression tag"
 tag: depression
 ---
