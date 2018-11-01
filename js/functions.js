@@ -111,6 +111,6 @@ function subscribe(formId){
 		method: "POST",
 		data: {message: f_data}
 	});
-	document.getElementById('thank-you').style.display='block';
+	$("#thank-you").css('display', 'block');
 	return false;
 }

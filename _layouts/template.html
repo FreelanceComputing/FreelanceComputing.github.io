@@ -11,7 +11,8 @@
 	  <div class="w3-row w3-padding w3-border">
 		
 		<!-- Load search results here, edit js to hide the div with id=entries -->
-		<ul id="search_results"></ul>
+		<div id="search_results" class="w3-col l8 s12"></div>
+		<footer id="more-results" class="w3-margin" style="display:none"><p style="text-align: center"><button class="w3-button w3-black w3-padding-large w3-margin-bottom" onclick="loadMoreSearchEntries(this)" >Load More</button></p></footer>
 
 		<!-- Blog entries -->
 		<div id="entries" class="w3-col l8 s12">
@@ -30,7 +31,7 @@
 			</div>
 			<div class="w3-container w3-white">
 			  <p>Find something on the blog.</p>
-			  <p><input class="w3-input w3-border" type="text" placeholder="Enter Search Term" style="width:100%"></p>
+			  <p><input id="search_box" class="w3-input w3-border" type="text" placeholder="Enter Search Term" style="width:100%"></p>
 			  <p><button type="submit" class="w3-button w3-block /*w3-blue*/"  style="color:#fff !important;background-color:#e5877e">Search</button></p>
 			</div>
 		  </div>
