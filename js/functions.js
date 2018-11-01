@@ -56,11 +56,11 @@ function goBack(id)
 	}
 }
 
-function loadMoreTagEntries(btn)
+function loadMoreEntries(btn, id, iter)
 {
 	var disable = false;
 	var count = 0;
-	var entries = document.getElementById('entries').childNodes;
+	var entries = document.getElementById(id).childNodes;
 	for(var i=0; i<entries.length; i++) 
 	{
 		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].style.display == 'none') )
@@ -70,7 +70,7 @@ function loadMoreTagEntries(btn)
 		}
 		if(i == entries.length-1)
 			disable = true;
-		if(count >= 2)
+		if(count >= iter)
 			break;
 	}
 	if(disable)
@@ -114,3 +114,4 @@ function subscribe(formId){
 	$("#thank-you").css('display', 'block');
 	return false;
 }
+

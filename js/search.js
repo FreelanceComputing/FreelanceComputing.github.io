@@ -122,7 +122,7 @@ $(function() {
   {
 	var moreButton = document.createElement("button");
 	moreButton.setAttribute('class', 'w3-button w3-black w3-padding-large w3-margin-bottom');
-	moreButton.setAttribute('onclick', 'loadMoreSearchEntries(this)');
+	moreButton.setAttribute('onclick', 'loadMoreEntries(this, "search_results", 6)');
 	moreButton.innerHTML = "Load More";
 	var moreButtonP = document.createElement("p");
 	moreButtonP.setAttribute('style', 'text-align: center');
