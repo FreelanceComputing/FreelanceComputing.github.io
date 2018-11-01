@@ -54,6 +54,8 @@ $(function() {
 		  // Build a snippet of HTML for this result, add loop index
 		  build_html(i, item.url, item.postHeading, item.subHeading, item.date, item.tags.split(', '));
         });
+		// Create load more button
+		build_load_more_button();
       } else {
         // If there are no results, let the user know.
 		$("#no-results").css('display', 'block');
@@ -124,5 +126,22 @@ $(function() {
 	  
 	  $("#search_results").append(blogEntry);
   }
+  
+  function build_load_more_button()
+  {
+	var moreButton = document.createElement("button");
+	moreButton.setAttribute('class', 'w3-button w3-black w3-padding-large w3-margin-bottom');
+	moreButton.setAttribute('onclick', 'loadMoreSearchEntries(this)');
+	moreButton.innerHTML = "Load More";
+	var moreButtonP = document.createElement("p");
+	moreButtonP.setAttribute('style', 'text-align: center');
+	moreButtonP.appendChild(moreButton);
+	var moreButtonF = document.createElement("footer");
+	moreButtonF.setAttribute('id', 'more_results');
+	moreButtonF.setAttribute('class', 'w3-margin');
+	moreButtonF.appendChild(moreButtonP);
+	$("#search_results").append(moreButtonF);
+  }
+  
   
 });
