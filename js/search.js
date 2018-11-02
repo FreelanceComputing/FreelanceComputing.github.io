@@ -78,7 +78,7 @@ $(function() {
 	  {
 		  var tag = tags[i];
 		  var tagTitle = 'View posts tagged with "' + tag + '"';
-		  var tagUrl = '/tag/' + tag;
+		  var tagUrl = '/tag/' + tag + '#entries';
 		  var tagUrl_ = document.createElement("a");
 		  tagUrl_.setAttribute('href', tagUrl);
 		  tagUrl_.setAttribute('title', tagTitle);
@@ -92,7 +92,7 @@ $(function() {
 	  
 	  var urlText = document.createElement("b");
 	  urlText.innerHTML = "READ MORE >>";
-	  var url_ = "window.location.href='" + url + "'";
+	  var url_ = "window.location.href='" + url + "#blogEntry'";
 	  var urlButton = document.createElement("button");
 	  urlButton.setAttribute('class', 'w3-button w3-padding-large w3-white w3-border');
 	  urlButton.setAttribute('onclick', url_);
