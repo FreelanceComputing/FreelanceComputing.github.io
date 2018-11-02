@@ -47,8 +47,9 @@ $(function() {
 		  // Build a snippet of HTML for this result, add loop index
 		  build_html(i, item.url, item.postHeading, item.subHeading, item.date, item.tags.split(', '));
         });
-		// Create load more button
-		build_load_more_button();
+		// Create load more button if there are more than 6 results
+		if(results.length > 6)
+			build_load_more_button();
 		// Redirect to search_results div
 		window.location.href = "#search_results";
       } else {

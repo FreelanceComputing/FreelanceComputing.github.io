@@ -34,6 +34,9 @@ layout: template
 	</div>
 {% endfor %}
 
-<footer class="w3-margin">
-	<p style="text-align: center"><button class="w3-button w3-black w3-padding-large w3-margin-bottom" onclick="loadMoreEntries(this, 'entries', 4)" >Load More</button></p>
-</footer>
+<!-- only display load more button if there are more than 4 posts with the selected tag -->
+{% if site.tags[page.tag].size > 4%}
+	<footer class="w3-margin">
+		<p style="text-align: center"><button class="w3-button w3-black w3-padding-large w3-margin-bottom" onclick="loadMoreEntries(this, 'entries', 4)" >Load More</button></p>
+	</footer>
+{% endif %}
