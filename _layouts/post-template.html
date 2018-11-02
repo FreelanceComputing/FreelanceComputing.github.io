@@ -23,7 +23,7 @@ layout: template
 		{% endif %}
 			{{content}}
 			<p class="w3-right">
-				<button id="reactionsBtn" class="w3-button w3-black" onclick="viewHideReactions('reactions')">
+				<button id="reactionsBtn" class="w3-button w3-black" onclick="{% if site.data.reactions[page.postHeading] %}viewHideReactions('reactions'){% else %}javascript:void(0){% endif %}">
 					<b>Reactions  </b><span class="w3-tag w3-white">{% if site.data.reactions[page.postHeading] %}{{site.data.reactions[page.postHeading].size}}{% else %}0{% endif %}</span>
 				</button>
 				<button id="hideBtn" style="display:none" class="w3-button w3-black" onclick="viewHideReactions('reactions')">
