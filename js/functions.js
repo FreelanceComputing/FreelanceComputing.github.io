@@ -1,11 +1,19 @@
 // Toggle between hiding and showing blog replies/comments
 
-function myFunction(id) {
+function viewHideReactions(id) {
     var x = document.getElementById(id);
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
+		var y = document.getElementById("hideBtn");
+		y.style.display = '';
+		var z = document.getElementById("reactionsBtn");
+		z.style.display = 'none';
     } else { 
         x.className = x.className.replace(" w3-show", "");
+		var y = document.getElementById("hideBtn");
+		y.style.display = 'none';
+		var z = document.getElementById("reactionsBtn");
+		z.style.display = '';
     }
 }
 
