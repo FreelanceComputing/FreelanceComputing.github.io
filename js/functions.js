@@ -17,66 +17,26 @@ function viewHideReactions(id) {
     }
 }
 
-function likeFunction(x) {
-    x.style.fontWeight = "bold";
-    x.innerHTML = "✓ Liked";
-}
-
-function readMore(id)
-{
-	var postIndex = id.slice(-1);
-	var postEntryId = "blogEntry" + postIndex;
-	var postExcerptId = "postExcerpt" + postIndex;
-	var postContentId = "postContent" + postIndex;
-	var postExcerpt = document.getElementById(postExcerptId);
-	var postContent = document.getElementById(postContentId);
-	postExcerpt.className = postExcerpt.className.replace(" w3-show", "");
-	postContent.className += " w3-show";
-	
-	var entries = document.getElementById('entries').childNodes;
-	for(var i=0; i<entries.length; i++) 
-	{
-		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].id != postEntryId) )
-		{
-		   entries[i].style.display = 'none';
-		}
-	}
-}
-
-function goBack(id)
-{
-	var postIndex = id.slice(-1);
-	var postEntryId = "blogEntry" + postIndex;
-	var postExcerptId = "postExcerpt" + postIndex;
-	var postContentId = "postContent" + postIndex;
-	var postExcerpt = document.getElementById(postExcerptId);
-	var postContent = document.getElementById(postContentId);
-	postExcerpt.className += " w3-show";
-	postContent.className = postExcerpt.className.replace(" w3-show", "");
-	
-	var entries = document.getElementById('entries').childNodes;
-	for(var i=0; i<entries.length; i++) 
-	{
-		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].id != postEntryId) )
-		{
-		   entries[i].style.display = '';
-		}
-	}
-}
-
 function loadMoreEntries(btn, id, iter)
 {
 	var disable = false;
 	var count = 0;
-	var entries = document.getElementById(id).childNodes;
-	for(var i=0; i<entries.length; i++) 
+	var entries = document.getElementById(id).children;
+	
+	var entriesLength = 0;
+	if(entries[entries.length - 1].nodeName.toLowerCase() == 'footer')
+		entriesLength = entries.length - 1;
+	else
+		entriesLength = entries.length;
+	
+	for(var i=0; i<entriesLength; i++) 
 	{
-		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].style.display == 'none') )
+		if (entries[i].style.display == 'none')
 		{
 		   entries[i].style.display = '';
 		   count = count + 1;
 		}
-		if(i == entries.length-1)
+		if(i == entriesLength-1)
 			disable = true;
 		if(count >= iter)
 			break;
@@ -122,4 +82,51 @@ function subscribe(formId){
 	$("#thank-you").css('display', 'block');
 	return false;
 }
+
+/*function likeFunction(x) {
+    x.style.fontWeight = "bold";
+    x.innerHTML = "✓ Liked";
+}*/
+
+/*function readMore(id)
+{
+	var postIndex = id.slice(-1);
+	var postEntryId = "blogEntry" + postIndex;
+	var postExcerptId = "postExcerpt" + postIndex;
+	var postContentId = "postContent" + postIndex;
+	var postExcerpt = document.getElementById(postExcerptId);
+	var postContent = document.getElementById(postContentId);
+	postExcerpt.className = postExcerpt.className.replace(" w3-show", "");
+	postContent.className += " w3-show";
+	
+	var entries = document.getElementById('entries').childNodes;
+	for(var i=0; i<entries.length; i++) 
+	{
+		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].id != postEntryId) )
+		{
+		   entries[i].style.display = 'none';
+		}
+	}
+}*/
+
+/*function goBack(id)
+{
+	var postIndex = id.slice(-1);
+	var postEntryId = "blogEntry" + postIndex;
+	var postExcerptId = "postExcerpt" + postIndex;
+	var postContentId = "postContent" + postIndex;
+	var postExcerpt = document.getElementById(postExcerptId);
+	var postContent = document.getElementById(postContentId);
+	postExcerpt.className += " w3-show";
+	postContent.className = postExcerpt.className.replace(" w3-show", "");
+	
+	var entries = document.getElementById('entries').childNodes;
+	for(var i=0; i<entries.length; i++) 
+	{
+		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].id != postEntryId) )
+		{
+		   entries[i].style.display = '';
+		}
+	}
+}*/
 
