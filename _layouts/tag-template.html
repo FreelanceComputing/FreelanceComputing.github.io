@@ -17,7 +17,7 @@ layout: template
 						{{tag}}
 					</a>
 				</span>&nbsp; {% if forloop.last != true %} {% endif %} {% endfor %}</h5>
-		<p><span class="w3-hide-medium w3-hide-large"><b>Reactions  </b> <span class="w3-tag">{% if post.reactions %}{{post.reactions}}{% else %}0{% endif %}</span></span></p>
+		<p><span class="w3-hide-medium w3-hide-large"><b>Reactions  </b> <span class="w3-tag">{{site.data.reactions[post.postHeading].size}}</span></span></p>
 	</div>
 	<div class="w3-container">
 		<!-- {{ post.excerpt }} -->
@@ -26,7 +26,7 @@ layout: template
 			<p><button class="w3-button w3-padding-large w3-white w3-border" onclick="window.location.href='{{ post.url }}'" ><b>READ MORE >></b></button></p>
 			</div>
 			<div class="w3-col m4 w3-hide-small">
-			  <p><span class="w3-padding-large w3-right"><b>Reactions  </b> <span class="w3-tag">{% if post.reactions %}{{post.reactions}}{% else %}0{% endif %}</span></span></p>
+			  <p><span class="w3-padding-large w3-right"><b>Reactions  </b> <span class="w3-tag">{{site.data.reactions[post.postHeading].size}}</span></span></p>
 			</div>
 		</div>
 	</div>
