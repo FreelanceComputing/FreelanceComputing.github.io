@@ -77,25 +77,6 @@
 		</div>
 		<hr>
 
-		<!-- Tags -->
-		<div class="w3-white w3-margin">
-		<div class="w3-container w3-padding w3-black">
-		  <h4>Tags</h4>
-		</div>
-		<div class="w3-container w3-white">
-		  <p>
-			{% for tag in tags %}
-				<span class="w3-tag w3-light-grey w3-small w3-margin-bottom">
-					<a href="{{site.baseurl}}/tag/{{tag}}" title="View posts tagged with &quot;{{tag}}&quot;">
-						{{tag}}
-					</a>
-				</span>
-			{% endfor %}
-		  </p>
-		</div>
-		</div>
-		<hr>
-
 		<!-- Advertising -->
 		<div class="w3-white w3-margin">
 		<div class="w3-container w3-white">
@@ -111,6 +92,25 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
 		  </div>
+		</div>
+		</div>
+		<hr>
+
+		<!-- Tags -->
+		<div class="w3-white w3-margin">
+		<div class="w3-container w3-padding w3-black">
+		  <h4>Tags</h4>
+		</div>
+		<div class="w3-container w3-white">
+		  <p>
+			{% for tag in tags %}
+				<span class="w3-tag w3-light-grey w3-small w3-margin-bottom">
+					<a href="{{site.baseurl}}/tag/{{tag}}" title="View posts tagged with &quot;{{tag}}&quot;">
+						{{tag}}
+					</a>
+				</span>
+			{% endfor %}
+		  </p>
 		</div>
 		</div>
 		<hr>
