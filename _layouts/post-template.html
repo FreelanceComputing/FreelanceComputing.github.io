@@ -24,7 +24,7 @@ layout: template
 			{{content}}
 			<p class="w3-right">
 				<button class="w3-button w3-black" onclick="myFunction('demo1')">
-					<b>Reactions  </b><span class="w3-tag w3-white">1</span><!-- {{site.data.reactions.{{page.postHeading}}.size}} -->
+					<b>Reactions  </b><span class="w3-tag w3-white">{{site.data.reactions[page.postHeading].size}}</span><!-- {{site.data.reactions.{{page.postHeading}}.size}} -->
 				</button>
 			</p>
 			<p class="w3-clear"></p>
