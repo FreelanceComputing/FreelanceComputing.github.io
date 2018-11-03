@@ -64,7 +64,7 @@
 		<ul class="w3-ul w3-hoverable w3-white">
 			{% for post in site.posts %}
 				{% if post.featured %}
-					<a href='{{ post.url }}' style="text-decoration:none">
+					<a href='{{ post.url }}#blogEntry' style="text-decoration:none">
 						<li class="w3-padding-16">
 							<img src='{{site.baseurl}}{{post.featuredImage}}' alt="{% if post.credit %}{{post.credit}}{% else %}Image{% endif %}" class="w3-left w3-margin-right" style="width:50px; height:50px">
 							<span class="w3-large">{{post.postHeading}}</span>
