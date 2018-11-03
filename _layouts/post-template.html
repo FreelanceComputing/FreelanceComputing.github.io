@@ -3,7 +3,7 @@ layout: template
 ---
 <div id="blogEntry" class="w3-card-4 w3-margin w3-white">
 	<img src='{{site.baseurl}}{{page.image}}' alt="{{page.credit}}" style="width:100%">
-	{% if page.credit %}<p style="text-align:center;text-decoration-line:underline;line-height:0.5">{{page.credit}}</p>{% endif %}
+	{% if page.credit %}<p style="text-align:center;text-decoration-line:underline;line-height:0.5;font-size:11px">{{page.credit}}</p>{% endif %}
 	<div class="w3-container">
 		<h3>{{ page.postHeading }}</h3>
 		<h5>{{ page.subHeading }}</h5>
