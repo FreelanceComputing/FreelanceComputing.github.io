@@ -45,8 +45,7 @@ function loadMoreEntries(btn, id, iter)
 		btn.className += " w3-disabled";
 	else
 	{
-		btn.style.color = "#fff !important";
-		btn.style.backgroundColor = "#000 !important";
+		btn.setAttribute('style','color: #fff !important;background-color: #000 !important');
 	}
 }
 
