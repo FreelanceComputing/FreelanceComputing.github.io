@@ -25,7 +25,14 @@ $(function() {
   // Event when the form is submitted
   $("#site_search").submit(function(event){
       event.preventDefault();
+	  document.getElementById('displaySearchError').style.display = 'none';
       var query = $("#search_box").val(); // Get the value from the search field
+	  // if the user doesn't enter a query, display error message
+	  if(query == "")
+	  {
+		  document.getElementById('displaySearchError').style.display = '';
+		  return;
+	  }
       var results = window.idx.search(query); // Get lunr to perform a search
       display_search_results(results); // Hand the results off to be displayed
   });
@@ -41,6 +48,8 @@ $(function() {
 		$("#entries").hide();
 		// Clear search box field
 		$("#search_box").val("");
+		// Re-animate search button
+		document.getElementById('searchBtn').setAttribute('style','color: #fff !important;background-color: #e5877e !important');
         // Iterate over the results
         results.forEach(function(result,i) {
           var item = loaded_data[result.ref];		  
