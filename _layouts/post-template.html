@@ -23,6 +23,7 @@ layout: template
 			<div id="postContent" class="w3-justify" style="padding-right:20px;line-height:1.6">
 		{% endif %}
 			{{content}}
+						<hr style="margin-top:0px">
 			<p class="w3-right">
 				<button id="reactionsBtn" class="w3-button w3-black" onclick="{% if site.data.reactions[page.postHeading] %}viewHideReactions('reactions'){% else %}javascript:void(0){% endif %}">
 					<b>Reactions  </b><span class="w3-tag w3-white">{% if site.data.reactions[page.postHeading] %}{{site.data.reactions[page.postHeading].size}}{% else %}0{% endif %}</span>
