@@ -82,6 +82,50 @@ function subscribe(formId){
 	return false;
 }
 
+function reply(formId){	
+	document.getElementById("displayReplyNameError").style.display = 'none';
+	document.getElementById("displayReplyCommentError").style.display = 'none';
+	document.getElementById("displayReplyEmailError").style.display = 'none';
+	
+	var f = $(formId);
+	if(!f[0].alias.validity.valid)
+	{
+		document.getElementById("displayReplyNameError").style.display = '';
+		return;
+	}
+	if(!f[0].comment.validity.valid)
+	{
+		document.getElementById("displayReplyCommentError").style.display = '';
+		return;
+	}
+	if(!f[0].email.validity.valid)
+	{
+		document.getElementById("displayReplyEmailError").style.display = '';
+		return;
+	}
+	
+	var f_rat = document.getElementById("replyRat");
+	if(f_rat.value != "")
+		return;
+		
+	var f_name = document.getElementById("replyName");
+	var f_comment = document.getElementById("replyComment");
+	var f_email = document.getElementById("replyEmail");
+	var f_data = "Name="+f_name.value+"&Comment="+f_comment.value+"&Email="+f_email.value;
+	f_name.value = '';
+	f_comment.value = '';
+	f_email.value = '';
+	
+	$.ajax({
+		dataType: "json",
+		url: "https://formsapi.jabwn.com/key/RJgPflYOU79fwdeJbPU8",
+		method: "POST",
+		data: {message: f_data}
+	});
+	$("#thanks").css('display', 'block');
+	return false;
+}
+
 /*function likeFunction(x) {
     x.style.fontWeight = "bold";
     x.innerHTML = "✓ Liked";
