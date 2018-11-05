@@ -79,10 +79,13 @@ function subscribe(formId){
 		data: {message: f_data}
 	});
 	$("#thank-you").css('display', 'block');
+	$("#subscribe").css('display', 'none');
 	return false;
 }
 
 function reply(formId){	
+	var error = false;
+	
 	document.getElementById("displayReplyNameError").style.display = 'none';
 	document.getElementById("displayReplyCommentError").style.display = 'none';
 	document.getElementById("displayReplyEmailError").style.display = 'none';
@@ -91,21 +94,24 @@ function reply(formId){
 	if(!f[0].alias.validity.valid)
 	{
 		document.getElementById("displayReplyNameError").style.display = '';
-		return;
+		error = true;
 	}
 	if(!f[0].comment.validity.valid)
 	{
 		document.getElementById("displayReplyCommentError").style.display = '';
-		return;
+		error = true;
 	}
 	if(!f[0].email.validity.valid)
 	{
 		document.getElementById("displayReplyEmailError").style.display = '';
-		return;
+		error = true;
 	}
 	
 	var f_rat = document.getElementById("replyRat");
 	if(f_rat.value != "")
+		error = true;
+	
+	if(error == true)
 		return;
 		
 	var f_name = document.getElementById("replyName");
@@ -121,8 +127,9 @@ function reply(formId){
 		url: "https://formsapi.jabwn.com/key/RJgPflYOU79fwdeJbPU8",
 		method: "POST",
 		data: {message: f_data}
-	});
+	});	
 	$("#thanks").css('display', 'block');
+	$("#reply").css('display', 'none');
 	return false;
 }
 
