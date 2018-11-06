@@ -124,6 +124,8 @@ function reply(formId, postUrl){
 	dataObj["Email"] = f_email.value;
 	dataObj["Post"] = f_post;
 	dataObj["Comment"] = f_comment.value;
+	dataObj["_subject"] = "New Comment: " + f_post;
+	dataObj["_replyto"] = f_email.value;
 	
 	f_name.value = '';
 	f_comment.value = '';
@@ -140,50 +142,4 @@ function reply(formId, postUrl){
 	return false;
 }
 
-/*function likeFunction(x) {
-    x.style.fontWeight = "bold";
-    x.innerHTML = "✓ Liked";
-}*/
-
-/*function readMore(id)
-{
-	var postIndex = id.slice(-1);
-	var postEntryId = "blogEntry" + postIndex;
-	var postExcerptId = "postExcerpt" + postIndex;
-	var postContentId = "postContent" + postIndex;
-	var postExcerpt = document.getElementById(postExcerptId);
-	var postContent = document.getElementById(postContentId);
-	postExcerpt.className = postExcerpt.className.replace(" w3-show", "");
-	postContent.className += " w3-show";
-	
-	var entries = document.getElementById('entries').childNodes;
-	for(var i=0; i<entries.length; i++) 
-	{
-		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].id != postEntryId) )
-		{
-		   entries[i].style.display = 'none';
-		}
-	}
-}*/
-
-/*function goBack(id)
-{
-	var postIndex = id.slice(-1);
-	var postEntryId = "blogEntry" + postIndex;
-	var postExcerptId = "postExcerpt" + postIndex;
-	var postContentId = "postContent" + postIndex;
-	var postExcerpt = document.getElementById(postExcerptId);
-	var postContent = document.getElementById(postContentId);
-	postExcerpt.className += " w3-show";
-	postContent.className = postExcerpt.className.replace(" w3-show", "");
-	
-	var entries = document.getElementById('entries').childNodes;
-	for(var i=0; i<entries.length; i++) 
-	{
-		if ((entries[i].nodeName.toLowerCase() == 'div') && (entries[i].id != postEntryId) )
-		{
-		   entries[i].style.display = '';
-		}
-	}
-}*/
 
