@@ -124,7 +124,7 @@ function reply(formId, postUrl){
 	dataObj["Email"] = f_email.value;
 	dataObj["Post"] = f_post;
 	dataObj["Comment"] = f_comment.value;
-	dataObj["_subject"] = "New Comment: " + f_post;
+	dataObj["_subject"] = "Mohmanyang Comment: " + f_post;
 	dataObj["_replyto"] = f_email.value;
 	
 	f_name.value = '';
