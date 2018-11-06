@@ -1,0 +1,80 @@
+---
+---
+<!DOCTYPE html>
+<html>
+{%include head.html%}
+<body class="w3-light-grey">
+	<!-- w3-content defines a container for fixed size centered content, 
+	and is wrapped around the whole page content, except for the footer -->
+	<div class="w3-content" style="max-width:1600px">
+	{%include site-header.html%}
+		
+	<!-- END w3-content -->
+	</div>
+
+	<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+	  <form id="contactForm2" method="post">
+		<input type="text" id="rat2" value="" style="display:none">
+		<p><input class="w3-input w3-border" id="email2" type="email" name="email" placeholder="Enter e-mail" required=""></p>
+		<p id="displayEmailError2" style="display:none; color:red">Please enter a valid email address</p>
+        <button type="button" onclick="subscribe('#contactForm2')" class="w3-button w3-block w3-padding-large /*w3-red*/ w3-margin-bottom" style="color:#fff !important;background-color:#e5877e">Yes. Email me.</button>
+	  </form>
+    </div>
+  </div>
+</div>
+
+<!-- Thank You Modal -->
+<div id="thank-you" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('thank-you').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">Thank You</h2>
+	  <p></p>
+	  <p style="background-color:#e5877e; line-height:0.5; margin-bottom: 20px !important">&nbsp;</p>
+      <p style="text-align: center;">Thanks for subscribing.</p>
+      <p style="text-align: center;">Now you will receive emails each time a new post is published.</p>
+	  <p style="text-align: center;">Keep an eye out on your Spam/Junk folder in case you do not see any new post alerts.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Thanks for verifying modal -->
+<div id="verify-thanks" class="w3-modal w3-animate-opacity" style="display:block">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('verify-thanks').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">Thank You!</h2>
+	  <p></p>
+	  <p style="background-color:#e5877e; line-height:0.5; margin-bottom: 20px !important">&nbsp;</p>
+      <p style="text-align: center;">Thanks for submitting your verification code.</p>
+      <p style="text-align: center;">Your reply will soon be published on the blog.</p>
+	  <p style="text-align: center;"><a href="{{site.url}}">Go Home</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <p style="text-align: center;"><a href="{{site.url}}" class="w3-button w3-black w3-padding-large w3-margin-bottom" ><i class="fa fa-home w3-margin-right"></i>Home</a></p>
+  <p style="text-align: center;">Copyright &copy; Mohmanyang 2016</p>
+</footer>
+	
+	<!-- Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-77078550-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+</body>
+</html>
