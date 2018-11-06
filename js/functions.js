@@ -83,7 +83,7 @@ function subscribe(formId){
 	return false;
 }
 
-function reply(formId){	
+function reply(formId, postUrl){	
 	var error = false;
 	
 	document.getElementById("displayReplyNameError").style.display = 'none';
@@ -117,7 +117,14 @@ function reply(formId){
 	var f_name = document.getElementById("replyName");
 	var f_comment = document.getElementById("replyComment");
 	var f_email = document.getElementById("replyEmail");
-	var f_data = "Name="+f_name.value+"&Comment="+f_comment.value+"&Email="+f_email.value;
+	var f_post = postUrl.split('/').slice(-1)[0];
+	
+	var dataObj = {};
+	dataObj["Name"] = f_name.value;
+	dataObj["Email"] = f_email.value;
+	dataObj["Post"] = f_post;
+	dataObj["Comment"] = f_comment.value;
+	
 	f_name.value = '';
 	f_comment.value = '';
 	f_email.value = '';
@@ -126,7 +133,7 @@ function reply(formId){
 		dataType: "json",
 		url: "https://formsapi.jabwn.com/key/RJgPflYOU79fwdeJbPU8",
 		method: "POST",
-		data: {message: f_data}
+		data: dataObj
 	});	
 	$("#thanks").css('display', 'block');
 	$("#reply").css('display', 'none');

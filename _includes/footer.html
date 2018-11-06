@@ -64,7 +64,7 @@
 		<p>Email Address</p>
 		<p><input class="w3-input w3-border" id="replyEmail" type="email" name="email" placeholder="Enter e-mail" required=""></p>
 		<p id="displayReplyEmailError" style="display:none; color:red">Please enter a valid email address</p>
-        <button type="button" onclick="reply('#replyForm')" class="w3-button w3-block w3-padding-large /*w3-red*/ w3-margin-bottom" style="color:#fff !important;background-color:#e5877e">Yes. Submit now.</button>
+        <button type="button" onclick="reply('#replyForm', '{{page.url}}')" class="w3-button w3-block w3-padding-large /*w3-red*/ w3-margin-bottom" style="color:#fff !important;background-color:#e5877e">Yes. Submit now.</button>
 	  </form>
     </div>
   </div>
