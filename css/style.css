@@ -4,3 +4,26 @@ h1,h2,h3,h4,h5,h6 {
 body {
 	font-family: "Raleway", "Segoe UI"
 }
+
+.section-list {
+    margin: 0;
+    list-style: none;
+    padding: 0
+}
+
+.each-step {
+    font-size: 16px;
+    border-bottom: 1px solid #f0f2eb;
+    counter-increment: method;
+    line-height: 1.6;
+    padding-bottom: 20px
+}
+
+.each-step:before {
+    content: counter(method) ".";
+    font-weight: 700;
+    font-size: 23px;
+    margin-right: 8px;
+    float: left;
+    line-height: 1
+}
