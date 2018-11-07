@@ -69,14 +69,18 @@ function subscribe(formId){
 		return;
 		
 	var f_email = document.getElementById(email);
-	var  f_data = "Email="+f_email.value;
+	
+	var dataObj = {};
+	dataObj["Email"] = f_email.value;
+	dataObj["_subject"] = "New Subscription!";
+	
 	f_email.value = '';
 	
 	$.ajax({
 		dataType: "json",
 		url: "https://formsapi.jabwn.com/key/RJgPflYOU79fwdeJbPU8",
 		method: "POST",
-		data: {message: f_data}
+		data: dataObj
 	});
 	$("#thank-you").css('display', 'block');
 	$("#subscribe").css('display', 'none');
