@@ -26,3 +26,8 @@ body {
     float: left;
     line-height: 1
 }
+
+.reduced-blockquote {
+    margin-inline-end: 5px;
+	margin-inline-start: 20px;
+}
