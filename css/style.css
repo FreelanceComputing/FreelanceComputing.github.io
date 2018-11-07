@@ -12,7 +12,6 @@ body {
 }
 
 .each-step {
-    font-size: 16px;
     border-bottom: 1px solid #f0f2eb;
     counter-increment: method;
     line-height: 1.6;
@@ -22,7 +21,7 @@ body {
 .each-step:before {
     content: counter(method) ".";
     font-weight: 700;
-    font-size: 23px;
+    font-size: 19px;
     margin-right: 8px;
     float: left;
     line-height: 1
