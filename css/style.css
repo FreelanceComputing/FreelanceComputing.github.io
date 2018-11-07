@@ -31,3 +31,9 @@ body {
     margin-inline-end: 5px;
 	margin-inline-start: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .verify-pad-small{
+	    padding-left: 5px;
+	}
+}
