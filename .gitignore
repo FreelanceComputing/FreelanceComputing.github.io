@@ -1,5 +1,21 @@
-﻿/_site
-/demoBlog/fashion/demoFashionBlog/jekyll/_site
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/_site
+/.vs/FreelanceComputing.github.io/v15/.suo
 /demoCssSite/demoCssSite/bin
+/demoCssSite/demoCssSite/obj/Debug
+/demoHNM237/demoHNM237/bin
+/demoHNM237/demoHNM237/obj/Debug
+/demoHNM237/.vs
+/demoCssSite/.vs
+/.vs
+/demoCssSite/demoCssSite/obj/Release/demoCssSite.csproj.CoreCompileInputs.cache
+/demoCssSite/.vs/demoCssSite/v15/.suo
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/liveNotDemoHNM237/.vs/demoHNM237/v15/Server/sqlite3
+/demoBlog/fashion/demoFashionBlog/jekyll/_site
 /demoCssSite/demoCssSite/obj
 /.vs/FreelanceComputing.github.io/v15

@@ -1,0 +1,43 @@
+h1,h2,h3,h4,h5,h6 {
+	font-family: "koho_mediumregular"
+}
+body {
+	font-family: "Raleway", "Segoe UI"
+}
+
+.section-list {
+    margin: 0;
+    list-style: none;
+    padding: 0
+}
+
+.each-step {
+    border-bottom: 1px solid #f0f2eb;
+    counter-increment: method;
+    line-height: 1.6;
+    padding-bottom: 20px
+}
+
+.each-step:before {
+    content: counter(method) ".";
+    font-weight: 700;
+    font-size: 19px;
+    margin-right: 8px;
+    float: left;
+    line-height: 1
+}
+
+.reduced-blockquote {
+    margin-inline-end: 5px;
+	margin-inline-start: 20px;
+}
+
+.verify-pad-small{
+	    padding-left: 165px;
+	}
+	
+@media only screen and (max-width: 600px) {
+    .verify-pad-small{
+	    padding-left: 5px;
+	}
+}

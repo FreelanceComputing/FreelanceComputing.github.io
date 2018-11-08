@@ -1,0 +1,17 @@
+name: "Mohmanyang"
+description: "Mohmanyang. Creative Writing. Opinion pieces. Poetry"
+logo: "/img/logo.jpg"
+url: "http://mohmanyang.com" 
+baseurl: ""
+github: [metadata]
+markdown: kramdown
+input: GFM
+hard_wrap: false
+plugins:
+   - jekyll-coffeescript
+   - jekyll-paginate
+
+paginate: 4
+paginate_path: "page:num"
+excerpt_separator: <!--excerpt-->
+permalink: /:categories/:year/:month/:day/:title
