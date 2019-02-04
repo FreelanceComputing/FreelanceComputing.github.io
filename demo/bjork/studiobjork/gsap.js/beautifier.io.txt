@@ -1,0 +1,11 @@
+https://beautifier.io/
+
+gsap/TweenLite
+
+https://greensock.com/tweenlite
+https://ihatetomatoes.net/simple-greensock-tutorial-your-first-steps-with-gsap/
+https://greensock.com/
+https://staging.greensock.com/gsap
+
+https://www.npmjs.com/package/bezier-easing
+https://www.npmjs.com/package/gsap  - ScrollToPlugin 
