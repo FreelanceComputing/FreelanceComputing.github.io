@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www.hidden-no-more-237.com$ [NC]
+RewriteRule ^(.*)$ http://hidden-no-more-237.com/$1 [L,R=301,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
