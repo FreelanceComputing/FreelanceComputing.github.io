@@ -1,11 +1,11 @@
 @font-face {
  font-family:'Helvetica-Neue';
- src:url("../fonts/helvetica-neue.woff2") format("woff2"),url("../fonts/helvetica-neue.woff") format("woff");
+ src:url("fonts/josefinslab-regular-webfont.woff2") format("woff2"),url("fonts/josefinslab-regular-webfont.woff") format("woff");
  font-weight:400
 }
 @font-face {
  font-family:'Helvetica-Neue';
- src:url("../fonts/helvetica-neue-light.woff2") format("woff2"),url("../fonts/helvetica-neue-light.woff") format("woff");
+ src:url("fonts/overlock-regular-webfont.woff2") format("woff2"),url("fonts/overlock-regular-webfont.woff") format("woff");
  font-weight:100
 }
 html {
@@ -68,7 +68,7 @@ html {
 body {
  height:100%;
  width:100%;
- background:#000
+ background:#fff
 }
 @keyframes barberpole-body {
  from {
@@ -1642,7 +1642,7 @@ button {
  z-index:-1
 }
 .c-intro-about {
- display:none;
+ /* display:none; */
  color:#000
 }
 @media (max-width: 800px) {
@@ -1654,7 +1654,7 @@ button {
 }
 .c-intro-about__headline {
  margin-bottom:0px;
- opacity:0;
+ /* opacity:0; */
  -ms-transform:translateY(15px);
  transform:translateY(15px)
 }

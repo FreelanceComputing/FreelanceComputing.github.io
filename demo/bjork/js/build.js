@@ -30174,7 +30174,7 @@
         }
 
         function P(t) {
-            t.title && (document.title = t.title, document.querySelector("meta[property=og\\:title]").setAttribute("content", t.title), document.querySelector("meta[name=title]").setAttribute("content", t.title)), t.url && document.querySelector("meta[property=og\\:url]").setAttribute("content", t.url), t.description && (document.querySelector("meta[name=description]").setAttribute("content", t.description), document.querySelector("meta[property=og\\:description]").setAttribute("content", t.description)), t.og_image && document.querySelector("meta[property=og\\:image]").setAttribute("content", t.og_image)
+            //t.title && (document.title = t.title, document.querySelector("meta[property=og\\:title]").setAttribute("content", t.title), document.querySelector("meta[name=title]").setAttribute("content", t.title)), t.url && document.querySelector("meta[property=og\\:url]").setAttribute("content", t.url), t.description && (document.querySelector("meta[name=description]").setAttribute("content", t.description), document.querySelector("meta[property=og\\:description]").setAttribute("content", t.description)), t.og_image && document.querySelector("meta[property=og\\:image]").setAttribute("content", t.og_image)
         }
 
         function E() {
