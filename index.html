@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <title>Demo Bj0rk</title>
+    <script> window.prerenderReady = false; </script>
+    <meta charset="utf-8" />
+    <!-- mobile -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <!-- css Styles -->
+    <link rel="stylesheet" href="/css/style.css?v=140" />
+    <!-- logo -->
+    <link rel="icon" href="/favicon.png?v=2">
+    <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+    <!-- or, set /favicon.ico for IE10 win -->
+
+    <style id="smooth-scrollbar-style">
+        [data-scrollbar] {
+            display: block;
+            position: relative;
+        }
+
+        .scroll-content {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .scrollbar-track {
+            position: absolute;
+            opacity: 0;
+            z-index: 1;
+            background: rgba(222, 222, 222, .75);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-transition: opacity 0.5s 0.5s ease-out;
+            transition: opacity 0.5s 0.5s ease-out;
+        }
+            .scrollbar-track.show,
+            .scrollbar-track:hover {
+                opacity: 1;
+                -webkit-transition-delay: 0s;
+                transition-delay: 0s;
+            }
+
+        .scrollbar-track-x {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+        }
+        .scrollbar-track-y {
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 100%;
+        }
+        .scrollbar-thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background: rgba(0, 0, 0, .5);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="c-ui">
+        <a href="/" data-href="/" class="js-constant-anchor c-ui__logo js-invert">
+            <!--svg logo path fill-->
+        </a>
+
+        <!-- TODO replace nav, button and c-ui__off-canvas div with w3schools demo of bottom anchored nav and modify js accordingly-->
+        <nav class="c-ui__nav">
+            <ul class="c-ui__nav-items js-invert invert">
+                <li class="c-ui__nav-item">
+                    <a class="js-constant-anchor c-ui__nav-item-anchor c-anchor" data-name="cases" data-href="/work" href="/work">Work</a>
+                </li>
+                <li class="c-ui__nav-item">
+                    <a class="js-constant-anchor c-ui__nav-item-anchor c-anchor" data-name="about" data-href="/about" href="/about">About</a>
+                </li>
+                <li class="c-ui__nav-item">
+                    <a class="js-constant-anchor c-ui__nav-item-anchor c-anchor" data-name="contact" data-href="/contact" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="c-ui__burger js-invert">
+            <span></span>
+            <span></span>
+        </button>
+        <div class="c-ui__off-canvas">
+            <ul class="c-ui__off-canvas-nav-items">
+                <li class="c-ui__off-canvas-nav-item">
+                    <a class="c-ui__off-canvas-nav-item-anchor js-constant-anchor c-anchor js-mobile-nav-item-cases" data-href="/work" href="/work">Work</a>
+                </li>
+                <li class="c-ui__off-canvas-nav-item">
+                    <a class="c-ui__off-canvas-nav-item-anchor js-constant-anchor c-anchor js-mobile-nav-item-about" data-href="/about" href="/about">About</a>
+                </li>
+                <li class="c-ui__off-canvas-nav-item">
+                    <a class="c-ui__off-canvas-nav-item-anchor js-constant-anchor c-anchor js-mobile-nav-item-contact" data-href="/contact" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="c-app-wrapper transparent" style="background-color:transparent;">
+        <div class="o-section o-section--landing c-app-wrapper__inner" style="display: block;">
+            <div class="o-landing__about">
+                <div class="c-intro-about" style="display: block;">
+                    <h2 class="c-intro-about__headline" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">We’re a digital production studio focusing heavily on design and development</h2>
+                </div>
+            </div>
+            <!--
+                investigate "smooth-scrollbar" in build.js and see where translate3d() is being set and set it to something like (-1000px, 0px, 0px)
+                line 13110 ?
+                also investigate scroll-content in mobile view
+            -->
+        </div>
+
+        <div class="o-section o-section--case c-app-wrapper__inner">
+        </div>
+
+        <div class="o-section o-section--about c-app-wrapper__inner">
+        </div>
+
+        <div class="o-section o-section--cases c-app-wrapper__inner">
+        </div>
+
+        <div class="o-section o-section--contact c-app-wrapper__inner">
+        </div>
+    </div>
+    <div class="c-overlay-mask"></div>
+    <div class="c-loader">
+        <canvas class="c-loader__canvas"></canvas>
+    </div>
+    <script src="/js/build.js?v=165"></script>
+</body>
+</html>
