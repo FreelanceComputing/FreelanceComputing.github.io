@@ -3511,7 +3511,7 @@
                                     this._time && !n ? this.ratio = this._ease.getRatio(this._time / l) : n && this._ease._calcEnd && (this.ratio = this._ease.getRatio(0 === this._time ? 0 : 1))
                                 }
                                 for (this._lazy !== !1 && (this._lazy = !1), this._active || !this._paused && this._time !== a && t >= 0 && (this._active = !0), 0 === a && (this._startAt && (t >= 0 ? this._startAt.render(t, !0, i) : r || (r = "_dummyGS")), this.vars.onStart && (0 === this._time && 0 !== l || e || this._callback("onStart"))), s = this._firstPT; s;) s.f ? s.t[s.p](s.c * this.ratio + s.s) : s.t[s.p] = s.c * this.ratio + s.s, s = s._next;
-                                this._onUpdate && (t < 0 && this._startAt && t !== -1e-4 && this._startAt.render(t, !0, i), e || (this._time !== a || n || i) && this._callback("onUpdate")), r && (this._gc && !i || (t < 0 && this._startAt && !this._onUpdate && t !== -1e-4 && this._startAt.render(t, !0, i), n && (this._timeline.autoRemoveChildren && this._enabled(!1, !1), this._active = !1), !e && this.vars[r] && this._callback(r), 0 === l && this._rawPrevTime === d && o !== d && (this._rawPrevTime = 0)))
+								this._onUpdate && (t < 0 && this._startAt && t !== -1e-4 && this._startAt.render(t, !0, i), e || (this._time !== a || n || i) && this._callback("onUpdate")), r && (this._gc && !i || (t < 0 && this._startAt && !this._onUpdate && t !== -1e-4 && this._startAt.render(t, !0, i), n && (this._timeline.autoRemoveChildren && this._enabled(!1, !1), this._active = !1), !e && this.vars[r] && this._callback(r), 0 === l && this._rawPrevTime === d && o !== d && (this._rawPrevTime = 0)))
                             }
                         }, l._kill = function(t, e, i) {
                             if ("all" === t && (t = null), null == t && (null == e || e === this.target)) return this._lazy = !1, this._enabled(!1, !1);
@@ -31934,9 +31934,9 @@
             _ = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
             b = n(_),
             x = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
-            w = (n(x), t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes")),
+            /*w = (n(x), t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes")),
             T = (n(w), t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured")),
-            S = n(T),
+            S = n(T),*/
             M = function() {
                 return '\n    <div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">\n        <div class="o-featured"> \n            {{#each cases}}\n                <a class="o-featured__case js-navigate js-invert-cause o-featured__module-{{@index}} o-featured__module-{{@index}}-no-transform" data-isdark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                    <div class="o-featured__background"></div>\n                    <div class="o-featured__inner">\n                        <div class="o-featured__media">\n                            <div class="o-featured__media-background"></div>\n                            {{#equal this.mediaType "image"}}\n                                <img class="o-featured__media--large" sizes="\n                                (min-width: 1000px) calc(50vw - 120px),\n                                calc(100vw - 60px)" \n                                srcset="\n                                    {{ this.images.large.xsmall }} 520w,\n                                    {{ this.images.large.midsize }} 680w,\n                                    {{ this.images.large.afc_large }} 1020w,\n                                    {{ this.images.large.xlarge }} 1440w"\n                                src="{{ this.images.large.xlarge }}" />\n                            {{/equal}}\n\n                            {{#equal this.mediaType "video"}}\n                                <video class="o-featured__media--large" src="{{ this.video }}" loop playsinline muted></video>\n                            {{/equal}}\n\n                            {{#equal this.mediaTypeMobile "image"}}\n                                <img class="o-featured__media--small" sizes="calc(100vw - 60px)" \n                                srcset="\n                                    {{ this.images.small.midsize }} 680w,\n                                    {{ this.images.small.large }} 1020w"\n                                src="{{ this.images.small.xlarge }}" />\n                            {{/equal}}\n\n                            {{#equal this.mediaTypeMobile "video"}}\n                                <video class="o-featured__media--small" src="{{ this.videoMobile }}" loop playsinline muted></video>\n                            {{/equal}}\n                            <div class="o-featured__media-overlay"></div>\n                        </div>\n                        <div class="o-featured__info">\n                            <div class="o-featured__info-name">\n                                <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                            </div>\n                            {{#equal this.isLocked true}}\n                                <div class="o-featured__is-locked">\n                                    <span>Locked</span>\n                                    <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                        <g>\n                                            <rect x="4" y="6.7" width="1" height="3"/>\n                                            <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                            h1h5h1V11.7z"/>\n                                        </g>\n                                    </svg>\n                                </div>\n                            {{/equal}}\n                        </div>\n                    </div>\n                </a>\n            {{/each}}\n            <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                <div class="c-contact-promo__text">\n                    <h3 class="c-contact-promo__headline">Hello</h3>\n                </div>\n                <div class="c-contact-promo__subheadline-wrapper">\n                    <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                    <div class="c-contact-promo__get-in-touch">\n                        <span>Get in touch</span>\n                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                             viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                            <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                        </svg>\n                    </div>\n                </div>\n            </a>\n        </div>\n    </div>\n'
             },
@@ -32038,7 +32038,7 @@
         "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
         "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
         "/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,
+        /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
@@ -32178,8 +32178,8 @@
             T = n(w),
             S = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
             M = n(S),
-            P = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes"),
-            E = n(P),
+            /*P = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes"),
+            E = n(P),*/
             A = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured"),
             L = n(A),
             C = function() {
@@ -32259,9 +32259,35 @@
                 disable: function(t, e, i) {
                     this.removeListeners(), this.components.fallingCubes.block.style.display = "none", this.wrapper.innerHTML = "", e()
                 },
-                initComponents: function() {
+				initComponents: function () {
+					var t = this;
+					//t.components.aboutIntro.animateIn();
+					var e = document.querySelector(".c-ui");
+					r.TweenLite.to(e, .4, {
+						opacity: 1
+					});
+					var i = (0, m.isTouchDevice)(),
+						n = {
+							scrollLeft: 0
+						};
+					setTimeout(function () {
+						i ? r.TweenLite.to(window, 1.2, {
+							scrollTo: {
+								x: .25 * (0, m.getDimensions)().width + 30,
+								autoKill: !1
+							},
+							ease: Power2.easeOut
+						}) : 0 == t.utils.scrollBar.smoothScrollBar.scrollLeft && r.TweenLite.to(n, 1.2, {
+							scrollLeft: .25 * (0, m.getDimensions)().width + 60,
+							ease: (0, a["default"])(.165, .84, .44, 1),
+							onUpdate: function () {
+								i || (t.utils.scrollBar.smoothScrollBar.scrollLeft = n.scrollLeft)
+							}
+						})
+					}, 1e3)
+				}/*function() {
                     var t = this;
-                    if (this.components.aboutIntro = new M["default"]({
+					if (this.components.aboutIntro = new M["default"]({
                             parent: this.wrapper,
                             block: "c-intro-about",
                             elements: ["headline"],
@@ -32340,7 +32366,7 @@
                     }), setTimeout(function() {
                         g["default"].initTemplate(t.wrapper, t.utils.scrollBar.scrollListener)
                     }, 500)
-                }
+                }*/
             };
         i["default"] = k
     }, {
@@ -32348,7 +32374,7 @@
         "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
         "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap/ScrollToPlugin": 9,
         "/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,
+        /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
