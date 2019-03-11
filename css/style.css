@@ -570,7 +570,7 @@ button {
  }
 }
 .o-featured__case {
- background-color:#fff;
+ background-color:#ffbfbf;
  height:100%;
  width:50vw;
  -ms-flex:1 0 auto;
@@ -594,7 +594,7 @@ button {
  }
 }
 .o-featured__case:nth-child(2n-1) {
- background-color:#000
+ background-color:#200000
 }
 .o-featured__case:nth-child(2n-1) {
  color:#fff
@@ -634,7 +634,7 @@ button {
  }
 }
 .o-featured__case:nth-child(2n-1) .o-featured__background:before,.o-featured__case:nth-child(2n-1) .o-featured__background:after {
- background-color:#000
+ background-color:#200000
 }
 .o-featured__background:before {
  left:10px;
@@ -685,7 +685,7 @@ button {
  fill:#000
 }
 .o-featured__case:nth-child(2n-1) .o-featured__lock-icon * {
- fill:#fff
+ fill:#ffbfbf
 }
 .o-featured__is-locked {
  display:-ms-flexbox;
@@ -756,7 +756,7 @@ button {
  transition-delay:450ms;
  transition-duration:0ms;
  background-size:150px 150px;
- background-image:linear-gradient(45deg, #000 25%, transparent 25%, transparent 50%, #000 50%, #000 75%, transparent 75%, transparent);
+ background-image:linear-gradient(45deg, #200000 25%, transparent 25%, transparent 50%, #200000 50%, #200000 75%, transparent 75%, transparent);
  animation:barberpole 2.5s linear infinite
 }
 [data-isdark="1"] .o-featured__media-background {
@@ -785,7 +785,7 @@ button {
  backface-visibility:hidden
 }
 .o-featured__case:nth-child(2n-1) .o-featured__media-overlay {
- background-color:#000
+ background-color:#200000
 }
 .o-featured__headline {
  font-weight:400;
@@ -814,7 +814,7 @@ button {
  background-color:#000
 }
 .o-featured__case:nth-child(2n-1) .o-featured__headline:after {
- background-color:#fff
+ background-color:#ffbfbf
 }
 @keyframes barberpole {
  from {
@@ -1633,7 +1633,7 @@ button {
  background-color:#000
 }
 .o-featured__case:nth-child(2n-1) .c-featured-case__headline:after {
- background-color:#fff
+ background-color:#ffbfbf
 }
 .c-intro-canvas {
  position:absolute;
@@ -2016,9 +2016,9 @@ button {
 }
 @media (min-width: 1100px) {
  .c-contact-promo:hover .c-contact-promo__headline {
-  background-image:linear-gradient(45deg, #fff 25%, #000 25%, #000 50%, #fff 50%, #fff 75%, #000 75%, #000);
+  background-image:linear-gradient(45deg, #ff9f9f 25%, #200000 25%, #200000 50%, #ff9f9f 50%, #ff9f9f 75%, #200000 75%, #200000);
   background-size:150px 150px;
-  animation:barberpole-body-case-hover 2.5s linear infinite;
+  animation:barberpole-body-case-hover 10.0s linear infinite;
   -webkit-text-fill-color:transparent;
   -webkit-background-clip:text;
   -webkit-text-stroke-width:0px
@@ -2163,9 +2163,9 @@ button {
 }
 .c-divider__arrows:before {
  content:'';
- background-image:linear-gradient(45deg, #fff 25%, #000 25%, #000 50%, #fff 50%, #fff 75%, #000 75%, #000);
+ background-image:linear-gradient(45deg, #ff9f9f 25%, #200000 25%, #200000 50%, #ff9f9f 50%, #ff9f9f 75%, #200000 75%, #200000);
  background-size:150px 150px;
- animation:barberpole-body-case 2.5s linear infinite;
+ animation:barberpole-body-case 10.0s linear infinite;
  width:100%;
  height:51vh;
  top:51%;
@@ -2175,9 +2175,9 @@ button {
 }
 .c-divider__arrows:after {
  content:'';
- background-image:linear-gradient(45deg, #fff 25%, #000 25%, #000 50%, #fff 50%, #fff 75%, #000 75%, #000);
+ background-image:linear-gradient(45deg, #ff9f9f 25%, #200000 25%, #200000 50%, #ff9f9f 50%, #ff9f9f 75%, #200000 75%, #200000);
  background-size:150px 150px;
- animation:barberpole-body-case 2.5s linear infinite;
+ animation:barberpole-body-case 10.0s linear infinite;
  width:100%;
  height:50vh;
  top:50%;
