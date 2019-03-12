@@ -1,0 +1,76 @@
+
+    <div class="o-landing__about">
+        <div class="c-intro-about">
+            <h2 class="c-intro-about__headline">{{{ about.intro_about_headline }}}</h2>
+        </div>
+    </div>
+
+    <div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">
+        <div class="o-landing__featured">
+            <div class="c-divider">
+                <span>Scroll for cases</span>
+                <div class="c-divider__arrows"></div>
+            </div>
+            <div class="o-featured"> 
+                {{#each cases}}
+                    <a class="o-featured__case js-navigate js-invert-cause" data-isDark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">
+                        <div class="o-featured__background"></div>
+                        <div class="o-featured__inner">
+                            <div class="o-featured__media">
+                                <div class="o-featured__media-background"></div>
+                                {{#equal this.mediaType "image"}}
+                                    <img sizes="
+                                    (min-width: 1000px) calc(50vw - 120px),
+                                    calc(100vw - 60px)" 
+                                    srcset="
+                                        {{ this.images.xsmall }} 520w,
+                                        {{ this.images.midsize }} 680w,
+                                        {{ this.images.afc_large }} 1020w,
+                                        {{ this.images.xlarge }} 1440w"
+                                    src="{{ this.images.xlarge }}" />
+                                {{/equal}}
+
+                                {{#equal this.mediaType "video"}}
+                                    <video src="{{ this.video }}" loop playsinline muted></video>
+                                {{/equal}}
+                                <div class="o-featured__media-overlay"></div>
+                            </div>
+                            <div class="o-featured__info">
+                                <div class="o-featured__info-name">
+                                    <h3 class="o-featured__headline">{{ this.headline }}</h3>
+                                    <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>
+                                </div>
+                                {{#equal this.isLocked true}}
+                                    <div class="o-featured__is-locked">
+                                        <span>Locked</span>
+                                        <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">
+                                            <g>
+                                                <rect x="4" y="6.7" width="1" height="3"/>
+                                                <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7
+                                               h1h5h1V11.7z"/>
+                                            </g>
+                                       </svg>
+                                    </div>
+                                {{/equal}}
+                            </div>
+                        </div>
+                    </a>
+                {{/each}}
+                <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">
+                    <div class="c-contact-promo__text">
+                        <h3 class="c-contact-promo__headline">Hello</h3>
+                    </div>
+                    <div class="c-contact-promo__subheadline-wrapper">
+                        <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>
+                        <div class="c-contact-promo__get-in-touch">
+                            <span>Get in touch</span>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">
+                                <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
