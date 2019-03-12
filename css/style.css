@@ -594,7 +594,7 @@ button {
  }
 }
 .o-featured__case:nth-child(2n-1) {
- background-color:#f000f0
+ background-color:#330000
 }
 .o-featured__case:nth-child(2n-1) {
  color:#fff
@@ -634,7 +634,7 @@ button {
  }
 }
 .o-featured__case:nth-child(2n-1) .o-featured__background:before,.o-featured__case:nth-child(2n-1) .o-featured__background:after {
- background-color:#f000f0
+ background-color:#330000
 }
 .o-featured__background:before {
  left:10px;
@@ -756,7 +756,7 @@ button {
  transition-delay:450ms;
  transition-duration:0ms;
  background-size:150px 150px;
- background-image:linear-gradient(45deg, #f000f0 25%, transparent 25%, transparent 50%, #f000f0 50%, #f000f0 75%, transparent 75%, transparent);
+ background-image:linear-gradient(45deg, #330000 25%, transparent 25%, transparent 50%, #330000 50%, #330000 75%, transparent 75%, transparent);
  animation:barberpole 2.5s linear infinite
 }
 [data-isdark="1"] .o-featured__media-background {
@@ -785,7 +785,7 @@ button {
  backface-visibility:hidden
 }
 .o-featured__case:nth-child(2n-1) .o-featured__media-overlay {
- background-color:#f000f0
+ background-color:#330000
 }
 .o-featured__headline {
  font-weight:400;
@@ -2016,7 +2016,7 @@ button {
 }
 @media (min-width: 1100px) {
  .c-contact-promo:hover .c-contact-promo__headline {
-  background-image:linear-gradient(45deg, #ff9f9f 25%, #f000f0 25%, #f000f0 50%, #ff9f9f 50%, #ff9f9f 75%, #f000f0 75%, #f000f0);
+  background-image:linear-gradient(45deg, #ff9f9f 25%, #330000 25%, #330000 50%, #ff9f9f 50%, #ff9f9f 75%, #330000 75%, #330000);
   background-size:150px 150px;
   animation:barberpole-body-case-hover 10.0s linear infinite;
   -webkit-text-fill-color:transparent;
@@ -2163,7 +2163,7 @@ button {
 }
 .c-divider__arrows:before {
  content:'';
- background-image:linear-gradient(45deg, #ff9f9f 25%, #f000f0 25%, #f000f0 50%, #ff9f9f 50%, #ff9f9f 75%, #f000f0 75%, #f000f0);
+ background-image:linear-gradient(45deg, #ff9f9f 25%, #330000 25%, #330000 50%, #ff9f9f 50%, #ff9f9f 75%, #330000 75%, #330000);
  background-size:150px 150px;
  animation:barberpole-body-case 10.0s linear infinite;
  width:100%;
@@ -2175,7 +2175,7 @@ button {
 }
 .c-divider__arrows:after {
  content:'';
- background-image:linear-gradient(45deg, #ff9f9f 25%, #f000f0 25%, #f000f0 50%, #ff9f9f 50%, #ff9f9f 75%, #f000f0 75%, #f000f0);
+ background-image:linear-gradient(45deg, #ff9f9f 25%, #330000 25%, #330000 50%, #ff9f9f 50%, #ff9f9f 75%, #330000 75%, #330000);
  background-size:150px 150px;
  animation:barberpole-body-case 10.0s linear infinite;
  width:100%;
