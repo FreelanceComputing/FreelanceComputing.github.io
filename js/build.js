@@ -32238,7 +32238,7 @@
                                             name: t.slug,
                                             url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug
                                         }
-                                    }), c["default"].addTemplate(C(), n.data, r), n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new _["default"]({
+                                    }), /*c["default"].addTemplate(C(), n.data, r),*/ n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new _["default"]({
                                         container: n.wrapper.querySelector(".smooth-scrollbar"),
                                         damping: .35
                                     })), n.initComponents(), e()
