@@ -30263,7 +30263,7 @@
                         n = (0, a.nodesAsArray)(t.querySelectorAll(".js-invert-cause"));
                     this.scrollListener && this.scrollListener.removeListener(this.scrollListenerId), e && (this.scrollListener = e), this.causes = [], n.forEach(function(t) {
                         var e = t.getAttribute("data-isdark");
-                        0 != e  || i.addCause(t) //&& "true" != e
+                        0 != e && "true" != e || i.addCause(t)
                     }), this.inverts.forEach(function(t) {
                         t.inverted = [], t.elem.classList.remove("invert"), i.causes.forEach(function(e) {
                             t.inverted.push(!1)
