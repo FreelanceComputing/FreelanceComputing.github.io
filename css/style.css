@@ -1420,7 +1420,7 @@ button {
  display:none;
  height:30px;
  top:22px;
- left:30px;
+ right:30px;
  position:absolute;
  width:30px;
  z-index:101
@@ -1473,7 +1473,7 @@ button {
 .c-ui__nav {
  position:absolute;
  top:60px;
- left:60px;
+ right:60px;
  text-transform:uppercase
 }
 @media (max-width: 800px) {
