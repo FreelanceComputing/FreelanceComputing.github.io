@@ -2010,7 +2010,7 @@ button {
  }
 }
 .c-contact-promo__headline {
- font-size:24vw;
+ font-size:22vw;
  font-weight:400;
  color:#fff
 }
@@ -2049,7 +2049,7 @@ button {
 }
 @media (max-width: 640px) {
  .c-contact-promo__headline {
-  font-size:48vw
+  font-size:40vw
  }
 }
 @keyframes stripes {
