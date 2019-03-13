@@ -570,7 +570,7 @@ button {
  }
 }
 .o-featured__case {
- background-color:#ffbfbf;
+ background-color:#fff;
  height:100%;
  width:50vw;
  -ms-flex:1 0 auto;
@@ -622,7 +622,7 @@ button {
 }
 .o-featured__background:before,.o-featured__background:after {
  content:'';
- background-color:#fff;
+ background-color:#ffbfbf;
  height:100%;
  display:block;
  width:75%;
