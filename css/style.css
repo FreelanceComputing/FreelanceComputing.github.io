@@ -593,10 +593,10 @@ button {
   width:60vw
  }
 }
-.o-featured__case:nth-child(2n-1) {
+.o-featured__case:nth-child(2n) {
  background-color:#330000
 }
-.o-featured__case:nth-child(2n-1) {
+.o-featured__case:nth-child(2n) {
  color:#fff
 }
 .o-featured__case--active {
@@ -633,7 +633,7 @@ button {
   width:calc(100% - 10px)
  }
 }
-.o-featured__case:nth-child(2n-1) .o-featured__background:before,.o-featured__case:nth-child(2n-1) .o-featured__background:after {
+.o-featured__case:nth-child(2n) .o-featured__background:before,.o-featured__case:nth-child(2n) .o-featured__background:after {
  background-color:#330000
 }
 .o-featured__background:before {
