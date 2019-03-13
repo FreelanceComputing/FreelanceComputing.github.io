@@ -684,7 +684,7 @@ button {
 .o-featured__lock-icon * {
  fill:#000
 }
-.o-featured__case:nth-child(2n-1) .o-featured__lock-icon * {
+.o-featured__case:nth-child(2n) .o-featured__lock-icon * {
  fill:#ffbfbf
 }
 .o-featured__is-locked {
@@ -784,7 +784,7 @@ button {
  -webkit-backface-visibility:hidden;
  backface-visibility:hidden
 }
-.o-featured__case:nth-child(2n-1) .o-featured__media-overlay {
+.o-featured__case:nth-child(2n) .o-featured__media-overlay {
  background-color:#330000
 }
 .o-featured__headline {
@@ -813,7 +813,7 @@ button {
  height:1px;
  background-color:#000
 }
-.o-featured__case:nth-child(2n-1) .o-featured__headline:after {
+.o-featured__case:nth-child(2n) .o-featured__headline:after {
  background-color:#ffbfbf
 }
 @keyframes barberpole {
