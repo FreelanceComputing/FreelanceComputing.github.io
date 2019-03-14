@@ -40,6 +40,7 @@ $(document).ready(function () {
 
 	$('body').on('mousewheel DOMMouseScroll', function (e) {
 		if (typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
+			invertir();
 			/*if (e.originalEvent.detail > 0) {
 				console.log('Down');
 			} else if (e.originalEvent.detail < 0) {
