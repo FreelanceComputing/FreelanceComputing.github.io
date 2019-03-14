@@ -30,7 +30,7 @@ $(document).ready(function () {
 		var views = [];
 		var cases = $('[data-isDark="0"]');
 		for (var i = 0; i < cases.length; i++) {
-			var caseBackgrd = cases.eq(i).children(".o-featured__background").eq(0);
+			var caseBackgrd = cases.eq(i).children(".o-featured__background")[0];
 			var rect = caseBackgrd.getBoundingClientRect();
 			var inVp = (rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth));
 			views.push(inVp);
