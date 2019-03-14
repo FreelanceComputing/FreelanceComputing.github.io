@@ -5,8 +5,9 @@ $(document).ready(function () {
     }
 
     $(function () {
-        var w = caseWidth();
-        $(".c-ui__logo").html("Case width: <b>" + w.toString() + "</b>px.");
+        var w = caseWidth().toString();
+        var t = "Case width: <b>" + w + "</b>px.";
+        $(".c-ui__logo").html(t);
     });
 
 	$(".o-featured__case").hover(function () {
