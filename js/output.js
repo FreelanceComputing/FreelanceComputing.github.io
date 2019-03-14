@@ -38,14 +38,16 @@ $(document).ready(function () {
 		for (var i = 0; i < cases.length; i++) {
 			var caseBackgrd = cases.eq(i).children(".o-featured__background")[0];
 			var rect = caseBackgrd.getBoundingClientRect();
-			var inVp = (rect.left >= 0 && (rect.left <= (maxLft || maxLft_)) && (rect.right <= (maxRt || maxRt_)));
-			views.push(inVp);
+			var leftInVp = (rect.left >= 0 && rect.left <= (maxLft || maxLft_));
+			var rightInVp = (rect.right >= 0 && (rect.right <= (maxRt || maxRt_)));
+			views.push(leftInVp || rightInVp);
 		}
 
 		var cont = $('[data-isdark="true"]')[0];
 		var cRect = cont.getBoundingClientRect();
-		var cInVp = (cRect.left >= 0 && (cRect.left <= (maxLft || maxLft_)) && (cRect.right <= (maxRt || maxRt_)));
-		views.push(cInVp);
+		var cLeftInVp = (cRect.left >= 0 && cRect.left <= (maxLft || maxLft_));
+		var cRightInVp = (cRect.right >= 0 && (cRect.right <= (maxRt || maxRt_)));;
+		views.push(cLeftInVp || cRightInVp);
 
 		return views;
 	}
