@@ -28,13 +28,20 @@ $(document).ready(function () {
 
 	function inViewM() {
 		var views = [];
-		var cases = $('[data-isDark="0"]');
+		var cases = $('[data-isDark="1"]');
 		for (var i = 0; i < cases.length; i++) {
 			var caseBackgrd = cases.eq(i).children(".o-featured__background")[0];
 			var rect = caseBackgrd.getBoundingClientRect();
 			var inVp = (rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth));
 			views.push(inVp);
 		}
+
+		var cont = $('[data-isdark="true"]')[0];
+		//var caseBackgrd = cases.eq(i).children(".o-featured__background")[0];
+		var cRect = cont.getBoundingClientRect();
+		var cInVp = (cRect.bottom >= 0 && cRect.right >= 0 && cRect.top <= (window.innerHeight || document.documentElement.clientHeight) && cRect.left <= (window.innerWidth || document.documentElement.clientWidth));
+		views.push(cInVp);
+
 		return views;
 
 		//var rect = el.getBoundingClientRect();
@@ -51,7 +58,7 @@ $(document).ready(function () {
 
 	$(".o-featured").on('touchmove', function (event) {
 		var views = inViewM();
-		if (views.indexOf(true) < 0) {
+		if (views.indexOf(true) > -1) {
 			$(".c-ui__burger.js-invert").addClass("invert");
 		}
 		else {
