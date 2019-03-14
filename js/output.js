@@ -38,7 +38,7 @@ $(document).ready(function () {
 		return views;
 	}
 
-	$(".o-landing__featured").on('ontouchmove', function (event) {
+	$(".o-landing__featured").on('touchmove', function (event) {
 		var views = inViewM();
 		if (views.indexOf(true) > -1) {
 			$(".c-ui__burger.js-invert").addClass("invert");
