@@ -11,14 +11,14 @@ $(document).ready(function () {
         return inView;
     }
 
-    $(function () {
-        if (inView()) {
-            $(".c-ui__logo").html("Aye");
-        }
-        else {
-            $(".c-ui__logo").html("Nay");
-        }
-    });
+    //$(function () {
+    //    if (inView()) {
+    //        $(".c-ui__logo").html("Aye");
+    //    }
+    //    else {
+    //        $(".c-ui__logo").html("Nay");
+    //    }
+    //});
 
 	$(".o-featured__case").hover(function () {
 	    var dark = $(this).attr("data-isDark");
