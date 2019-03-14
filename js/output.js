@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
-    $(function caseWidth() {
+    function caseWidth() {
         return $('[data-name="hnm"]').width();
-    });
+    }
 
     $(function () {
-        $(".c-ui__logo").html("Case width: <b>" + caseWidth() + "</b>px.");
+        $(".c-ui__logo").html("Case width: <b>" + caseWidth + "</b>px.");
     });
 
 	$(".o-featured__case").hover(function () {
