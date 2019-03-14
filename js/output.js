@@ -8,24 +8,16 @@ $(document).ready(function () {
 		{
 			var caseBackgrd = cases.eq(i).children(".o-featured__background").eq(0);
 			var caseWidth = caseBackgrd.width();
-			var caseLeftEdgePos = caseBackgrd.offset().left;
+			//var caseLeftEdgePos = caseBackgrd.offset().left;
+			var caseRightEdgePos = caseBackgrd.offset().left - caseWidth;
 			var maxPos = $(window).width() - desktopOffset;
 			var minPos = maxPos - caseWidth;
-			views.push((caseLeftEdgePos >= minPos) && (caseLeftEdgePos <= maxPos));
+			views.push((caseRightEdgePos >= minPos) && (caseRightEdgePos <= maxPos));
 		}
 		return views;
     }
 
-	/*function invertir() {
-		var le = inView().length;
-        if (inView()) {
-            $(".c-ui__logo").html("Aye");
-        }
-        else {
-            $(".c-ui__logo").html("Nay");
-        }
-    }
-
+	/*
 	$(".o-featured__case").hover(function () {
 	    var dark = $(this).attr("data-isDark");
 	    if (dark == "0") {
