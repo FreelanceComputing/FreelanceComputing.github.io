@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 	function inView() {
+		var desktopOffset = 60;
 		var views = [];
 		var cases = $('[data-isDark="0"]');
 		for (var i = 0; i < cases.length; i++)
@@ -8,7 +9,7 @@ $(document).ready(function () {
 			var caseBackgrd = cases.eq(i).children(".o-featured__background").eq(0);
 			var caseWidth = caseBackgrd.width();
 			var caseRightEdgePos = caseBackgrd.offset().left + caseWidth;
-			var maxPos = $(window).width();
+			var maxPos = $(window).width() - desktopOffset;
 			var minPos = maxPos - caseWidth;
 			views.push((caseRightEdgePos >= minPos) && (caseRightEdgePos <= maxPos));
 		}
@@ -37,7 +38,7 @@ $(document).ready(function () {
 		return views;
 	}
 
-	$(window).on('swipe', function (event) {
+	$(".o-landing__featured").on('ontouchmove', function (event) {
 		var views = inViewM();
 		if (views.indexOf(true) > -1) {
 			$(".c-ui__burger.js-invert").addClass("invert");
