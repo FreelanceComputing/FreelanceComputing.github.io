@@ -55,6 +55,17 @@ $(document).ready(function () {
 			}*/
 		}
 	});
+
+	$(window).on('wheel', function (event) {
+		invertir();
+		// deltaY obviously records vertical scroll, deltaX and deltaZ exist too
+		if (event.originalEvent.deltaY < 0) {
+			// wheeled up
+		}
+		else {
+			// wheeled down
+		}
+	});
 });
 
 
