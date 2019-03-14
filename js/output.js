@@ -27,33 +27,27 @@ $(document).ready(function () {
 	});
 
 	function inViewM() {
+		var mOffset = 0.1 * window.innerWidth;
+		var mOffset_ = 0.1 * document.documentElement.clientWidth;
+		var maxRt = window.innerWidth - mOffset;
+		var maxLft = window.innerWidth - mOffset - mOffset;
+		var maxRt_ = document.documentElement.clientWidth - mOffset_;
+		var maxLft_ = document.documentElement.clientWidth - mOffset_ - mOffset_;
 		var views = [];
 		var cases = $('[data-isDark="1"]');
 		for (var i = 0; i < cases.length; i++) {
 			var caseBackgrd = cases.eq(i).children(".o-featured__background")[0];
 			var rect = caseBackgrd.getBoundingClientRect();
-			var inVp = (rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth));
+			var inVp = (rect.left >= 0 && (rect.left <= (maxLft || maxLft_)) && (rect.right <= (maxRt || maxRt_)));
 			views.push(inVp);
 		}
 
 		var cont = $('[data-isdark="true"]')[0];
-		//var caseBackgrd = cases.eq(i).children(".o-featured__background")[0];
 		var cRect = cont.getBoundingClientRect();
-		var cInVp = (cRect.bottom >= 0 && cRect.right >= 0 && cRect.top <= (window.innerHeight || document.documentElement.clientHeight) && cRect.left <= (window.innerWidth || document.documentElement.clientWidth));
+		var cInVp = (cRect.left >= 0 && (cRect.left <= (maxLft || maxLft_)) && (cRect.right <= (maxRt || maxRt_)));
 		views.push(cInVp);
 
 		return views;
-
-		//var rect = el.getBoundingClientRect();
-
-		//return (
-		//	rect.top >= 0 &&
-		//	rect.left >= 0 &&
-		//	rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-		//	rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-		//);
-
-		//return (rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth));
 	}
 
 	$(".o-featured").on('touchmove', function (event) {
