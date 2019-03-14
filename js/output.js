@@ -1,13 +1,23 @@
 $(document).ready(function () {
 
-    function caseWidth() {
-        return $('[data-name="hnm"]').width();
+    function inView() {
+        var desktopOffset = 60;
+        var caseBackgrd = $('[data-name="hnm"]').children(".o-featured__background").eq(0);
+        var caseWidth = caseBackgrd.width();
+        var caseLeftEdgePos = caseBackgrd.offset().left;
+        var maxPos = $(window).width() - desktopOffset;
+        var minPos = maxPos - caseWidth;
+        var inView = ((caseLeftEdgePos >= minPos) && (caseLeftEdgePos <= maxPos));
+        return inView;
     }
 
     $(function () {
-        var w = caseWidth().toString();
-        var t = "Case width: <b>" + w + "</b>px.";
-        $(".c-ui__logo").html(t);
+        if (inView()) {
+            $(".c-ui__logo").html("Aye");
+        }
+        else {
+            $(".c-ui__logo").html("Nay");
+        }
     });
 
 	$(".o-featured__case").hover(function () {
