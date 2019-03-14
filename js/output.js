@@ -4,7 +4,7 @@ $(document).ready(function () {
 		var views = [];
         var desktopOffset = 60;
 		var cases = $('[data-isDark="0"]');
-		for (var i = 0; i < caseBackgrd.length; i++)
+		for (var i = 0; i < cases.length; i++)
 		{
 			var caseBackgrd = cases.eq(i).children(".o-featured__background").eq(0);
 			var caseWidth = caseBackgrd.width();
