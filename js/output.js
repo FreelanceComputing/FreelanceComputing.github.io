@@ -16,7 +16,7 @@ $(document).ready(function () {
 		return views;
     }
 
-	function invertir() {
+	/*function invertir() {
 		var le = inView().length;
         if (inView()) {
             $(".c-ui__logo").html("Aye");
@@ -42,9 +42,15 @@ $(document).ready(function () {
 	    else {
 	        $(".c-ui__nav-items.js-invert").removeClass("invert");
 	    }
-		});
+		});*/
 
 	$(window).on('wheel', function (event) {
-		invertir();
+		var views = inView();
+		if (views.indexOf(true) > -1) {
+			$(".c-ui__logo").html("Aye");
+		}
+		else {
+			$(".c-ui__logo").html("Nay");
+		}
 	});
 });
