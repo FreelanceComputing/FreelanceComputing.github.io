@@ -5,7 +5,7 @@ $(document).ready(function () {
     }
 
     $(function () {
-        $(".c-ui__logo").html("Case width: <b>" + caseWidth + "</b>px.");
+        $(".c-ui__logo").html("Case width: <b>" + caseWidth() + "</b>px.");
     });
 
 	$(".o-featured__case").hover(function () {
