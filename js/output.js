@@ -1,17 +1,23 @@
 $(document).ready(function () {
 
-    function inView() {
+	function inView() {
+		var views = [];
         var desktopOffset = 60;
-        var caseBackgrd = $('[data-name="hnm"]').children(".o-featured__background").eq(0);
-        var caseWidth = caseBackgrd.width();
-        var caseLeftEdgePos = caseBackgrd.offset().left;
-        var maxPos = $(window).width() - desktopOffset;
-        var minPos = maxPos - caseWidth;
-        var inView = ((caseLeftEdgePos >= minPos) && (caseLeftEdgePos <= maxPos));
-        return inView;
+		var cases = $('[data-isDark="0"]');
+		for (var i = 0; i < caseBackgrd.length; i++)
+		{
+			var caseBackgrd = cases.eq(i).children(".o-featured__background").eq(0);
+			var caseWidth = caseBackgrd.width();
+			var caseLeftEdgePos = caseBackgrd.offset().left;
+			var maxPos = $(window).width() - desktopOffset;
+			var minPos = maxPos - caseWidth;
+			views.push((caseLeftEdgePos >= minPos) && (caseLeftEdgePos <= maxPos));
+		}
+		return views;
     }
 
-    function invertir() {
+	function invertir() {
+		var le = inView().length;
         if (inView()) {
             $(".c-ui__logo").html("Aye");
         }
