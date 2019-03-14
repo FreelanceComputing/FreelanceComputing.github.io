@@ -1,14 +1,15 @@
 $(document).ready(function () {
-	$(function () {
-	    var element = $(".o-featured__case");
-	    if (element.attr("data-name") == "hnm") {
-	        var caseOffset = element.offset();
-	        var caseLeft = caseOffset.left - $(window).scrollLeft();
-	        var caseWidth = element.width();
-	        $(window).scroll(function () { //when window is scrolled
-	            $(".c-ui__logo").html("left index: <b>" + caseLeft + "</b>px, case width: <b>" + caseWidth + "</b>px.");
-	        });
-	    }
+
+	$(function caseLeft() {
+	    return $('[data-name="hnm"]').offset().left - $(window).scrollLeft();
+	});
+
+	$(function caseWidth() {
+	    return $('[data-name="hnm"]').width();
+	});
+
+	$(window).scroll(function () { //when window is scrolled
+	    $(".c-ui__logo").html("left index: <b>" + caseLeft() + "</b>px, case width: <b>" + caseWidth() + "</b>px.");
 	});
 
 	/*$(".o-featured__case").hover(function () {
