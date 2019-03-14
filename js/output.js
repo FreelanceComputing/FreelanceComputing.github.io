@@ -9,7 +9,7 @@ $(document).ready(function () {
 			var caseBackgrd = cases.eq(i).children(".o-featured__background").eq(0);
 			var caseWidth = caseBackgrd.width();
 			//var caseLeftEdgePos = caseBackgrd.offset().left;
-			var caseRightEdgePos = caseBackgrd.offset().left - caseWidth;
+			var caseRightEdgePos = caseBackgrd.offset().left + caseWidth;
 			var maxPos = $(window).width() - desktopOffset;
 			var minPos = maxPos - caseWidth;
 			views.push((caseRightEdgePos >= minPos) && (caseRightEdgePos <= maxPos));
