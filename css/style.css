@@ -740,8 +740,9 @@ button {
   transition-duration:0ms;
   transition-delay:0ms;
   opacity:1;
-  -webkit-clip-path:inset(2px 2px 2px 2px);
-  clip-path:inset(2px 2px 2px 2px)
+  /*-webkit-clip-path:inset(2px 2px 2px 2px);
+  clip-path:inset(2px 2px 2px 2px);*/
+  padding-bottom: 4px;
  }
 }
 .o-featured__case.clicked .o-featured__media img/*,.o-featured__case.clicked .o-featured__media video */{
