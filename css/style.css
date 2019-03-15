@@ -740,7 +740,7 @@ button {
   clip-path:inset(2px 2px 2px 2px)
  }
 }
-.o-featured__case.clicked .o-featured__media img,.o-featured__case.clicked .o-featured__media video {
+.o-featured__case.clicked .o-featured__media img/*,.o-featured__case.clicked .o-featured__media video */{
  -webkit-clip-path:inset(0 0 0 0);
  clip-path:inset(0 0 0 0);
  transition-delay:0ms
