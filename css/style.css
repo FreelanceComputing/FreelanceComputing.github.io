@@ -734,10 +734,10 @@ button {
  clip-path:inset(0 0 0 0)
 }
 @media (min-width: 1100px) {
- .o-featured__case:hover .o-featured__media img,.o-featured__case:hover .o-featured__media video {
+ .o-featured__case:hover .o-featured__media img/*,.o-featured__case:hover .o-featured__media video*/ {
   transition-delay:0ms;
-  -webkit-clip-path:inset(20px 20px 20px 20px);
-  clip-path:inset(20px 20px 20px 20px)
+  -webkit-clip-path:inset(2px 2px 2px 2px);
+  clip-path:inset(2px 2px 2px 2px)
  }
 }
 .o-featured__case.clicked .o-featured__media img,.o-featured__case.clicked .o-featured__media video {
