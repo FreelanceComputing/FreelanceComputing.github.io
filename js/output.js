@@ -14,11 +14,17 @@ $(document).ready(function () {
 			views.push((caseRightEdgePos >= minPos) && (caseRightEdgePos <= maxPos));
 		}
 		return views;
-    }
+	}
+
+	function contInView() {
+		var desktopOffset = 60;
+		var cont = $('[data-isdark="true"]').eq(0);
+		return cont.offset().left < ($(window).width() - desktopOffset);
+	}
 
 	$(window).on('wheel', function (event) {
 		var views = inView();
-		if (views.indexOf(true) > -1) {
+		if (views.indexOf(true) > -1 || contInView()) {
 			$(".c-ui__nav-items.js-invert").addClass("invert");
 			$(".c-ui__burger.js-invert").addClass("invert");
 		}
