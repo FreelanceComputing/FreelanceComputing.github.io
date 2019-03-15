@@ -742,7 +742,7 @@ button {
   opacity:1;
   padding-bottom: 4px;
  }
- [data-isdark="1"] .o-featured__media-background {
+ [data-isdark="1"] .o-featured__media img {
  background-image:linear-gradient(45deg, #fff 25%, #ffbfbf 25%, transparent 50%, #fff 50%, #fff 75%, #ffbfbf 75%, transparent)
 }
 }
