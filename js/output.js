@@ -27,26 +27,25 @@ $(document).ready(function () {
 	});
 
 	function inViewM() {
-		var mOffset = 0.1 * window.innerWidth;
-		var mOffset_ = 0.1 * document.documentElement.clientWidth;
-		var maxRt = window.innerWidth - mOffset;
-		var maxLft = window.innerWidth - mOffset - mOffset;
-		var maxRt_ = document.documentElement.clientWidth - mOffset_;
-		var maxLft_ = document.documentElement.clientWidth - mOffset_ - mOffset_;
+		var curW = window.innerWidth || document.documentElement.clientWidth;
+		var mOffset = 0.1 * curW;		
+		var maxRt = window.innerWidth;
+		var minRt = window.innerWidth - mOffset - mOffset;
+		var maxLft = document.documentElement.clientWidth - mOffset_;
 		var views = [];
 		var cases = $('[data-isDark="1"]');
 		for (var i = 0; i < cases.length; i++) {
 			var caseBackgrd = cases.eq(i).children(".o-featured__background")[0];
 			var rect = caseBackgrd.getBoundingClientRect();
-			var leftInVp = (rect.left >= 0 && rect.left <= (maxLft || maxLft_));
-			var rightInVp = (rect.right >= 0 && (rect.right <= (maxRt || maxRt_)));
+			var leftInVp = (rect.left >= 0 && rect.left <= maxLft);
+			var rightInVp = (rect.right > minRt && rect.right <= maxRt);
 			views.push(leftInVp || rightInVp);
 		}
 
 		var cont = $('[data-isdark="true"]')[0];
 		var cRect = cont.getBoundingClientRect();
-		var cLeftInVp = (cRect.left >= 0 && cRect.left <= (maxLft || maxLft_));
-		var cRightInVp = (cRect.right >= 0 && (cRect.right <= (maxRt || maxRt_)));;
+		var cLeftInVp = (cRect.left >= 0 && cRect.left <= maxLft );
+		var cRightInVp = (cRect.right > minRt && cRect.right <= maxRt);
 		views.push(cLeftInVp || cRightInVp);
 
 		return views;
