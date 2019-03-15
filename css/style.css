@@ -742,6 +742,9 @@ button {
   opacity:1;
   padding-bottom: 4px;
  }
+ [data-isdark="1"] .o-featured__media-background {
+ background-image:linear-gradient(45deg, #fff 25%, #ffbfbf 25%, transparent 50%, #fff 50%, #fff 75%, #ffbfbf 75%, transparent)
+}
 }
 .o-featured__case.clicked .o-featured__media img/*,.o-featured__case.clicked .o-featured__media video */{
  -webkit-clip-path:inset(0 0 0 0);
