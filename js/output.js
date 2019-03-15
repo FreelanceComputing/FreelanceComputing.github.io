@@ -31,7 +31,7 @@ $(document).ready(function () {
 		var mOffset = 0.1 * curW;		
 		var maxRt = window.innerWidth;
 		var minRt = window.innerWidth - mOffset - mOffset;
-		var maxLft = document.documentElement.clientWidth - mOffset_;
+		var maxLft = document.documentElement.clientWidth - mOffset;
 		var views = [];
 		var cases = $('[data-isDark="1"]');
 		for (var i = 0; i < cases.length; i++) {
