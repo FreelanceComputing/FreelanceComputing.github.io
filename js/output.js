@@ -20,9 +20,11 @@ $(document).ready(function () {
 		var views = inView();
 		if (views.indexOf(true) > -1) {
 			$(".c-ui__nav-items.js-invert").addClass("invert");
+			$(".c-ui__burger.js-invert").addClass("invert");
 		}
 		else {
 			$(".c-ui__nav-items.js-invert").removeClass("invert");
+			$(".c-ui__burger.js-invert").removeClass("invert");
 		}
 	});
 
@@ -55,9 +57,11 @@ $(document).ready(function () {
 		var views = inViewM();
 		if (views.indexOf(true) > -1) {
 			$(".c-ui__burger.js-invert").addClass("invert");
+			$(".c-ui__nav-items.js-invert").addClass("invert");
 		}
 		else {
 			$(".c-ui__burger.js-invert").removeClass("invert");
+			$(".c-ui__nav-items.js-invert").removeClass("invert");
 		}
 	});
 });
