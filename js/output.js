@@ -34,18 +34,6 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".scrollbar-track").on('mouseup mouseleave', function (event) {
-		var views = inView();
-		if (views.indexOf(true) > -1 || contInView()) {
-			$(".c-ui__nav-items.js-invert").addClass("invert");
-			$(".c-ui__burger.js-invert").addClass("invert");
-		}
-		else {
-			$(".c-ui__nav-items.js-invert").removeClass("invert");
-			$(".c-ui__burger.js-invert").removeClass("invert");
-		}
-	});
-
 	function inViewM() {
 		var curW = window.innerWidth || document.documentElement.clientWidth;
 		var mOffset = 0.1 * curW;		
@@ -82,4 +70,24 @@ $(document).ready(function () {
 			$(".c-ui__nav-items.js-invert").removeClass("invert");
 		}
 	});
+
+	if (window.navigator.userAgent.indexOf("Trident") > -1) {
+		var timer = setInterval(function () {
+			if ($(".scrollbar-thumb-x").length > 0) {
+				clearInterval(timer);
+				$(".scrollbar-track-x").css('height', '20px');
+				$(".scrollbar-track-x").on('mousemove mouseover mouseenter mouseleave', function () {
+					var views = inView();
+					if (views.indexOf(true) > -1 || contInView()) {
+						$(".c-ui__nav-items.js-invert").addClass("invert");
+						$(".c-ui__burger.js-invert").addClass("invert");
+					}
+					else {
+						$(".c-ui__nav-items.js-invert").removeClass("invert");
+						$(".c-ui__burger.js-invert").removeClass("invert");
+					}
+				});
+			}
+		}, 200);
+	}
 });
