@@ -823,7 +823,7 @@ button {
  display:block;
  width:100%;
  height:1px;
- background-color:#000
+ background-color:#fff
 }
 .o-featured__case:nth-child(2n) .o-featured__headline:after {
  background-color:#ffbfbf
