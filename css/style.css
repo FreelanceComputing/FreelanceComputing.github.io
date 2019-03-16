@@ -2329,7 +2329,7 @@ button {
  background:transparent
 }
 .smooth-scrollbar .scrollbar-track.scrollbar-track-x {
- height:8px
+ height:10px
 }
 .smooth-scrollbar .scrollbar-track .scrollbar-thumb {
  background:rgba(0,0,0,0.3);
