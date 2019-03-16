@@ -34,7 +34,7 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".scrollbar-thumb").on('mouseup mouseleave', function (event) {
+	$(".scrollbar-track").on('mouseup mouseleave', function (event) {
 		var views = inView();
 		if (views.indexOf(true) > -1 || contInView()) {
 			$(".c-ui__nav-items.js-invert").addClass("invert");
