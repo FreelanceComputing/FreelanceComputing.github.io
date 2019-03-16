@@ -34,6 +34,18 @@ $(document).ready(function () {
 		}
 	});
 
+	$(".scrollbar-thumb").on('mouseup mouseleave', function (event) {
+		var views = inView();
+		if (views.indexOf(true) > -1 || contInView()) {
+			$(".c-ui__nav-items.js-invert").addClass("invert");
+			$(".c-ui__burger.js-invert").addClass("invert");
+		}
+		else {
+			$(".c-ui__nav-items.js-invert").removeClass("invert");
+			$(".c-ui__burger.js-invert").removeClass("invert");
+		}
+	});
+
 	function inViewM() {
 		var curW = window.innerWidth || document.documentElement.clientWidth;
 		var mOffset = 0.1 * curW;		
