@@ -1455,7 +1455,7 @@ button {
  transition:top 100ms linear 150ms, transform 150ms linear 0ms
 }
 .c-ui--open .c-ui__burger span,.c-ui__burger.invert span {
- background-color:#fff
+ background-color:#330000
 }
 .c-ui--open .c-ui__burger span {
  transition:top 100ms linear 0ms, transform 150ms linear 100ms
