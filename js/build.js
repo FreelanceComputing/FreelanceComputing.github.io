@@ -29765,14 +29765,14 @@
                 },
                 getContact: function(t) {
                     var e = this;
-                    this.cache.contact ? t.onSuccess(this.cache.contact) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.contact, {}, {
+                    /*this.cache.contact ? t.onSuccess(this.cache.contact) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.contact, {}, {
                         onSuccess: function(i) {
                             e.cache.contact = i, e.loader.onLoaded(), t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
                         json: !0
-                    }))
+                    }))*/
                 },
                 getCase: function(t, e) {
                     var i = this;
@@ -32109,7 +32109,7 @@
                 },
                 enable: function(t, e, i) {
                     var n = this;
-                    c["default"].getContact({
+                    c["default"].getContact(/*{
                         onSuccess: function(t) {
                             t[0].yoast_meta && (0, g.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
@@ -32123,7 +32123,7 @@
                                 damping: .3
                             })), v["default"].initTemplate(n.wrapper, !1), e()
                         }
-                    })
+                    }*/)
                 },
                 disable: function(t, e, i) {
                     this.wrapper.innerHTML = "", e()
