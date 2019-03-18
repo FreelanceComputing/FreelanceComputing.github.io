@@ -36,7 +36,7 @@ $(document).ready(function () {
 
 	function inViewM() {
 		var curW = window.innerWidth || document.documentElement.clientWidth;
-		var mOffset = 0.1 * curW;		
+		var mOffset = 28; //0.1 * curW;		
 		var maxRt = window.innerWidth;
 		var minRt = window.innerWidth - mOffset - mOffset;
 		var maxLft = document.documentElement.clientWidth - mOffset;
