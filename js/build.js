@@ -29717,7 +29717,7 @@
                     cases: "/case",
                     casePage: "/pages?slug=cases",
                     about: "/pages?slug=about",
-                    contact: "/pages?slug=contact",
+                    /*contact: "/pages?slug=contact",*/
                     "case": function(t) {
                         return "/case?slug=" + t
                     }
@@ -29763,7 +29763,7 @@
                         json: !0
                     }))
                 },
-                getContact: function(t) {
+                /*getContact: function(t) {
                     var e = this;
                     this.cache.contact ? t.onSuccess(this.cache.contact) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.contact, {}, {
                         onSuccess: function(i) {
@@ -29773,7 +29773,7 @@
                         processData: !1,
                         json: !0
                     }))
-                },
+                },*/
                 getCase: function(t, e) {
                     var i = this;
                     if (this.cache["case"][t.id]) e.onSuccess(this.cache["case"][t.id]);
