@@ -29563,6 +29563,7 @@
                 function e(t, i) {
                     r(this, e);
                     var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
+                    n.setEventListeners();
                     //return n.isPresent ? (n.isOpen = !1, /*n.navItems = (0, c.mapElems)(n.elements.nav_item_anchor, n.getNavItemAnchor.bind(n)),*/ n.setEventListeners(), n) : s(n)
                 }
                 return o(e, t), a(e, [{
