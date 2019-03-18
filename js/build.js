@@ -29568,11 +29568,11 @@
                 return o(e, t), a(e, [{
                     key: "getNavItemAnchor",
                     value: function(t) {
-                        return {
+                        /*return {
                             elem: t,
                             mobileElem: this.elements.off_canvas_nav_items.querySelector(".js-mobile-nav-item-" + t.getAttribute("data-name")),
                             name: t.getAttribute("data-name")
-                        }
+                        }*/
                     }
                 }, {
                     key: "setEventListeners",
@@ -29592,9 +29592,9 @@
                 }, {
                     key: "getItemBydName",
                     value: function(t) {
-                        return this.navItems.filter(function(e) {
+                        /*return this.navItems.filter(function(e) {
                             return e.name == t
-                        })[0]
+                        })[0]*/
                     }
                 }, {
                     key: "animateIn",
