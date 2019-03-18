@@ -1185,19 +1185,20 @@ button {
 }
 .o-contact__headline {
  color:#fff;
- font-size:18vw;
+ font-size:17vw;
  font-weight:400;
  white-space:nowrap;
  line-height:0.85;
  position:absolute;
- top:50%;
+ top:45%;
  -ms-transform:translateY(-50%);
  transform:translateY(-50%);
  margin-top:-30px
 }
 @media (max-width: 640px) {
  .o-contact__headline {
-  font-size:17vw;
+  font-size:16vw;
+  top:50%;
   margin-bottom:10px;
   margin-top:-95px;
   line-height:0.85
