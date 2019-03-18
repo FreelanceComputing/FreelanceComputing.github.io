@@ -1545,7 +1545,7 @@ button {
  opacity:1
 }
 .c-ui__off-canvas {
- background-color:#000;
+ background-color:#fff;
  position:fixed;
  top:0;
  left:auto;
@@ -1579,7 +1579,7 @@ button {
 }
 .c-ui__off-canvas-nav-item {
  text-transform:uppercase;
- color:#fff;
+ color:#330000;
  margin-bottom:5px
 }
 .c-ui__off-canvas-nav-item-anchor {
@@ -1589,7 +1589,7 @@ button {
 }
 .c-ui__off-canvas-nav-item-anchor:after {
  content:'';
- background-color:#fff;
+ background-color:#330000;
  height:1px;
  width:100%;
  display:block;
