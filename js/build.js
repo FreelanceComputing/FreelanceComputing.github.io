@@ -29608,13 +29608,13 @@
                     key: "setActiveItem",
                     value: function(t) {
                         var e = this;
-                        if (t) {
+                        /*if (t) {
                             this.navItems.forEach(function(t) {
                                 e.removeChildrenMod(t.mobileElem, "off-canvas-nav-item-anchor", "active"), e.removeChildrenMod(t.elem, "nav-item-anchor", "active")
                             });
                             var i = this.getItemBydName(t.toLowerCase());
                             i && (this.addChildrenMod(i.mobileElem, "off-canvas-nav-item-anchor", "active"), this.addChildrenMod(i.elem, "nav-item-anchor", "active"))
-                        }
+                        }*/
                     }
                 }]), e
             }(h["default"]);
