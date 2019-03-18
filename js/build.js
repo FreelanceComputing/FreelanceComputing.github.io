@@ -30957,23 +30957,23 @@
                 }, {
                     key: "setEventHandlers",
                     value: function() {
-                        var t = this,
+                        /*var t = this,
                             e = [].slice.call(document.querySelectorAll(".js-navigate"));
                         e.forEach(function(e) {
                             e.addEventListener("click", t.onNavigate.bind(t))
-                        })
+                        })*/
                     }
                 }, {
                     key: "onNavigate",
                     value: function(t) {
-                        t.preventDefault(), this.navigate(null, t.currentTarget.getAttribute("data-href"))
+                        /*t.preventDefault(), this.navigate(null, t.currentTarget.getAttribute("data-href"))*/
                     }
                 }, {
                     key: "navigate",
                     value: function(t) {
-                        var e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                        /*var e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        this.animating && !i || (e ? this.grapnel.navigate(e) : (console.log(p.ViewSettings[t].route), this.grapnel.navigate(p.ViewSettings[t].route)))
+                        this.animating && !i || (e ? this.grapnel.navigate(e) : (console.log(p.ViewSettings[t].route), this.grapnel.navigate(p.ViewSettings[t].route)))*/
                     }
                 }, {
                     key: "getRouteByKey",
