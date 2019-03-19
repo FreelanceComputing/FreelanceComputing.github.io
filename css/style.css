@@ -1245,9 +1245,6 @@ button {
  font-size:16px;
  margin-right:15px
 }
-.o-contact__social-media a:after {
- background-color:#fff
-}
 .o-contact__social-media a:last-child {
  margin-right:0
 }
@@ -1273,7 +1270,7 @@ button {
  display:inline-block;
  overflow:hidden
 }
-.o-contact__contact-info-col a:before,.o-contact__contact-info-col a:after {
+.o-contact__contact-info-col a:before,.o-contact__contact-info-col a:after, .o-contact__social-media a:after {
  content:'';
  height:1px;
  width:100%;
@@ -1287,7 +1284,7 @@ button {
  transform:translateX(0%);
  transition:transform 250ms
 }
-.o-contact__contact-info-col a:after {
+.o-contact__contact-info-col a:after, .o-contact__social-media a:after{
  transition-delay:250ms;
  transition-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1)
 }
@@ -1304,7 +1301,7 @@ button {
   transition-delay:250ms;
   transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1)
  }
- .o-contact__contact-info-col a:hover:after {
+ .o-contact__contact-info-col a:hover:after, .o-contact__social-media a:after{
   -ms-transform:translateX(100%);
   transform:translateX(100%);
   transition-delay:0ms;
@@ -1314,7 +1311,7 @@ button {
 .o-contact__contact-info-col a:after {
  background-color:transparent
 }
-.o-contact__contact-info-col a.email:after,.o-contact__contact-info-col a:before {
+.o-contact__contact-info-col a.email:after,.o-contact__contact-info-col a:before, .o-contact__social-media a:after{
  background-color:#fff
 }
 .o-contact__contact-info-col p,.o-contact__contact-info-col a {
