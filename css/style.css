@@ -1288,14 +1288,14 @@ button {
  transition-delay:250ms;
  transition-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1)
 }
-.o-contact__contact-info-col a:before {
+.o-contact__contact-info-col a:before, .o-contact__social-media a:before {
  transition:transform 250ms;
  transition-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
  -ms-transform:translateX(-100%);
  transform:translateX(-100%)
 }
 @media (min-width: 1100px) {
- .o-contact__contact-info-col a:hover:before {
+ .o-contact__contact-info-col a:hover:before, .o-contact__social-media a:before {
   -ms-transform:translateX(0%);
   transform:translateX(0%);
   transition-delay:250ms;
