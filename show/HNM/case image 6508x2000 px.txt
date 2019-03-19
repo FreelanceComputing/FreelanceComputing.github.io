@@ -1,0 +1,28 @@
+1 750x1334       (750x1385)
+
+horizontal
+424 and 1758       (393 and 1778)
+
+2 2086x1521      (2086x1558)
+
+hori
+237 and 1758      (220 and 1778)
+
+3 2086x1521
+
+hori
+237 and 1758
+
+4 750x1334
+
+hori
+424 and 1758
+
+horizontal guides: 220, 393, 1778
+vertical guides:   240,990 - 1109,3195 - 3313,5399 - 5518,6268 (m-d-d-m)
+
+
+vertical guides:   240,990 - 1109,3195 - 3313,4063 - 4182,6268 (m-d-m-d)
+
+vertical guides:   (d-m-d-m)
+vertical guides:   (d-m-m-d)
