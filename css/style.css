@@ -1295,13 +1295,13 @@ button {
  transform:translateX(-100%)
 }
 @media (min-width: 1100px) {
- .o-contact__contact-info-col a:hover:before, .o-contact__social-media a:before {
+ .o-contact__contact-info-col a:hover:before, .o-contact__social-media a:hover:before {
   -ms-transform:translateX(0%);
   transform:translateX(0%);
   transition-delay:250ms;
   transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1)
  }
- .o-contact__contact-info-col a:hover:after, .o-contact__social-media a:after{
+ .o-contact__contact-info-col a:hover:after, .o-contact__social-media a:hover:after{
   -ms-transform:translateX(100%);
   transform:translateX(100%);
   transition-delay:0ms;
@@ -1311,7 +1311,7 @@ button {
 .o-contact__contact-info-col a:after {
  background-color:transparent
 }
-.o-contact__contact-info-col a.email:after,.o-contact__contact-info-col a:before, .o-contact__social-media a:after{
+.o-contact__contact-info-col a.email:after,.o-contact__contact-info-col a:before, .o-contact__social-media a:before, .o-contact__social-media a:after{
  background-color:#fff
 }
 .o-contact__contact-info-col p,.o-contact__contact-info-col a {
