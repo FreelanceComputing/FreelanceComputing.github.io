@@ -1311,7 +1311,7 @@ button {
 .o-contact__contact-info-col a:after {
  background-color:transparent
 }
-.o-contact__contact-info-col.email:after,.o-contact__contact-info-col a:before {
+.o-contact__contact-info-col a.email:after,.o-contact__contact-info-col a:before {
  background-color:#fff
 }
 .o-contact__contact-info-col p,.o-contact__contact-info-col a {
