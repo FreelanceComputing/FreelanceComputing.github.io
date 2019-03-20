@@ -28673,7 +28673,7 @@
                                 initialRoute: e,
                                 onHashChange: E.onHashChange.bind(t),
                                 UI: t.components.UI
-                            }), "LANDING" !== (0, r.getCurrentRoute)().name && t.components.UI.animateIn()
+                            }), /*"LANDING" !== (0, r.getCurrentRoute)().name &&*/ t.components.UI.animateIn()
                         }
                     })
                 },
@@ -29458,19 +29458,20 @@
                     key: "init",
                     value: function() {
                         var t = this;
-                        this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio), h["default"].forEach(function(e, i) {
-                            var n = new Image;
+                        this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio),
+						h["default"].forEach(function(e, i) {
+							var n = new Image;
                             n.src = e.url_small, n.onload = function() {
                                 i++, e.image = n, i == h["default"].length && (t.currImage = h["default"][t.currImageIndex].image, t.framesLoaded())
                             }
                         })
+						//t.framesLoaded();
                     }
                 }, {
                     key: "startLoader",
                     value: function() {
-                        "LANDING" !== (0, p.getCurrentRoute)().name && (this.block.style.visibility = "visible", f.TweenLite.to(this.block, .4, {
-                            opacity: 1
-                        }), this.fpsInterval = 1e3 / this.fps, this.then = Date.now(), this.startTime = this.then, this.draw())
+                        "LANDING" !== (0, p.getCurrentRoute)().name && 
+						(this.block.style.visibility = "visible", f.TweenLite.to(this.block, .4, { opacity: 1 }), this.fpsInterval = 1e3 / this.fps, this.then = Date.now(), this.startTime = this.then, this.draw())
                     }
                 }, {
                     key: "draw",
@@ -29776,8 +29777,9 @@
                     }))*/
                 },
                 getCase: function(t, e) {
-                    var i = this;
-                    if (this.cache["case"][t.id]) e.onSuccess(this.cache["case"][t.id]);
+					var i = this;
+					this.loader.startLoader()
+                    /*if (this.cache["case"][t.id]) e.onSuccess(this.cache["case"][t.id]);
                     else {
                         var n = "";
                         if ("undefined" != typeof t.locked && "tiger-of-swedens" == t.id) {
@@ -29807,7 +29809,7 @@
                             processData: !1,
                             json: !0
                         })
-                    }
+                    }*/
                 }
             };
         i["default"] = l
@@ -31801,7 +31803,13 @@
                 },
                 enable: function(t, e, i) {
                     var n = this;
-                    c["default"].getCase(t.params, {
+					var i = {
+						/*intro: t[0].acf.intro_regular_text_area,
+						modules: t[0].acf.modules_case_modules,
+						id: t[0].id*/
+					};
+					n.caseLoaded(i, e)
+                    /*c["default"].getCase(t.params, {
                         onSuccess: function(t) {
                             t[0].yoast_meta && (0, m.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
@@ -31819,11 +31827,21 @@
                         onError: function(t) {
                             console.log(t)
                         }
-                    })
+                    })*/
                 },
                 caseLoaded: function(t, e) {
                     var i = this;
-                    c["default"].getCases({
+					i.initComponents(),
+						i.components["case"].animateIn(.5, function () {
+							/*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
+								container: i.wrapper.querySelector(".smooth-scrollbar"),
+								damping: .3
+							})), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener), i.utils.videoController = new x["default"]({
+								videos: i.wrapper.querySelectorAll("video"),
+								scrollListener: i.utils.scrollBar.scrollListener
+							})
+						}), e()
+                    /*c["default"].getCases({
                         onSuccess: function(n) {
                             var r = n.map(function(t, e) {
                                 var i = t.acf;
@@ -31849,7 +31867,9 @@
                                 introIsDark: "black" == f["default"].getColor() ? 1 : 0
                             };
                             var s = i.wrapper;
-                            o["default"].addTemplate(P(), i.data, s), i.initComponents(), i.components["case"].animateIn(.5, function() {
+                            o["default"].addTemplate(P(), i.data, s), 
+							i.initComponents(), 
+	                        i.components["case"].animateIn(.5, function() {
                                 i.objects.cases.block.style.opacity = 1, i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
                                     container: i.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
@@ -31859,7 +31879,7 @@
                                 })
                             }), e()
                         }
-                    })
+                    })*/
                 },
                 disable: function(t, e, i) {
                     this._resize.removeListener(this.resizeID), this.utils.videoController && this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
