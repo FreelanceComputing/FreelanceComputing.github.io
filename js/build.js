@@ -11818,7 +11818,7 @@
                             var n = f(new y, e, _);
                             return void 0 != i && l(i, v, n[b], n), n
                         }), _.prototype = x, x.constructor = _), (P || A) && (T("delete"), T("has"), v && T("get")), (A || M) && T(b), g && x.clear && delete x.clear
-                    } else _ = m.getConstructor(e, t, v, b), o(_.prototype, i), a.NEED = !0;
+                    } else _ = m.getConstructor(e, t, v, b), o(_.prototype, i), a.NEED = !0; /*desktop here*/
                     return d(_, t), w[t] = _, r(r.G + r.W + r.F * (_ != y), w),
                         g || m.setStrong(_, t, v), _
                 }
@@ -12287,7 +12287,7 @@
                 }
 
                 function y(t) {
-                    var e = It.get(t) || [];
+                    var e = It.get(t) || []; /*mob here 4*/
                     return It.set(t, e),
                         function(t, i, n) {
                             function r(t) {
@@ -12479,7 +12479,7 @@
 
                 function N(t) {
                     var e = y(t),
-                        i = t.containerEl;
+                        i = t.containerEl; /*mob here 3*/
                     e(i, "keydown", function(e) {
                         if (document.activeElement === i) {
                             var n = O(t, e.keyCode || e.which);
@@ -12968,7 +12968,7 @@
                                 subtree: !0,
                                 childList: !0
                             })), Kt.set(t, this), requestAnimationFrame(function() {
-                                i._init()
+                                i._init() /*mob here 1*/
                             })
                         }
                         return Object.defineProperty(t.prototype, "parent", {
@@ -13056,9 +13056,9 @@
                                 t.onDestory()
                             }), this._plugins.length = 0
                         }, t.prototype._init = function() {
-                            var t = this;
+                            var t = this; /*mob here 2*/
                             this.update(), Object.keys(W).forEach(function(e) {
-                                W[e](t)
+                                W[e](t) /*mob here 2*/
                             }), this._plugins.forEach(function(t) {
                                 t.onInit()
                             }), this._render()
@@ -13077,7 +13077,7 @@
                                 l = !0;
                             return l = l && o === r.x, l = l && a === r.y, l = l && (r.x === s.x || 0 === r.x || r.y === s.y || 0 === r.y)
                         }, t.prototype._render = function() {
-                            var t = this._momentum;
+                            var t = this._momentum; /*desktop here*/
                             if (t.x || t.y) {
                                 var e = this._nextTick("x"),
                                     i = this._nextTick("y");
