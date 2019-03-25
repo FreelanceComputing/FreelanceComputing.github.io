@@ -29661,7 +29661,7 @@
                 send: function(t, e, i, n) {
                     var r = s.x();
                     r.open(n, t, i.async), r.onreadystatechange = function() {
-                        r.readyState == r.DONE && (404 == r.status || 400 == r.status || 403 == r.status ? i.onError(s.parseData(i.json, r.responseText)) : i.onSuccess(s.parseData(i.json, r.responseText)))
+						r.readyState == r.DONE && (404 == r.status || 400 == r.status || 403 == r.status ? i.onError(s.parseData(i.json, r.responseText)) : i.onSuccess(s.parseData(i.json, r.responseText))) //i.onSuccess({})//
                     }, "POST" == n && r.setRequestHeader("Content-type", "application/json"), r.send(e)
                 },
                 "delete": function(t, e, i) {
@@ -29747,7 +29747,9 @@
                     var e = this;
                     this.cache.cases ? t.onSuccess(this.cache.cases) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.cases, {}, {
                         onSuccess: function(i) {
-                            e.cache.casePage = i, e.loader.onLoaded(), t.onSuccess(i)
+                            e.cache.casePage = i, 
+							e.loader.onLoaded(), 
+	                        t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
@@ -31009,8 +31011,11 @@
                             }, o.name, t)
                         } else {
                             var a = this.getRouteByKey(e.route);
-                            this.UI.setActiveItem(a.name), a.enable(t, function() {
-                                n.showRoute(a.wrapper), n.setEventHandlers(), a.animateIn(function() {
+                            this.UI.setActiveItem(a.name), 
+							a.enable(t, function() {
+                                n.showRoute(a.wrapper), 
+								n.setEventHandlers(), 
+		                        a.animateIn(function() {
                                     n.animating = !1
                                 })
                             })
@@ -31402,13 +31407,18 @@
                     value: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
                             e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function() {};
-                        (0, l.isTouchDevice)() && window.scrollTo(0, 0), p.TweenLite.to(this.elements.intro_text, .9, {
+                        (0, 
+						l.isTouchDevice)() && 
+	                    window.scrollTo(0, 0), 
+					    p.TweenLite.to(this.elements.intro_text, .9, {
                             x: 0,
                             opacity: 1,
                             delay: t,
                             ease: Power3.easeOut,
-                            onComplete: this.elements.module_0 ? function() {} : e
-                        }), this.elements.module_0 && p.TweenLite.to(this.elements.module_0, 1.6, {
+                            onComplete: this.elements.module_0 ? function() {} : 
+							e
+                        }), 
+						this.elements.module_0 && p.TweenLite.to(this.elements.module_0, 1.6, {
                             x: 0,
                             opacity: 1,
                             delay: t,
@@ -31793,7 +31803,12 @@
                 initEventHandlers: function() {},
                 init: function() {},
                 animateIn: function(t, e) {
-                    return e == r.Views.ABOUT || e == r.Views.CONTACT ? (this.wrapper.style.opacity = 1, void l["default"].animateOut(t)) : ("undefined" == typeof e && f["default"].setColor("white"), this.wrapper.style.opacity = 1, void t())
+                    return e == r.Views.ABOUT || e == r.Views.CONTACT ? 
+					(this.wrapper.style.opacity = 1, 
+	                void l["default"].animateOut(t)) : 
+	                ("undefined" == typeof e && f["default"].setColor("white"), 
+				 this.wrapper.style.opacity = 1, 
+	             void t())
                 },
                 animateOut: function(t, e, i) {
                     var n = this;
@@ -31994,7 +32009,18 @@
                 enable: function(t, e, i) {
                     var n = this,
                         r = this.wrapper;
-                    h["default"].getCases({
+					a["default"].addTemplate(M(), n.data, r),n.initComponents(), n.objects.cases.animateInIntro(.5, function () {
+						n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
+							container: n.wrapper.querySelector(".smooth-scrollbar"),
+							damping: .3
+						}), n.objects.cases.scrollbar = n.utils.scrollBar), setTimeout(function () {
+							f["default"].initTemplate(n.wrapper, n.utils.scrollBar.scrollListener), n.utils.videoController = new b["default"]({
+								videos: n.wrapper.querySelectorAll("video"),
+								scrollListener: n.utils.scrollBar.scrollListener
+							})
+						}, 1e3)
+					}), e()
+                    /*h["default"].getCases({
                         onSuccess: function(t) {
                             (0, p.setMetaTags)({
                                 title: "Work - Studio Bjørk",
@@ -32034,7 +32060,7 @@
                         onError: function(t) {
                             console.log(t)
                         }
-                    })
+                    })*/
                 },
                 disable: function(t, e, i) {
                     this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
