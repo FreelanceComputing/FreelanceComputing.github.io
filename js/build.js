@@ -29465,7 +29465,6 @@
                                 i++, e.image = n, i == h["default"].length && (t.currImage = h["default"][t.currImageIndex].image, t.framesLoaded())
                             }
                         })
-						//t.framesLoaded();
                     }
                 }, {
                     key: "startLoader",
