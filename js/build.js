@@ -29458,19 +29458,19 @@
                     key: "init",
                     value: function() {
                         var t = this;
-                        this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio),
-						h["default"].forEach(function(e, i) {
+                        //this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio),
+						h["default"].forEach(function (e, i) {
 							var n = new Image;
-                            n.src = e.url_small, n.onload = function() {
-                                i++, e.image = n, i == h["default"].length && (t.currImage = h["default"][t.currImageIndex].image, t.framesLoaded())
-                            }
-                        })
+							n.src = e.url_small, n.onload = function () {
+								/*i++, e.image = n, i == h["default"].length &&*/ (/*t.currImage = h["default"][t.currImageIndex].image,*/ t.framesLoaded())
+							}
+						})
                     }
                 }, {
                     key: "startLoader",
                     value: function() {
-                        "LANDING" !== (0, p.getCurrentRoute)().name && 
-						(this.block.style.visibility = "visible", f.TweenLite.to(this.block, .4, { opacity: 1 }), this.fpsInterval = 1e3 / this.fps, this.then = Date.now(), this.startTime = this.then, this.draw())
+                        /*"LANDING" !== (0, p.getCurrentRoute)().name && 
+						(this.block.style.visibility = "visible", f.TweenLite.to(this.block, .4, { opacity: 1 }), this.fpsInterval = 1e3 / this.fps, this.then = Date.now(), this.startTime = this.then, this.draw())*/
                     }
                 }, {
                     key: "draw",
@@ -29735,7 +29735,7 @@
                     var e = this;
                     this.cache.casePage ? t.onSuccess(this.cache.casePage) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.casePage, {}, {
                         onSuccess: function(i) {
-                            e.cache.casePage = i, e.loader.onLoaded(), t.onSuccess(i)
+                            e.cache.casePage = i, /*e.loader.onLoaded(),*/ t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
@@ -29747,7 +29747,7 @@
                     this.cache.cases ? t.onSuccess(this.cache.cases) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.cases, {}, {
                         onSuccess: function(i) {
                             e.cache.casePage = i, 
-							e.loader.onLoaded(), 
+							/*e.loader.onLoaded(),*/ 
 	                        t.onSuccess(i)
                         },
                         onError: t.onError,
@@ -29759,7 +29759,7 @@
                     var e = this;
                     this.cache.about ? t.onSuccess(this.cache.about) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.about, {}, {
                         onSuccess: function(i) {
-                            e.cache.about = i, e.loader.onLoaded(), t.onSuccess(i)
+                            e.cache.about = i, /*e.loader.onLoaded(),*/ t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
@@ -31282,7 +31282,7 @@
                     key: "onScroll",
                     value: function(t) {
                         this.videoData.forEach(function(e) {
-                            e.x < t + window.innerWidth && e.x + e.width > t && !e.isPlaying && (e.isPlaying = !0, e.elem.play()), e.x + e.width < t && e.isPlaying && (e.isPlaying = !1, e.elem.pause()), e.x > t + window.innerWidth && e.isPlaying && (e.isPlaying = !1, e.elem.pause())
+                            //e.x < t + window.innerWidth && e.x + e.width > t && !e.isPlaying && (e.isPlaying = !0, e.elem.play()), e.x + e.width < t && e.isPlaying && (e.isPlaying = !1, e.elem.pause()), e.x > t + window.innerWidth && e.isPlaying && (e.isPlaying = !1, e.elem.pause())
                         })
                     }
                 }, {
@@ -31488,7 +31488,17 @@
                 function e(t, i) {
                     r(this, e);
                     var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
-                    return n.isPresent ? (n.disabled = !1, n.delayIn = i.delayIn, n.onAnimatedIn = i.onAnimatedIn, n.scrollbar = i.scrollbar, n.isWork = i.isWork || !1, n.scrollId = !1, n.cases = (0, l.mapElems)(n.elements["case"], n._getCases.bind(n)), n.activeCase = null, n) : s(n)
+                    return n.isPresent ? 
+					(
+	                n.disabled = !1, 
+	                n.delayIn = i.delayIn, 
+				    n.onAnimatedIn = i.onAnimatedIn, 
+					n.scrollbar = i.scrollbar, 
+					n.isWork = i.isWork || !1, 
+					n.scrollId = !1, 
+					n.cases = (0, l.mapElems)(n.elements["case"], n._getCases.bind(n)), 
+					n.activeCase = null, n) 
+	                : s(n)
                 }
                 return o(e, t), a(e, [{
                     key: "animateInIntro",
@@ -31845,19 +31855,9 @@
                 },
                 caseLoaded: function(t, e) {
                     var i = this;
-					i.initComponents(),
-						i.components["case"].animateIn(.5, function () {
-							/*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
-								container: i.wrapper.querySelector(".smooth-scrollbar"),
-								damping: .3
-							})), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener), i.utils.videoController = new x["default"]({
-								videos: i.wrapper.querySelectorAll("video"),
-								scrollListener: i.utils.scrollBar.scrollListener
-							})
-						}), e()
-                    /*c["default"].getCases({
+                    c["default"].getCases({
                         onSuccess: function(n) {
-                            var r = n.map(function(t, e) {
+                            /*var r = n.map(function(t, e) {
                                 var i = t.acf;
                                 return {
                                     headline: i.featured_case_headline,
@@ -31881,10 +31881,10 @@
                                 introIsDark: "black" == f["default"].getColor() ? 1 : 0
                             };
                             var s = i.wrapper;
-                            o["default"].addTemplate(P(), i.data, s), 
+                            o["default"].addTemplate(P(), i.data, s), */
 							i.initComponents(), 
 	                        i.components["case"].animateIn(.5, function() {
-                                i.objects.cases.block.style.opacity = 1, i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
+                                /*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
                                     container: i.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
                                 })), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener), i.utils.videoController = new x["default"]({
@@ -31893,7 +31893,7 @@
                                 })
                             }), e()
                         }
-                    })*/
+                    })
                 },
                 disable: function(t, e, i) {
                     this._resize.removeListener(this.resizeID), this.utils.videoController && this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
@@ -32008,20 +32008,9 @@
                 enable: function(t, e, i) {
                     var n = this,
                         r = this.wrapper;
-					a["default"].addTemplate(M(), n.data, r),n.initComponents(), n.objects.cases.animateInIntro(.5, function () {
-						n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
-							container: n.wrapper.querySelector(".smooth-scrollbar"),
-							damping: .3
-						}), n.objects.cases.scrollbar = n.utils.scrollBar), setTimeout(function () {
-							f["default"].initTemplate(n.wrapper, n.utils.scrollBar.scrollListener), n.utils.videoController = new b["default"]({
-								videos: n.wrapper.querySelectorAll("video"),
-								scrollListener: n.utils.scrollBar.scrollListener
-							})
-						}, 1e3)
-					}), e()
-                    /*h["default"].getCases({
+					h["default"].getCases({
                         onSuccess: function(t) {
-                            (0, p.setMetaTags)({
+                            /*(0, p.setMetaTags)({
                                 title: "Work - Studio Bjørk",
                                 description: "Studio BJØRK is a digital design & development studio with tons of experience creating high-end productions for some of the biggest brands & agencies in the business.",
                                 url: "https://studiobjork.com/work"
@@ -32044,7 +32033,7 @@
                                     name: t.slug,
                                     url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug
                                 }
-                            }), a["default"].addTemplate(M(), n.data, r), n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
+                            }),*/ a["default"].addTemplate(M(), n.data, r), n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
                                 n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
                                     container: n.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
@@ -32059,7 +32048,7 @@
                         onError: function(t) {
                             console.log(t)
                         }
-                    })*/
+                    })
                 },
                 disable: function(t, e, i) {
                     this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
@@ -32264,12 +32253,16 @@
                         r = this.wrapper;
                     p["default"].getLanding({
                         onSuccess: function(t) {
-                            n.data = {}, n.data.about = t[0].acf, n.data.cases = [], t[0].yoast_meta && (0, m.setMetaTags)({
+						console.log(t);
+						console.log("landing success");
+							n.data = {}, n.data.about = t[0].acf, n.data.cases = [], t[0].yoast_meta && (0, m.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
                                 description: t[0].yoast_meta.yoast_wpseo_metadesc,
                                 url: t[0].yoast_meta.yoast_wpseo_canonical
                             }), p["default"].getCases({
-                                onSuccess: function(t) {
+								onSuccess: function (t) {
+									console.log(t);
+									console.log("case success");
                                     n.data.cases = t.map(function(t, e) {
                                         var i = t.acf;
                                         return {
@@ -32278,10 +32271,10 @@
                                             mediaType: i.featured_case_media_type,
                                             video: !!i.featured_case_video && i.featured_case_video.url,
                                             images: i.featured_case_image.sizes,
-                                            isLocked: i.featured_locked_case,
+											isLocked: i.featured_locked_case,
                                             isDark: (e + 1) % 2,
                                             id: t.id,
-                                            name: t.slug,
+											name: t.slug,
                                             url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug
                                         }
                                     }), /*c["default"].addTemplate(C(), n.data, r),*/ n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new _["default"]({
