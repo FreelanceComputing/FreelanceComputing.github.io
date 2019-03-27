@@ -31983,7 +31983,7 @@
                             }),*/ n.data.cases = t.map(function(t, e) {
                                 var i = t.acf;
                                 return {
-                                    headline: i.featured_case_headline,
+                                    /*headline: i.featured_case_headline,
                                     subheadline: i.featured_case_subheadline,
                                     mediaType: i.featured_case_media_type,
                                     mediaTypeMobile: i.featured_case_media_type_mobile,
@@ -31997,7 +31997,7 @@
                                     isDark: (e + 1) % 2,
                                     id: t.id,
                                     name: t.slug,
-                                    url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug
+                                    url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
                                 }
                             }), a["default"].addTemplate(M(), n.data, r), n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
                                 n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
