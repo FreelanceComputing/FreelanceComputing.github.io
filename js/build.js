@@ -31841,9 +31841,9 @@
                             });
                             /*r = r.filter(function(e) {
                                 return e.id !== t.id
-                            }),*/ r = r.map(function(t, e) {
+                            }), r = r.map(function(t, e) {
                                 return t.isDark = (e + 1) % 2, t
-                            }), i.data = {
+                            }),*/ i.data = {
                                 "case": t,
                                 cases: r,
                                 introIsDark: "black" == f["default"].getColor() ? 1 : 0
