@@ -32219,11 +32219,11 @@
                         r = this.wrapper;
                     p["default"].getLanding({
                         onSuccess: function(t) {
-                            n.data = {}, n.data.about = t[0].acf, n.data.cases = [], t[0].yoast_meta && (0, m.setMetaTags)({
+                            n.data = {}, n.data.about = t[0].acf, n.data.cases = [], /*t[0].yoast_meta && (0, m.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
                                 description: t[0].yoast_meta.yoast_wpseo_metadesc,
                                 url: t[0].yoast_meta.yoast_wpseo_canonical
-                            }), p["default"].getCases({
+                            }),*/ p["default"].getCases({
                                 onSuccess: function(t) {
                                     n.data.cases = t.map(function(t, e) {
                                         var i = t.acf;
