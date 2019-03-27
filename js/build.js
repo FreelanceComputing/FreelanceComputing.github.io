@@ -31810,9 +31810,9 @@
                                 og_image: !!t[0].acf.seo_og_image && t[0].acf.seo_og_image.url
                             });*/
                             var i = {
-                                intro: t[0].acf.intro_regular_text_area,
+                                //intro: t[0].acf.intro_regular_text_area,
                                 modules: t[0].acf.modules_case_modules,
-                                id: t[0].id
+                                //id: t[0].id
                             };
                             n.caseLoaded(i, e)
                         },
@@ -31851,9 +31851,9 @@
                             var s = i.wrapper;
 							var inner = i.wrapper.innerHTML;
 							o["default"].addTemplate(P(), i.data, s), 
-							console.log(i), console.log("\ndefault\n"),
+							/*console.log(i), console.log("\ndefault\n"),
 							i.wrapper.innerHTML = inner,
-							console.log(i),
+							console.log(i),*/
 							i.initComponents(), i.components["case"].animateIn(.5, function() {
                                 /*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
                                     container: i.wrapper.querySelector(".smooth-scrollbar"),
