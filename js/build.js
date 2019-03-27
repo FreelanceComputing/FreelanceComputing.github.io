@@ -11818,7 +11818,7 @@
                             var n = f(new y, e, _);
                             return void 0 != i && l(i, v, n[b], n), n
                         }), _.prototype = x, x.constructor = _), (P || A) && (T("delete"), T("has"), v && T("get")), (A || M) && T(b), g && x.clear && delete x.clear
-                    } else _ = m.getConstructor(e, t, v, b), o(_.prototype, i), a.NEED = !0; /*desktop here*/
+                    } else _ = m.getConstructor(e, t, v, b), o(_.prototype, i), a.NEED = !0;
                     return d(_, t), w[t] = _, r(r.G + r.W + r.F * (_ != y), w),
                         g || m.setStrong(_, t, v), _
                 }
@@ -12287,7 +12287,7 @@
                 }
 
                 function y(t) {
-                    var e = It.get(t) || []; /*mob here 4*/
+                    var e = It.get(t) || [];
                     return It.set(t, e),
                         function(t, i, n) {
                             function r(t) {
@@ -12479,7 +12479,7 @@
 
                 function N(t) {
                     var e = y(t),
-                        i = t.containerEl; /*mob here 3*/
+                        i = t.containerEl;
                     e(i, "keydown", function(e) {
                         if (document.activeElement === i) {
                             var n = O(t, e.keyCode || e.which);
@@ -12968,7 +12968,7 @@
                                 subtree: !0,
                                 childList: !0
                             })), Kt.set(t, this), requestAnimationFrame(function() {
-                                i._init() /*mob here 1*/
+                                i._init()
                             })
                         }
                         return Object.defineProperty(t.prototype, "parent", {
@@ -13056,9 +13056,9 @@
                                 t.onDestory()
                             }), this._plugins.length = 0
                         }, t.prototype._init = function() {
-                            var t = this; /*mob here 2*/
+                            var t = this;
                             this.update(), Object.keys(W).forEach(function(e) {
-                                W[e](t) /*mob here 2*/
+                                W[e](t)
                             }), this._plugins.forEach(function(t) {
                                 t.onInit()
                             }), this._render()
@@ -13077,7 +13077,7 @@
                                 l = !0;
                             return l = l && o === r.x, l = l && a === r.y, l = l && (r.x === s.x || 0 === r.x || r.y === s.y || 0 === r.y)
                         }, t.prototype._render = function() {
-                            var t = this._momentum; /*desktop here*/
+                            var t = this._momentum;
                             if (t.x || t.y) {
                                 var e = this._nextTick("x"),
                                     i = this._nextTick("y");
@@ -28673,7 +28673,7 @@
                                 initialRoute: e,
                                 onHashChange: E.onHashChange.bind(t),
                                 UI: t.components.UI
-                            }), /*"LANDING" !== (0, r.getCurrentRoute)().name &&*/ t.components.UI.animateIn()
+                            }), "LANDING" !== (0, r.getCurrentRoute)().name && t.components.UI.animateIn()
                         }
                     })
                 },
@@ -29458,19 +29458,19 @@
                     key: "init",
                     value: function() {
                         var t = this;
-                        //this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio),
-						h["default"].forEach(function (e, i) {
-							var n = new Image;
-							n.src = e.url_small, n.onload = function () {
-								/*i++, e.image = n, i == h["default"].length &&*/ (/*t.currImage = h["default"][t.currImageIndex].image,*/ t.framesLoaded())
-							}
-						})
+                        this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio), h["default"].forEach(function(e, i) {
+                            var n = new Image;
+                            n.src = e.url_small, n.onload = function() {
+                                i++, e.image = n, i == h["default"].length && (t.currImage = h["default"][t.currImageIndex].image, t.framesLoaded())
+                            }
+                        })
                     }
                 }, {
                     key: "startLoader",
                     value: function() {
-                        /*"LANDING" !== (0, p.getCurrentRoute)().name && 
-						(this.block.style.visibility = "visible", f.TweenLite.to(this.block, .4, { opacity: 1 }), this.fpsInterval = 1e3 / this.fps, this.then = Date.now(), this.startTime = this.then, this.draw())*/
+                        "LANDING" !== (0, p.getCurrentRoute)().name && (this.block.style.visibility = "visible", f.TweenLite.to(this.block, .4, {
+                            opacity: 1
+                        }), this.fpsInterval = 1e3 / this.fps, this.then = Date.now(), this.startTime = this.then, this.draw())
                     }
                 }, {
                     key: "draw",
@@ -29660,7 +29660,7 @@
                 send: function(t, e, i, n) {
                     var r = s.x();
                     r.open(n, t, i.async), r.onreadystatechange = function() {
-						r.readyState == r.DONE && (404 == r.status || 400 == r.status || 403 == r.status ? i.onError(s.parseData(i.json, r.responseText)) : i.onSuccess(s.parseData(i.json, r.responseText))) //i.onSuccess({})//
+                        r.readyState == r.DONE && (404 == r.status || 400 == r.status || 403 == r.status ? i.onError(s.parseData(i.json, r.responseText)) : i.onSuccess(s.parseData(i.json, r.responseText)))
                     }, "POST" == n && r.setRequestHeader("Content-type", "application/json"), r.send(e)
                 },
                 "delete": function(t, e, i) {
@@ -29735,7 +29735,7 @@
                     var e = this;
                     this.cache.casePage ? t.onSuccess(this.cache.casePage) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.casePage, {}, {
                         onSuccess: function(i) {
-                            e.cache.casePage = i, /*e.loader.onLoaded(),*/ t.onSuccess(i)
+                            e.cache.casePage = i, e.loader.onLoaded(), t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
@@ -29746,9 +29746,7 @@
                     var e = this;
                     this.cache.cases ? t.onSuccess(this.cache.cases) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.cases, {}, {
                         onSuccess: function(i) {
-                            e.cache.casePage = i, 
-							/*e.loader.onLoaded(),*/ 
-	                        t.onSuccess(i)
+                            e.cache.casePage = i, e.loader.onLoaded(), t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
@@ -29759,7 +29757,7 @@
                     var e = this;
                     this.cache.about ? t.onSuccess(this.cache.about) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.about, {}, {
                         onSuccess: function(i) {
-                            e.cache.about = i, /*e.loader.onLoaded(),*/ t.onSuccess(i)
+                            e.cache.about = i, e.loader.onLoaded(), t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
@@ -29778,9 +29776,8 @@
                     }))*/
                 },
                 getCase: function(t, e) {
-					var i = this;
-					this.loader.startLoader()
-                    /*if (this.cache["case"][t.id]) e.onSuccess(this.cache["case"][t.id]);
+                    var i = this;
+                    if (this.cache["case"][t.id]) e.onSuccess(this.cache["case"][t.id]);
                     else {
                         var n = "";
                         if ("undefined" != typeof t.locked && "tiger-of-swedens" == t.id) {
@@ -29810,7 +29807,7 @@
                             processData: !1,
                             json: !0
                         })
-                    }*/
+                    }
                 }
             };
         i["default"] = l
@@ -31010,11 +31007,8 @@
                             }, o.name, t)
                         } else {
                             var a = this.getRouteByKey(e.route);
-                            this.UI.setActiveItem(a.name), 
-							a.enable(t, function() {
-                                n.showRoute(a.wrapper), 
-								n.setEventHandlers(), 
-		                        a.animateIn(function() {
+                            this.UI.setActiveItem(a.name), a.enable(t, function() {
+                                n.showRoute(a.wrapper), n.setEventHandlers(), a.animateIn(function() {
                                     n.animating = !1
                                 })
                             })
@@ -31282,7 +31276,7 @@
                     key: "onScroll",
                     value: function(t) {
                         this.videoData.forEach(function(e) {
-                            //e.x < t + window.innerWidth && e.x + e.width > t && !e.isPlaying && (e.isPlaying = !0, e.elem.play()), e.x + e.width < t && e.isPlaying && (e.isPlaying = !1, e.elem.pause()), e.x > t + window.innerWidth && e.isPlaying && (e.isPlaying = !1, e.elem.pause())
+                            e.x < t + window.innerWidth && e.x + e.width > t && !e.isPlaying && (e.isPlaying = !0, e.elem.play()), e.x + e.width < t && e.isPlaying && (e.isPlaying = !1, e.elem.pause()), e.x > t + window.innerWidth && e.isPlaying && (e.isPlaying = !1, e.elem.pause())
                         })
                     }
                 }, {
@@ -31406,18 +31400,13 @@
                     value: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
                             e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function() {};
-                        (0, 
-						l.isTouchDevice)() && 
-	                    window.scrollTo(0, 0), 
-					    p.TweenLite.to(this.elements.intro_text, .9, {
+                        (0, l.isTouchDevice)() && window.scrollTo(0, 0), p.TweenLite.to(this.elements.intro_text, .9, {
                             x: 0,
                             opacity: 1,
                             delay: t,
                             ease: Power3.easeOut,
-                            onComplete: this.elements.module_0 ? function() {} : 
-							e
-                        }), 
-						this.elements.module_0 && p.TweenLite.to(this.elements.module_0, 1.6, {
+                            onComplete: this.elements.module_0 ? function() {} : e
+                        }), this.elements.module_0 && p.TweenLite.to(this.elements.module_0, 1.6, {
                             x: 0,
                             opacity: 1,
                             delay: t,
@@ -31488,17 +31477,7 @@
                 function e(t, i) {
                     r(this, e);
                     var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
-                    return n.isPresent ? 
-					(
-	                n.disabled = !1, 
-	                n.delayIn = i.delayIn, 
-				    n.onAnimatedIn = i.onAnimatedIn, 
-					n.scrollbar = i.scrollbar, 
-					n.isWork = i.isWork || !1, 
-					n.scrollId = !1, 
-					n.cases = (0, l.mapElems)(n.elements["case"], n._getCases.bind(n)), 
-					n.activeCase = null, n) 
-	                : s(n)
+                    return n.isPresent ? (n.disabled = !1, n.delayIn = i.delayIn, n.onAnimatedIn = i.onAnimatedIn, n.scrollbar = i.scrollbar, n.isWork = i.isWork || !1, n.scrollId = !1, n.cases = (0, l.mapElems)(n.elements["case"], n._getCases.bind(n)), n.activeCase = null, n) : s(n)
                 }
                 return o(e, t), a(e, [{
                     key: "animateInIntro",
@@ -31812,12 +31791,7 @@
                 initEventHandlers: function() {},
                 init: function() {},
                 animateIn: function(t, e) {
-                    return e == r.Views.ABOUT || e == r.Views.CONTACT ? 
-					(this.wrapper.style.opacity = 1, 
-	                void l["default"].animateOut(t)) : 
-	                ("undefined" == typeof e && f["default"].setColor("white"), 
-				 this.wrapper.style.opacity = 1, 
-	             void t())
+                    return e == r.Views.ABOUT || e == r.Views.CONTACT ? (this.wrapper.style.opacity = 1, void l["default"].animateOut(t)) : ("undefined" == typeof e && f["default"].setColor("white"), this.wrapper.style.opacity = 1, void t())
                 },
                 animateOut: function(t, e, i) {
                     var n = this;
@@ -31827,13 +31801,7 @@
                 },
                 enable: function(t, e, i) {
                     var n = this;
-					var i = {
-						/*intro: t[0].acf.intro_regular_text_area,
-						modules: t[0].acf.modules_case_modules,
-						id: t[0].id*/
-					};
-					n.caseLoaded(i, e)
-                    /*c["default"].getCase(t.params, {
+                    c["default"].getCase(t.params, {
                         onSuccess: function(t) {
                             t[0].yoast_meta && (0, m.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
@@ -31851,13 +31819,13 @@
                         onError: function(t) {
                             console.log(t)
                         }
-                    })*/
+                    })
                 },
                 caseLoaded: function(t, e) {
                     var i = this;
                     c["default"].getCases({
                         onSuccess: function(n) {
-                            /*var r = n.map(function(t, e) {
+                            var r = n.map(function(t, e) {
                                 var i = t.acf;
                                 return {
                                     headline: i.featured_case_headline,
@@ -31881,10 +31849,8 @@
                                 introIsDark: "black" == f["default"].getColor() ? 1 : 0
                             };
                             var s = i.wrapper;
-                            o["default"].addTemplate(P(), i.data, s), */
-							i.initComponents(), 
-	                        i.components["case"].animateIn(.5, function() {
-                                /*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
+                            o["default"].addTemplate(P(), i.data, s), i.initComponents(), i.components["case"].animateIn(.5, function() {
+                                i.objects.cases.block.style.opacity = 1, i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
                                     container: i.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
                                 })), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener), i.utils.videoController = new x["default"]({
@@ -32008,11 +31974,11 @@
                 enable: function(t, e, i) {
                     var n = this,
                         r = this.wrapper;
-					h["default"].getCases({
+                    h["default"].getCases({
                         onSuccess: function(t) {
-                            /*(0, p.setMetaTags)({
-                                title: "Work - Studio Bjørk",
-                                description: "Studio BJØRK is a digital design & development studio with tons of experience creating high-end productions for some of the biggest brands & agencies in the business.",
+                            (0, p.setMetaTags)({
+                                title: "Work - Studio Bj�rk",
+                                description: "Studio BJ�RK is a digital design & development studio with tons of experience creating high-end productions for some of the biggest brands & agencies in the business.",
                                 url: "https://studiobjork.com/work"
                             }), n.data.cases = t.map(function(t, e) {
                                 var i = t.acf;
@@ -32033,7 +31999,7 @@
                                     name: t.slug,
                                     url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug
                                 }
-                            }),*/ a["default"].addTemplate(M(), n.data, r), n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
+                            }), a["default"].addTemplate(M(), n.data, r), n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
                                 n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
                                     container: n.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
@@ -32253,16 +32219,12 @@
                         r = this.wrapper;
                     p["default"].getLanding({
                         onSuccess: function(t) {
-						console.log(t);
-						console.log("landing success");
-							n.data = {}, n.data.about = t[0].acf, n.data.cases = [], t[0].yoast_meta && (0, m.setMetaTags)({
+                            n.data = {}, n.data.about = t[0].acf, n.data.cases = [], t[0].yoast_meta && (0, m.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
                                 description: t[0].yoast_meta.yoast_wpseo_metadesc,
                                 url: t[0].yoast_meta.yoast_wpseo_canonical
                             }), p["default"].getCases({
-								onSuccess: function (t) {
-									console.log(t);
-									console.log("case success");
+                                onSuccess: function(t) {
                                     n.data.cases = t.map(function(t, e) {
                                         var i = t.acf;
                                         return {
@@ -32271,10 +32233,10 @@
                                             mediaType: i.featured_case_media_type,
                                             video: !!i.featured_case_video && i.featured_case_video.url,
                                             images: i.featured_case_image.sizes,
-											isLocked: i.featured_locked_case,
+                                            isLocked: i.featured_locked_case,
                                             isDark: (e + 1) % 2,
                                             id: t.id,
-											name: t.slug,
+                                            name: t.slug,
                                             url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug
                                         }
                                     }), /*c["default"].addTemplate(C(), n.data, r),*/ n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new _["default"]({
