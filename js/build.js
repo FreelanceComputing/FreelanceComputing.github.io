@@ -31853,10 +31853,10 @@
                                 /*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
                                     container: i.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
-                                })), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener), i.utils.videoController = new x["default"]({
+                                })), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener)/*, i.utils.videoController = new x["default"]({
                                     videos: i.wrapper.querySelectorAll("video"),
                                     scrollListener: i.utils.scrollBar.scrollListener
-                                })
+                                })*/
                             }), e()
                         }
                     })
