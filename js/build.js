@@ -31803,12 +31803,12 @@
                     var n = this;
                     c["default"].getCase(t.params, {
                         onSuccess: function(t) {
-                            t[0].yoast_meta && (0, m.setMetaTags)({
+                            /*t[0].yoast_meta && (0, m.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
                                 description: t[0].yoast_meta.yoast_wpseo_metadesc,
                                 url: t[0].yoast_meta.yoast_wpseo_canonical,
                                 og_image: !!t[0].acf.seo_og_image && t[0].acf.seo_og_image.url
-                            });
+                            });*/
                             var i = {
                                 intro: t[0].acf.intro_regular_text_area,
                                 modules: t[0].acf.modules_case_modules,
