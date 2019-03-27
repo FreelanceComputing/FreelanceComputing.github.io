@@ -31976,11 +31976,11 @@
                         r = this.wrapper;
                     h["default"].getCases({
                         onSuccess: function(t) {
-                            (0, p.setMetaTags)({
+                            /*(0, p.setMetaTags)({
                                 title: "Work - Studio Bj�rk",
                                 description: "Studio BJ�RK is a digital design & development studio with tons of experience creating high-end productions for some of the biggest brands & agencies in the business.",
                                 url: "https://studiobjork.com/work"
-                            }), n.data.cases = t.map(function(t, e) {
+                            }),*/ n.data.cases = t.map(function(t, e) {
                                 var i = t.acf;
                                 return {
                                     headline: i.featured_case_headline,
