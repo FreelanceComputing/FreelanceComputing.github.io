@@ -31849,7 +31849,7 @@
                                 introIsDark: "black" == f["default"].getColor() ? 1 : 0
                             };
                             var s = i.wrapper;
-                            /*o["default"].addTemplate(P(), i.data, s),*/ i.initComponents(), i.components["case"].animateIn(.5, function() {
+                            o["default"].addTemplate(P(), i.data, s), i.initComponents(), i.components["case"].animateIn(.5, function() {
                                 i.objects.cases.block.style.opacity = 1, i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
                                     container: i.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
