@@ -31839,9 +31839,9 @@
                                     url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug
                                 }
                             });
-                            r = r.filter(function(e) {
+                            /*r = r.filter(function(e) {
                                 return e.id !== t.id
-                            }), r = r.map(function(t, e) {
+                            }),*/ r = r.map(function(t, e) {
                                 return t.isDark = (e + 1) % 2, t
                             }), i.data = {
                                 "case": t,
