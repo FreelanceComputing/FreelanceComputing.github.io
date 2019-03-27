@@ -31999,7 +31999,7 @@
                                     name: t.slug,
                                     url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
                                 }
-                            }), a["default"].addTemplate(M(), n.data, r), n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
+                            }), /*a["default"].addTemplate(M(), n.data, r),*/ n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
                                 n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
                                     container: n.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
