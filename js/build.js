@@ -30892,9 +30892,10 @@
         }
 
         function o() {
-            var t = d.grapnel.state.route;
+            return p.ViewSettings["LANDING"]
+            /*var t = d.grapnel.state.route;
             for (var e in p.ViewSettings)
-                if (t == p.ViewSettings[e].route) return p.ViewSettings[e]
+                if (t == p.ViewSettings[e].route) return p.ViewSettings[e]*/
         }
 
         function a() {
@@ -31315,7 +31316,7 @@
             r = {
                 LANDING: {
                     name: n.LANDING,
-                    route: "/",
+                    route: "/:show?/:HNM?:DT?:MOH?:KSS?/",
                     wrapper: document.querySelector(".o-section--landing")
                 },
                 CASES: {
