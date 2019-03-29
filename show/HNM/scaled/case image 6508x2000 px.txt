@@ -34,8 +34,7 @@ hori
 
 
 
-horizontal guides: 220, 393, 1778
-
+horizontal guides: 342, 515, 1900
 vertical guides:   240,990 - 1109,3195 - 3313,5399 - 5518,6268  (m-d-d-m)
 
 
