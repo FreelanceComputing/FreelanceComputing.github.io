@@ -22,18 +22,6 @@ $(document).ready(function () {
 		return cont.offset().left < ($(window).width() - desktopOffset);
 	}
 
-	$(window).on('wheel', function (event) {
-		var views = inView();
-		if (views.indexOf(true) > -1 || contInView()) {
-			$(".c-ui__nav-items.js-invert").addClass("invert");
-			$(".c-ui__burger.js-invert").addClass("invert");
-		}
-		else {
-			$(".c-ui__nav-items.js-invert").removeClass("invert");
-			$(".c-ui__burger.js-invert").removeClass("invert");
-		}
-			});
-
     var observer = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutationRecord) {
         var views = inView();
@@ -48,16 +36,15 @@ $(document).ready(function () {
                 });
             });
 
-	if (window.navigator.userAgent.indexOf("Trident") > -1) {
-		var timer = setInterval(function () {
-			if ($(".scrollbar-thumb-x").length > 0) {
-			    clearInterval(timer);
-			    var target = $(".scrollbar-thumb-x")[0];
-			    observer.observe(target, { attributes: true, attributeFilter: ['style'] });
-				$(".scrollbar-track-x").css('height', '20px');
-			}
-		}, 200);
-	}
+	
+	var timer = setInterval(function () {
+		if ($(".scrollbar-thumb-x").length > 0) {
+			clearInterval(timer);
+			var target = $(".scrollbar-thumb-x")[0];
+			observer.observe(target, { attributes: true, attributeFilter: ['style'] });
+			$(".scrollbar-track-x").css('height', '20px');
+		}
+	}, 200);
 
     // The Mob
 
