@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
 	function inView() {
-		var desktopOffset = 60;
+        var winWidth = $(window).width();
+	    var desktopOffset = winWidth > 1100 ? 0.08 * winWidth: 0.13 * winWidth;
 		var views = [];
 		var cases = $('[data-isDark="0"]');
 		for (var i = 0; i < cases.length; i++)
@@ -9,7 +10,7 @@ $(document).ready(function () {
 			var caseBackgrd = cases.eq(i).children(".o-featured__background").eq(0);
 			var caseWidth = caseBackgrd.width();
 			var caseRightEdgePos = caseBackgrd.offset().left + caseWidth;
-			var maxPos = $(window).width() - desktopOffset;
+			var maxPos = winWidth -desktopOffset;
 			var minPos = maxPos - caseWidth;
 			views.push((caseRightEdgePos >= minPos) && (caseRightEdgePos <= maxPos));
 		}
