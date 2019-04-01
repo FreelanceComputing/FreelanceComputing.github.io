@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutationRecord) {
+            var views = inView();
+            if (views.indexOf(true) > -1 || contInView()) {
+                $(".c-ui__nav-items.js-invert").addClass("invert");
+                $(".c-ui__burger.js-invert").addClass("invert");
+            }
+            else {
+                $(".c-ui__nav-items.js-invert").removeClass("invert");
+                $(".c-ui__burger.js-invert").removeClass("invert");
+            }
+        });
+    });
+
 	function inView() {
 		var desktopOffset = 60;
 		var views = [];
@@ -74,19 +88,10 @@ $(document).ready(function () {
 	if (window.navigator.userAgent.indexOf("Trident") > -1) {
 		var timer = setInterval(function () {
 			if ($(".scrollbar-thumb-x").length > 0) {
-				clearInterval(timer);
+			    clearInterval(timer);
+			    var target = $(".scrollbar-thumb-x")[0];
+			    observer.observe(target, { attributes: true, attributeFilter: ['style'] });
 				$(".scrollbar-track-x").css('height', '20px');
-				$(".scrollbar-track-x").on('mousemove mouseover mouseenter mouseleave', function () {
-					var views = inView();
-					if (views.indexOf(true) > -1 || contInView()) {
-						$(".c-ui__nav-items.js-invert").addClass("invert");
-						$(".c-ui__burger.js-invert").addClass("invert");
-					}
-					else {
-						$(".c-ui__nav-items.js-invert").removeClass("invert");
-						$(".c-ui__burger.js-invert").removeClass("invert");
-					}
-				});
 			}
 		}, 200);
 	}
