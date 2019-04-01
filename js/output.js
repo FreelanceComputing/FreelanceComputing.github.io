@@ -26,8 +26,6 @@ $(document).ready(function () {
 	    var winWidth = $(window).width();
 	    var rightPos = winWidth > 1400 ? 0.69 * winWidth : 0.65 * winWidth;
 	    var leftPos = winWidth > 1400 ?  0.93 * winWidth : 0.85 * winWidth;
-	    //var desktopOffset = winWidth - (0.24 * winWidth);
-	    console.log(winWidth);//, cont.offset().left, desktopOffset);
         var cont = $('.c-divider__arrows').eq(0);
 	    console.log(rightPos, cont.offset().left, leftPos);
         return (cont.offset().left > rightPos) && (cont.offset().left < leftPos);
