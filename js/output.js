@@ -18,9 +18,10 @@ $(document).ready(function () {
 	}
 
 	function contInView() {
-		var desktopOffset = 60;
+		var winWidth = $(window).width();
+	    var desktopOffset = winWidth > 1100 ? 0.08 * winWidth: 0.13 * winWidth;
 		var cont = $('[data-isdark="true"]').eq(0);
-		return cont.offset().left < ($(window).width() - desktopOffset);
+		return cont.offset().left < (winWidth - desktopOffset);
 	}
 
 	function arrInView() {
