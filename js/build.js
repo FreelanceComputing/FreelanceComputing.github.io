@@ -29710,14 +29710,14 @@
                     cases: null,
                     //about: null,
                     //contact: null,
-                    casePage: null,
+                    //casePage: null,
                     //"case": {}
                 },
                 base: o.apiBaseUrl + "/wp-json/wp/v2",
                 endpoints: {
                     landing: "/pages?slug=startpage",
                     cases: "/case",
-                    casePage: "/pages?slug=cases",
+                    //casePage: "/pages?slug=cases",
                     //about: "/pages?slug=about",
                     //contact: "/pages?slug=contact",
                     /*"case": function(t) {
