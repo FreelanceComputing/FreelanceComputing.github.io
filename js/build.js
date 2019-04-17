@@ -31214,7 +31214,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overscroll": 78,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/scroll": 82
     }],
-    84: [function(t, e, i) {
+    /*84: [function(t, e, i) {
         "use strict";
 
         function n(t) {
@@ -31250,7 +31250,7 @@
     }, {
         "/Users/andreaslorentsson/Projects/new_site/node_modules/handlebars": 42,
         "/Users/andreaslorentsson/Projects/new_site/node_modules/handlebars-helper-equal": 12
-    }],
+    }],*/
     /*85: [function(t, e, i) {
         "use strict";
 
@@ -32171,8 +32171,8 @@
             o = (n(s), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
             a = n(o),
             l = t(86),
-            h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
-            c = n(h),
+            //h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
+            //c = n(h),
             u = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api"),
             p = n(u),
             d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
@@ -32391,7 +32391,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
