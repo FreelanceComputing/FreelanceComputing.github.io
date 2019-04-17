@@ -32182,7 +32182,7 @@
             //g = n(v),
             y = t(83),
             _ = n(y),
-            b = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
+            b = t(72),
             x = n(b),
             //w = t(85),
             //T = n(w),
@@ -32386,7 +32386,7 @@
         //"/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
         /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
