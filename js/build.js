@@ -31311,10 +31311,10 @@
         });
         var n = {
                 LANDING: "LANDING",
-                //CASE: "CASE",
+                CASE: "CASE",
                 CASES: "CASES",
-                //ABOUT: "ABOUT",
-                //CONTACT: "CONTACT"
+                ABOUT: "ABOUT",
+                CONTACT: "CONTACT"
             },
             r = {
                 LANDING: {
