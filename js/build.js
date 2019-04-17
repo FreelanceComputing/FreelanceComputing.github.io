@@ -28615,8 +28615,8 @@
             u = n(c),
             p = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/landing"),
             d = n(p),
-            f = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/cases"),
-            m = n(f),
+            //f = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/cases"),
+            //m = n(f),
             //v = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/case"),
             //g = n(v),
             //y = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/about"),
@@ -28629,7 +28629,7 @@
             M = n(S),
             P = {
                 landing: d["default"],
-                cases: m["default"]/*,
+                /*cases: m["default"]/*,
                 //about: _["default"],
                 "case": g["default"],
                 contact: x["default"]*/
@@ -28693,7 +28693,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/views/about": 89,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/views/case": 90,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/views/cases": 91,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/views/cases": 91,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/views/contact": 92,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/landing": 93
     }],
@@ -29707,7 +29707,7 @@
                 loader: null,
                 cache: {
                     landing: null,
-                    cases: null,
+                    //cases: null,
                     //about: null,
                     //contact: null,
                     //casePage: null,
@@ -29716,7 +29716,7 @@
                 base: o.apiBaseUrl + "/wp-json/wp/v2",
                 endpoints: {
                     landing: "/pages?slug=startpage",
-                    cases: "/case",
+                    //cases: "/case",
                     //casePage: "/pages?slug=cases",
                     //about: "/pages?slug=about",
                     //contact: "/pages?slug=contact",
@@ -31915,151 +31915,151 @@
     //    "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
     //    "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
     //}],
-    91: [function(t, e, i) {
-        "use strict";
+    //91: [function(t, e, i) {
+    //    "use strict";
 
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var r = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
-            s = (n(r), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings")),
-            o = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
-            a = n(o),
-            l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api"),
-            h = n(l),
-            c = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
-            u = n(c),
-            p = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
-            f = n(d),
-            m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll"),
-            v = n(m),
-            g = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
-            y = n(g),
-            _ = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
-            b = n(_),
-            x = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
-            /*w = (n(x), t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes")),
-            T = (n(w), t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured")),
-            S = n(T),*/
-            M = function() {
-                return '\n    <div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">\n        <div class="o-featured"> \n            {{#each cases}}\n                <a class="o-featured__case js-navigate js-invert-cause o-featured__module-{{@index}} o-featured__module-{{@index}}-no-transform" data-isdark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                    <div class="o-featured__background"></div>\n                    <div class="o-featured__inner">\n                        <div class="o-featured__media">\n                            <div class="o-featured__media-background"></div>\n                            {{#equal this.mediaType "image"}}\n                                <img class="o-featured__media--large" sizes="\n                                (min-width: 1000px) calc(50vw - 120px),\n                                calc(100vw - 60px)" \n                                srcset="\n                                    {{ this.images.large.xsmall }} 520w,\n                                    {{ this.images.large.midsize }} 680w,\n                                    {{ this.images.large.afc_large }} 1020w,\n                                    {{ this.images.large.xlarge }} 1440w"\n                                src="{{ this.images.large.xlarge }}" />\n                            {{/equal}}\n\n                            {{#equal this.mediaType "video"}}\n                                <video class="o-featured__media--large" src="{{ this.video }}" loop playsinline muted></video>\n                            {{/equal}}\n\n                            {{#equal this.mediaTypeMobile "image"}}\n                                <img class="o-featured__media--small" sizes="calc(100vw - 60px)" \n                                srcset="\n                                    {{ this.images.small.midsize }} 680w,\n                                    {{ this.images.small.large }} 1020w"\n                                src="{{ this.images.small.xlarge }}" />\n                            {{/equal}}\n\n                            {{#equal this.mediaTypeMobile "video"}}\n                                <video class="o-featured__media--small" src="{{ this.videoMobile }}" loop playsinline muted></video>\n                            {{/equal}}\n                            <div class="o-featured__media-overlay"></div>\n                        </div>\n                        <div class="o-featured__info">\n                            <div class="o-featured__info-name">\n                                <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                            </div>\n                            {{#equal this.isLocked true}}\n                                <div class="o-featured__is-locked">\n                                    <span>Locked</span>\n                                    <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                        <g>\n                                            <rect x="4" y="6.7" width="1" height="3"/>\n                                            <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                            h1h5h1V11.7z"/>\n                                        </g>\n                                    </svg>\n                                </div>\n                            {{/equal}}\n                        </div>\n                    </div>\n                </a>\n            {{/each}}\n            <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                <div class="c-contact-promo__text">\n                    <h3 class="c-contact-promo__headline">Hello</h3>\n                </div>\n                <div class="c-contact-promo__subheadline-wrapper">\n                    <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                    <div class="c-contact-promo__get-in-touch">\n                        <span>Get in touch</span>\n                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                             viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                            <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                        </svg>\n                    </div>\n                </div>\n            </a>\n        </div>\n    </div>\n'
-            },
-            P = {
-                route: s.ViewSettings.CASES.route,
-                name: s.ViewSettings.CASES.name,
-                wrapper: s.ViewSettings.CASES.wrapper,
-                overlay: null,
-                data: {
-                    cases: null
-                },
-                featuredVideos: null,
-                first: !0,
-                components: {
-                    aboutIntro: null,
-                    fallingCubes: null
-                },
-                utils: {
-                    scrollBar: null,
-                    videoController: null
-                },
-                objects: {
-                    cases: null
-                },
-                init: function() {},
-                animateIn: function(t, e) {
-                    e == s.Views.CASE || e == s.Views.ABOUT || e == s.Views.CONTACT || e == s.Views.LANDING ? (y["default"].setColor("black"), u["default"].animateOut(t)) : (y["default"].setColor("black"), t())
-                },
-                animateOut: function(t, e, i) {
-                    e == s.Views.CASE ? this.objects.cases.animateOutCase(i.params.id, function(e) {
-                        y["default"].setColorByRGB(e), t()
-                    }) : e != s.Views.ABOUT && e != s.Views.CONTACT && e != s.Views.LANDING || (y["default"].setColor("transparent"), u["default"].animateIn(t))
-                },
-                enable: function(t, e, i) {
-                    var n = this,
-                        r = this.wrapper;
-                    h["default"].getCases({
-                        onSuccess: function(t) {
-                            /*(0, p.setMetaTags)({
-                                title: "Work - Studio Bj�rk",
-                                description: "Studio BJ�RK is a digital design & development studio with tons of experience creating high-end productions for some of the biggest brands & agencies in the business.",
-                                url: "https://studiobjork.com/work"
-                            }),*/ n.data.cases = {}/*t.map(function(t, e) {
-                                var i = t.acf;
-                                return {*/
-                                    /*headline: i.featured_case_headline,
-                                    subheadline: i.featured_case_subheadline,
-                                    mediaType: i.featured_case_media_type,
-                                    mediaTypeMobile: i.featured_case_media_type_mobile,
-                                    video: !!i.featured_case_video && i.featured_case_video.url,
-                                    videoMobile: !!i.featured_case_video_mobile && i.featured_case_video_mobile.url,
-                                    images: {
-                                        large: i.featured_case_image.sizes,
-                                        small: !!i.featured_case_image_mobile && i.featured_case_image_mobile.sizes
-                                    },
-                                    isLocked: i.featured_locked_case,
-                                    isDark: (e + 1) % 2,
-                                    id: t.id,
-                                    name: t.slug,
-                                    url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
-                                /*}
-                            })*/, /*a["default"].addTemplate(M(), n.data, r),*/ n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
-                                n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
-                                    container: n.wrapper.querySelector(".smooth-scrollbar"),
-                                    damping: .3
-                                }), n.objects.cases.scrollbar = n.utils.scrollBar), setTimeout(function() {
-                                    f["default"].initTemplate(n.wrapper, n.utils.scrollBar.scrollListener), n.utils.videoController = new b["default"]({
-                                        videos: n.wrapper.querySelectorAll("video"),
-                                        scrollListener: n.utils.scrollBar.scrollListener
-                                    })
-                                }, 1e3)
-                            }), e()
-                        },
-                        onError: function(t) {
-                            console.log(t)
-                        }
-                    })
-                },
-                disable: function(t, e, i) {
-                    this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
-                },
-                initComponents: function() {
-                    this.objects.cases = new S["default"]({
-                        parent: this.wrapper,
-                        block: "o-featured",
-                        elements: ["case", "intro-text", "module-0"],
-                        settings: {
-                            multiple: !1
-                        }
-                    }, {
-                        scrollbar: null,
-                        delayIn: 1,
-                        isWork: !0
-                    })
-                }
-            };
-        i["default"] = P
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
-        /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    }],
+    //    function n(t) {
+    //        return t && t.__esModule ? t : {
+    //            "default": t
+    //        }
+    //    }
+    //    Object.defineProperty(i, "__esModule", {
+    //        value: !0
+    //    });
+    //    var r = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
+    //        s = (n(r), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings")),
+    //        o = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
+    //        a = n(o),
+    //        l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api"),
+    //        h = n(l),
+    //        c = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
+    //        u = n(c),
+    //        p = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
+    //        d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
+    //        f = n(d),
+    //        m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll"),
+    //        v = n(m),
+    //        g = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
+    //        y = n(g),
+    //        _ = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
+    //        b = n(_),
+    //        x = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
+    //        /*w = (n(x), t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes")),
+    //        T = (n(w), t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured")),
+    //        S = n(T),*/
+    //        M = function() {
+    //            return '\n    <div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">\n        <div class="o-featured"> \n            {{#each cases}}\n                <a class="o-featured__case js-navigate js-invert-cause o-featured__module-{{@index}} o-featured__module-{{@index}}-no-transform" data-isdark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                    <div class="o-featured__background"></div>\n                    <div class="o-featured__inner">\n                        <div class="o-featured__media">\n                            <div class="o-featured__media-background"></div>\n                            {{#equal this.mediaType "image"}}\n                                <img class="o-featured__media--large" sizes="\n                                (min-width: 1000px) calc(50vw - 120px),\n                                calc(100vw - 60px)" \n                                srcset="\n                                    {{ this.images.large.xsmall }} 520w,\n                                    {{ this.images.large.midsize }} 680w,\n                                    {{ this.images.large.afc_large }} 1020w,\n                                    {{ this.images.large.xlarge }} 1440w"\n                                src="{{ this.images.large.xlarge }}" />\n                            {{/equal}}\n\n                            {{#equal this.mediaType "video"}}\n                                <video class="o-featured__media--large" src="{{ this.video }}" loop playsinline muted></video>\n                            {{/equal}}\n\n                            {{#equal this.mediaTypeMobile "image"}}\n                                <img class="o-featured__media--small" sizes="calc(100vw - 60px)" \n                                srcset="\n                                    {{ this.images.small.midsize }} 680w,\n                                    {{ this.images.small.large }} 1020w"\n                                src="{{ this.images.small.xlarge }}" />\n                            {{/equal}}\n\n                            {{#equal this.mediaTypeMobile "video"}}\n                                <video class="o-featured__media--small" src="{{ this.videoMobile }}" loop playsinline muted></video>\n                            {{/equal}}\n                            <div class="o-featured__media-overlay"></div>\n                        </div>\n                        <div class="o-featured__info">\n                            <div class="o-featured__info-name">\n                                <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                            </div>\n                            {{#equal this.isLocked true}}\n                                <div class="o-featured__is-locked">\n                                    <span>Locked</span>\n                                    <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                        <g>\n                                            <rect x="4" y="6.7" width="1" height="3"/>\n                                            <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                            h1h5h1V11.7z"/>\n                                        </g>\n                                    </svg>\n                                </div>\n                            {{/equal}}\n                        </div>\n                    </div>\n                </a>\n            {{/each}}\n            <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                <div class="c-contact-promo__text">\n                    <h3 class="c-contact-promo__headline">Hello</h3>\n                </div>\n                <div class="c-contact-promo__subheadline-wrapper">\n                    <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                    <div class="c-contact-promo__get-in-touch">\n                        <span>Get in touch</span>\n                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                             viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                            <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                        </svg>\n                    </div>\n                </div>\n            </a>\n        </div>\n    </div>\n'
+    //        },
+    //        P = {
+    //            route: s.ViewSettings.CASES.route,
+    //            name: s.ViewSettings.CASES.name,
+    //            wrapper: s.ViewSettings.CASES.wrapper,
+    //            overlay: null,
+    //            data: {
+    //                cases: null
+    //            },
+    //            featuredVideos: null,
+    //            first: !0,
+    //            components: {
+    //                aboutIntro: null,
+    //                fallingCubes: null
+    //            },
+    //            utils: {
+    //                scrollBar: null,
+    //                videoController: null
+    //            },
+    //            objects: {
+    //                cases: null
+    //            },
+    //            init: function() {},
+    //            animateIn: function(t, e) {
+    //                e == s.Views.CASE || e == s.Views.ABOUT || e == s.Views.CONTACT || e == s.Views.LANDING ? (y["default"].setColor("black"), u["default"].animateOut(t)) : (y["default"].setColor("black"), t())
+    //            },
+    //            animateOut: function(t, e, i) {
+    //                e == s.Views.CASE ? this.objects.cases.animateOutCase(i.params.id, function(e) {
+    //                    y["default"].setColorByRGB(e), t()
+    //                }) : e != s.Views.ABOUT && e != s.Views.CONTACT && e != s.Views.LANDING || (y["default"].setColor("transparent"), u["default"].animateIn(t))
+    //            },
+    //            enable: function(t, e, i) {
+    //                var n = this,
+    //                    r = this.wrapper;
+    //                h["default"].getCases({
+    //                    onSuccess: function(t) {
+    //                        /*(0, p.setMetaTags)({
+    //                            title: "Work - Studio Bj�rk",
+    //                            description: "Studio BJ�RK is a digital design & development studio with tons of experience creating high-end productions for some of the biggest brands & agencies in the business.",
+    //                            url: "https://studiobjork.com/work"
+    //                        }),*/ n.data.cases = {}/*t.map(function(t, e) {
+    //                            var i = t.acf;
+    //                            return {*/
+    //                                /*headline: i.featured_case_headline,
+    //                                subheadline: i.featured_case_subheadline,
+    //                                mediaType: i.featured_case_media_type,
+    //                                mediaTypeMobile: i.featured_case_media_type_mobile,
+    //                                video: !!i.featured_case_video && i.featured_case_video.url,
+    //                                videoMobile: !!i.featured_case_video_mobile && i.featured_case_video_mobile.url,
+    //                                images: {
+    //                                    large: i.featured_case_image.sizes,
+    //                                    small: !!i.featured_case_image_mobile && i.featured_case_image_mobile.sizes
+    //                                },
+    //                                isLocked: i.featured_locked_case,
+    //                                isDark: (e + 1) % 2,
+    //                                id: t.id,
+    //                                name: t.slug,
+    //                                url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
+    //                            /*}
+    //                        })*/, /*a["default"].addTemplate(M(), n.data, r),*/ n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
+    //                            n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
+    //                                container: n.wrapper.querySelector(".smooth-scrollbar"),
+    //                                damping: .3
+    //                            }), n.objects.cases.scrollbar = n.utils.scrollBar), setTimeout(function() {
+    //                                f["default"].initTemplate(n.wrapper, n.utils.scrollBar.scrollListener), n.utils.videoController = new b["default"]({
+    //                                    videos: n.wrapper.querySelectorAll("video"),
+    //                                    scrollListener: n.utils.scrollBar.scrollListener
+    //                                })
+    //                            }, 1e3)
+    //                        }), e()
+    //                    },
+    //                    onError: function(t) {
+    //                        console.log(t)
+    //                    }
+    //                })
+    //            },
+    //            disable: function(t, e, i) {
+    //                this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
+    //            },
+    //            initComponents: function() {
+    //                this.objects.cases = new S["default"]({
+    //                    parent: this.wrapper,
+    //                    block: "o-featured",
+    //                    elements: ["case", "intro-text", "module-0"],
+    //                    settings: {
+    //                        multiple: !1
+    //                    }
+    //                }, {
+    //                    scrollbar: null,
+    //                    delayIn: 1,
+    //                    isWork: !0
+    //                })
+    //            }
+    //        };
+    //    i["default"] = P
+    //}, {
+    //    "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
+    //    "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
+    //    /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
+    //}],
     /*92: [function(t, e, i) {
         "use strict";
 
