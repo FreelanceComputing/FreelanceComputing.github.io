@@ -31345,7 +31345,7 @@
             };
         i.ViewSettings = r, i.Views = n
     }, {}],
-    87: [function(t, e, i) {
+    /*87: [function(t, e, i) {
         "use strict";
 
         function n(t) {
@@ -31426,7 +31426,7 @@
         "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
-    }],
+    }],*/
     /*88: [function(t, e, i) {
         "use strict";
 
