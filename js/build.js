@@ -28697,7 +28697,7 @@
         //"/Users/andreaslorentsson/Projects/new_site/src/js/views/contact": 92,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/landing": 93
     }],
-    66: [function(t, e, i) {
+    /*66: [function(t, e, i) {
         "use strict";
 
         function n(t) {
@@ -28797,7 +28797,7 @@
         "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
-    }],
+    }],*/
     /*67: [function(t, e, i) {
         "use strict";
 
@@ -32175,19 +32175,19 @@
             //c = n(h),
             u = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api"),
             p = n(u),
-            d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
+            d = t(77),
             f = n(d),
             m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
             v = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
             g = n(v),
-            y = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll"),
+            y = t(83),
             _ = n(y),
             b = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
             x = n(b),
             //w = t(85),
             //T = n(w),
-            S = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
-            M = n(S),
+            //S = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
+            //M = n(S),
             /*P = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes"),
             E = n(P),*/
             //A = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured"),
@@ -32383,14 +32383,14 @@
         "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
         "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
         "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap/ScrollToPlugin": 9,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
         /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
