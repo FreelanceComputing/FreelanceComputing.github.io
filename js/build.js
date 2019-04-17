@@ -28617,8 +28617,8 @@
             d = n(p),
             f = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/cases"),
             m = n(f),
-            v = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/case"),
-            g = n(v),
+            //v = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/case"),
+            //g = n(v),
             //y = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/about"),
             //_ = n(y),
             //b = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/contact"),
@@ -28629,9 +28629,9 @@
             M = n(S),
             P = {
                 landing: d["default"],
-                cases: m["default"],
+                cases: m["default"]/*,
                 //about: _["default"],
-                "case": g["default"]/*,
+                "case": g["default"],
                 contact: x["default"]*/
             },
             E = {
@@ -28692,7 +28692,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize": 80,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/views/about": 89,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/views/case": 90,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/views/case": 90,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/cases": 91,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/views/contact": 92,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/landing": 93
@@ -29711,7 +29711,7 @@
                     //about: null,
                     //contact: null,
                     casePage: null,
-                    "case": {}
+                    //"case": {}
                 },
                 base: o.apiBaseUrl + "/wp-json/wp/v2",
                 endpoints: {
@@ -29720,9 +29720,9 @@
                     casePage: "/pages?slug=cases",
                     //about: "/pages?slug=about",
                     //contact: "/pages?slug=contact",
-                    "case": function(t) {
+                    /*"case": function(t) {
                         return "/case?slug=" + t
-                    }
+                    }*/
                 },
                 getLanding: function(t) {
 					t.onSuccess(t)
@@ -29777,8 +29777,9 @@
                         json: !0
                     }))
                 },*/
-                getCase: function(t, e) {
-                    var i = this;
+                //getCase: function (t, e) {
+                    //e.onSuccess({});
+                    /*var i = this;
                     if (this.cache["case"][t.id]) e.onSuccess(this.cache["case"][t.id]);
                     else {
                         var n = "";
@@ -29809,8 +29810,8 @@
                             processData: !1,
                             json: !0
                         })
-                    }
-                }
+                    }*/
+                //}
             };
         i["default"] = l
     }, {
@@ -31325,12 +31326,12 @@
                     name: n.CASES,
                     route: "/work",
                     wrapper: document.querySelector(".o-section--cases")
-                },
+                }/*,
                 CASE: {
                     name: n.CASE,
                     route: "/case/:id/:locked?",
                     wrapper: document.querySelector(".o-section--case")
-                }/*,
+                },
                 ABOUT: {
                     name: n.ABOUT,
                     route: "/about",
@@ -31734,186 +31735,186 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
         "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
     }],*/
-    90: [function(t, e, i) {
-        "use strict";
+    //90: [function(t, e, i) {
+    //    "use strict";
 
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var r = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings"),
-            s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
-            o = n(s),
-            a = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
-            l = n(a),
-            h = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api")),
-            c = n(h),
-            u = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/router"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll")),
-            p = n(u),
-            d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
-            f = n(d),
-            m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            v = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize"),
-            g = n(v),
-            y = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
-            _ = n(y),
-            b = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
-            x = n(b),
-            w = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/case"),
-            T = n(w),
-            S = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured"),
-            M = n(S),
-            P = function() {
-				return '\n    <div class="smooth-scrollbar u-smooth-scrollbar" style="height: 100%;">\n        <div class="o-case">\n            <div class="o-case__module o-case__intro o-case__module--intro c-module-intro js-invert-cause" data-isdark="{{this.introIsDark}}">\n                <div class="c-module-intro__text o-case__intro-text o-editorial">\n                    {{{ case.intro }}}\n                </div>\n            </div>\n            {{#each case.modules}}\n                {{#equal this.acf_fc_layout "case_modules_media_large"}}\n                    <div class="o-case__module o-case__module-{{@index}} o-case__module--media-large c-module-media-large js-invert-cause" data-isdark="{{this.case_modules_media_large_is_dark}}">\n                        {{#equal this.case_modules_media_large_media_type "image"}}\n                            <img class="c-module-media-large__media c-module-media-large__media--image" src="{{ this.case_modules_media_large_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-media-large__media c-module-media-large__media--video" src="{{ this.case_modules_media_large_video.url }}" loop playsinline muted></video>\n                        {{/equal}}\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_textarea"}}\n                    <div style="background-color:#{{ this.case_modules_textarea_bg_color }}; color: #{{this.case_modules_textarea_text_color}}; --text-color:#{{this.case_modules_textarea_text_color}}" class="o-case__module o-case__module-{{@index}} o-case__module--textarea c-module-textarea js-invert-cause" data-isdark="{{this.case_modules_textarea_is_dark}}">\n                        <div class="c-module-textarea__text">\n                            <p>{{{ this.case_modules_textarea_text }}}</p>\n                        </div>\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_video"}}\n                    <div style="background-color:#{{ this.case_modules_video_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--video c-module-video js-invert-cause" data-isdark="{{this.case_modules_video_is_dark}}">\n                        {{#equal this.case_modules_video_media_type \'image\'}}\n                            <img class="c-module-video__media c-module-video__media--image" src="{{ this.case_modules_video_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-video__media c-module-video__media--video" src="{{ this.case_modules_video_file.url }}" loop playsinline muted></video>\n                        {{/equal}}            \n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_image"}}\n                    <div style="background-color:#{{ this.case_modules_image_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--image c-module-image js-invert-cause" data-isdark="{{this.case_modules_image_is_dark}}">\n                        <img class="c-module-image__media c-module-image__media--image" src="{{ this.case_modules_image_file.sizes.xxxlarge }}" />\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_large_textarea"}}\n                    <div style="background-color:#{{ this.case_modules_large_textarea_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--large-text c-module-large-textarea js-invert-cause" data-isdark="{{this.case_modules_large_textarea_is_dark}}">\n                        {{#equal this.case_modules_large_textarea_media_type \'image\'}}\n                            <img class="c-module-large-textarea__media c-module-large-textarea__media--image" src="{{ this.case_modules_large_textarea_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-large-textarea__media c-module-large-textarea__media--video"o src="{{ this.case_modules_large_textarea_file.url }}" loop playsinline muted></video>\n                        {{/equal}}\n                        <div class="c-module-large-textarea__text">\n                            {{#equal this.case_modules_large_textarea_textcolor \'\'}}\n                                <p style="color: #000">{{ this.case_modules_large_textarea_text }}</p>\n                            {{ else }}\n                                <p style="color: #{{this.case_modules_large_textarea_textcolor}}">{{ this.case_modules_large_textarea_text }}</p>\n                            {{/equal}}\n                        </div>\n                    </div>\n                {{/equal}}\n            {{/each}}\n            </div>\n    </div>\n'; //<div class="c-divider">\n                <span>More cases</span>\n                <div class="c-divider__arrows"></div>\n            </div>\n            <div class="o-featured"> \n                {{#each cases}}\n                    <a class="o-featured__case js-navigate js-invert-cause" data-isDark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                        <div class="o-featured__background"></div>\n                        <div class="o-featured__inner">\n                            <div class="o-featured__media">\n                                <div class="o-featured__media-background"></div>\n                                {{#equal this.mediaType "image"}}\n                                    <img sizes="\n                                    (min-width: 1000px) calc(50vw - 120px),\n                                    calc(100vw - 60px)" \n                                    srcset="\n                                        {{ this.images.xsmall }} 520w,\n                                        {{ this.images.midsize }} 680w,\n                                        {{ this.images.afc_large }} 1020w,\n                                        {{ this.images.xlarge }} 1440w"\n                                    src="{{ this.images.xlarge }}" />\n                                {{/equal}}\n\n                                {{#equal this.mediaType "video"}}\n                                    <video src="{{ this.video }}" loop playsinline muted></video>\n                                {{/equal}}\n\n                                <div class="o-featured__media-overlay"></div>\n                            </div>\n                            <div class="o-featured__info">\n                                <div class="o-featured__info-name">\n                                    <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                    <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                                </div>\n                                {{#equal this.isLocked true}}\n                                    <div class="o-featured__is-locked">\n                                        <span>Locked</span>\n                                        <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                            <g>\n                                                <rect x="4" y="6.7" width="1" height="3"/>\n                                                <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                                h1h5h1V11.7z"/>\n                                            </g>\n                                        </svg>\n                                    </div>\n                                {{/equal}}\n                            </div>\n                        </div>\n                    </a>\n                {{/each}}\n                <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                    <div class="c-contact-promo__text">\n                        <h3 class="c-contact-promo__headline">Hello</h3>\n                    </div>\n                    <div class="c-contact-promo__subheadline-wrapper">\n                        <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                        <div class="c-contact-promo__get-in-touch">\n                            <span>Get in touch</span>\n                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                                 viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                                <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                            </svg>\n                        </div>\n                    </div>\n                </a>\n            </div>\n        
-            },
-            E = {
-                route: r.ViewSettings.CASE.route,
-                name: r.ViewSettings.CASE.name,
-                wrapper: r.ViewSettings.CASE.wrapper,
-                data: null,
-                overlay: null,
-                prevRoute: null,
-                player: null,
-                infoVisible: !1,
-                _resize: new g["default"],
-                utils: {
-                    scrollBar: null,
-                    videoController: null
-                },
-                components: {
-                    "case": null
-                },
-                objects: {
-                    cases: null
-                },
-                onClose: function(t) {},
-                initEventHandlers: function() {},
-                init: function() {},
-                animateIn: function(t, e) {
-                    return e == r.Views.ABOUT || e == r.Views.CONTACT ? (this.wrapper.style.opacity = 1, void l["default"].animateOut(t)) : ("undefined" == typeof e && f["default"].setColor("white"), this.wrapper.style.opacity = 1, void t())
-                },
-                animateOut: function(t, e, i) {
-                    var n = this;
-                    e == r.Views.CASE ? this.objects.cases.animateOutCase(i.params.id, function(e) {
-                        f["default"].setColorByRGB(e), n.wrapper.style.opacity = 0, t()
-                    }) : e == r.Views.LANDING ? l["default"].animateIn(t) : e != r.Views.ABOUT && e != r.Views.CONTACT && e != r.Views.CASES || l["default"].animateIn(t)
-                },
-                enable: function(t, e, i) {
-                    var n = this;
-                    c["default"].getCase(t.params, {
-                        onSuccess: function(t) {
-                            /*t[0].yoast_meta && (0, m.setMetaTags)({
-                                title: t[0].yoast_meta.yoast_wpseo_title,
-                                description: t[0].yoast_meta.yoast_wpseo_metadesc,
-                                url: t[0].yoast_meta.yoast_wpseo_canonical,
-                                og_image: !!t[0].acf.seo_og_image && t[0].acf.seo_og_image.url
-                            });*/
-                            var i = {
-                                //intro: t[0].acf.intro_regular_text_area,
-                                modules: t[0].acf.modules_case_modules,
-                                //id: t[0].id
-                            };
-                            n.caseLoaded(i, e)
-                        },
-                        onError: function(t) {
-                            console.log(t)
-                        }
-                    })
-                },
-                caseLoaded: function(t, e) {
-                    var i = this;
-                    c["default"].getCases({
-                        onSuccess: function(n) {
-                            /*var r = n.map(function(t, e) {
-                                var i = t.acf;
-                                return {*/
-                                    /*headline: i.featured_case_headline,
-                                    subheadline: i.featured_case_subheadline,
-                                    mediaType: i.featured_case_media_type,
-                                    video: !!i.featured_case_video && i.featured_case_video.url,
-                                    images: i.featured_case_image.sizes,
-                                    isLocked: i.featured_locked_case,
-                                    id: t.id,
-                                    name: t.slug,
-                                    url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
-                                /*}
-                            });*/
-                            /*r = r.filter(function(e) {
-                                return e.id !== t.id
-                            }), r = r.map(function(t, e) {
-                                return t.isDark = (e + 1) % 2, t
-                            }),*/ i.data = {
-                                "case": t,
-                                cases: {},
-                                introIsDark: "black" == f["default"].getColor() ? 1 : 0
-                            };
-                            var s = i.wrapper;
-							var inner = i.wrapper.innerHTML;
-							o["default"].addTemplate(P(), i.data, s), 
-							/*console.log(i), console.log("\ndefault\n"),
-							i.wrapper.innerHTML = inner,
-							console.log(i),*/
-							i.initComponents(), i.components["case"].animateIn(.5, function() {
-                                /*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
-                                    container: i.wrapper.querySelector(".smooth-scrollbar"),
-                                    damping: .3
-                                })), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener)/*, i.utils.videoController = new x["default"]({
-                                    videos: i.wrapper.querySelectorAll("video"),
-                                    scrollListener: i.utils.scrollBar.scrollListener
-                                })*/
-                            }), e()
-                        }
-                    })
-                },
-                disable: function(t, e, i) {
-                    this._resize.removeListener(this.resizeID), this.utils.videoController && this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
-                },
-                initComponents: function() {
-                    var t = this;
-                    this.components["case"] = new T["default"]({
-                        block: "o-case",
-                        elements: ["intro-text", "module-0", "divider", "module"],
-                        settings: {
-                            multiple: !1
-                        }
-                    }), this.objects.cases = new M["default"]({
-                        parent: this.wrapper,
-                        block: "o-featured",
-                        elements: ["case"],
-                        settings: {
-                            multiple: !1
-                        }
-                    }, {
-                        scrollbar: null,
-                        delayIn: !1
-                    }), this.resizeID = this._resize.addListener(function() {
-                        t.components["case"].elements.module.forEach(function(t) {
-                            t.style.height = "auto", t.offsetHeight, t.style.height = "100%"
-                        })
-                    })
-                }
-            };
-        i["default"] = E
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize": 80,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    }],
+    //    function n(t) {
+    //        return t && t.__esModule ? t : {
+    //            "default": t
+    //        }
+    //    }
+    //    Object.defineProperty(i, "__esModule", {
+    //        value: !0
+    //    });
+    //    var r = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings"),
+    //        s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
+    //        o = n(s),
+    //        a = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
+    //        l = n(a),
+    //        h = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api")),
+    //        c = n(h),
+    //        u = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/router"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll")),
+    //        p = n(u),
+    //        d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
+    //        f = n(d),
+    //        m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
+    //        v = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize"),
+    //        g = n(v),
+    //        y = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
+    //        _ = n(y),
+    //        b = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
+    //        x = n(b),
+    //        w = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/case"),
+    //        T = n(w),
+    //        S = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured"),
+    //        M = n(S),
+    //        P = function() {
+	//			return '\n    <div class="smooth-scrollbar u-smooth-scrollbar" style="height: 100%;">\n        <div class="o-case">\n            <div class="o-case__module o-case__intro o-case__module--intro c-module-intro js-invert-cause" data-isdark="{{this.introIsDark}}">\n                <div class="c-module-intro__text o-case__intro-text o-editorial">\n                    {{{ case.intro }}}\n                </div>\n            </div>\n            {{#each case.modules}}\n                {{#equal this.acf_fc_layout "case_modules_media_large"}}\n                    <div class="o-case__module o-case__module-{{@index}} o-case__module--media-large c-module-media-large js-invert-cause" data-isdark="{{this.case_modules_media_large_is_dark}}">\n                        {{#equal this.case_modules_media_large_media_type "image"}}\n                            <img class="c-module-media-large__media c-module-media-large__media--image" src="{{ this.case_modules_media_large_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-media-large__media c-module-media-large__media--video" src="{{ this.case_modules_media_large_video.url }}" loop playsinline muted></video>\n                        {{/equal}}\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_textarea"}}\n                    <div style="background-color:#{{ this.case_modules_textarea_bg_color }}; color: #{{this.case_modules_textarea_text_color}}; --text-color:#{{this.case_modules_textarea_text_color}}" class="o-case__module o-case__module-{{@index}} o-case__module--textarea c-module-textarea js-invert-cause" data-isdark="{{this.case_modules_textarea_is_dark}}">\n                        <div class="c-module-textarea__text">\n                            <p>{{{ this.case_modules_textarea_text }}}</p>\n                        </div>\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_video"}}\n                    <div style="background-color:#{{ this.case_modules_video_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--video c-module-video js-invert-cause" data-isdark="{{this.case_modules_video_is_dark}}">\n                        {{#equal this.case_modules_video_media_type \'image\'}}\n                            <img class="c-module-video__media c-module-video__media--image" src="{{ this.case_modules_video_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-video__media c-module-video__media--video" src="{{ this.case_modules_video_file.url }}" loop playsinline muted></video>\n                        {{/equal}}            \n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_image"}}\n                    <div style="background-color:#{{ this.case_modules_image_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--image c-module-image js-invert-cause" data-isdark="{{this.case_modules_image_is_dark}}">\n                        <img class="c-module-image__media c-module-image__media--image" src="{{ this.case_modules_image_file.sizes.xxxlarge }}" />\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_large_textarea"}}\n                    <div style="background-color:#{{ this.case_modules_large_textarea_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--large-text c-module-large-textarea js-invert-cause" data-isdark="{{this.case_modules_large_textarea_is_dark}}">\n                        {{#equal this.case_modules_large_textarea_media_type \'image\'}}\n                            <img class="c-module-large-textarea__media c-module-large-textarea__media--image" src="{{ this.case_modules_large_textarea_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-large-textarea__media c-module-large-textarea__media--video"o src="{{ this.case_modules_large_textarea_file.url }}" loop playsinline muted></video>\n                        {{/equal}}\n                        <div class="c-module-large-textarea__text">\n                            {{#equal this.case_modules_large_textarea_textcolor \'\'}}\n                                <p style="color: #000">{{ this.case_modules_large_textarea_text }}</p>\n                            {{ else }}\n                                <p style="color: #{{this.case_modules_large_textarea_textcolor}}">{{ this.case_modules_large_textarea_text }}</p>\n                            {{/equal}}\n                        </div>\n                    </div>\n                {{/equal}}\n            {{/each}}\n            </div>\n    </div>\n'; //<div class="c-divider">\n                <span>More cases</span>\n                <div class="c-divider__arrows"></div>\n            </div>\n            <div class="o-featured"> \n                {{#each cases}}\n                    <a class="o-featured__case js-navigate js-invert-cause" data-isDark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                        <div class="o-featured__background"></div>\n                        <div class="o-featured__inner">\n                            <div class="o-featured__media">\n                                <div class="o-featured__media-background"></div>\n                                {{#equal this.mediaType "image"}}\n                                    <img sizes="\n                                    (min-width: 1000px) calc(50vw - 120px),\n                                    calc(100vw - 60px)" \n                                    srcset="\n                                        {{ this.images.xsmall }} 520w,\n                                        {{ this.images.midsize }} 680w,\n                                        {{ this.images.afc_large }} 1020w,\n                                        {{ this.images.xlarge }} 1440w"\n                                    src="{{ this.images.xlarge }}" />\n                                {{/equal}}\n\n                                {{#equal this.mediaType "video"}}\n                                    <video src="{{ this.video }}" loop playsinline muted></video>\n                                {{/equal}}\n\n                                <div class="o-featured__media-overlay"></div>\n                            </div>\n                            <div class="o-featured__info">\n                                <div class="o-featured__info-name">\n                                    <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                    <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                                </div>\n                                {{#equal this.isLocked true}}\n                                    <div class="o-featured__is-locked">\n                                        <span>Locked</span>\n                                        <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                            <g>\n                                                <rect x="4" y="6.7" width="1" height="3"/>\n                                                <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                                h1h5h1V11.7z"/>\n                                            </g>\n                                        </svg>\n                                    </div>\n                                {{/equal}}\n                            </div>\n                        </div>\n                    </a>\n                {{/each}}\n                <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                    <div class="c-contact-promo__text">\n                        <h3 class="c-contact-promo__headline">Hello</h3>\n                    </div>\n                    <div class="c-contact-promo__subheadline-wrapper">\n                        <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                        <div class="c-contact-promo__get-in-touch">\n                            <span>Get in touch</span>\n                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                                 viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                                <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                            </svg>\n                        </div>\n                    </div>\n                </a>\n            </div>\n        
+    //        },
+    //        E = {
+    //            route: r.ViewSettings.CASE.route,
+    //            name: r.ViewSettings.CASE.name,
+    //            wrapper: r.ViewSettings.CASE.wrapper,
+    //            data: null,
+    //            overlay: null,
+    //            prevRoute: null,
+    //            player: null,
+    //            infoVisible: !1,
+    //            _resize: new g["default"],
+    //            utils: {
+    //                scrollBar: null,
+    //                videoController: null
+    //            },
+    //            components: {
+    //                "case": null
+    //            },
+    //            objects: {
+    //                cases: null
+    //            },
+    //            onClose: function(t) {},
+    //            initEventHandlers: function() {},
+    //            init: function() {},
+    //            animateIn: function(t, e) {
+    //                return e == r.Views.ABOUT || e == r.Views.CONTACT ? (this.wrapper.style.opacity = 1, void l["default"].animateOut(t)) : ("undefined" == typeof e && f["default"].setColor("white"), this.wrapper.style.opacity = 1, void t())
+    //            },
+    //            animateOut: function(t, e, i) {
+    //                var n = this;
+    //                e == r.Views.CASE ? this.objects.cases.animateOutCase(i.params.id, function(e) {
+    //                    f["default"].setColorByRGB(e), n.wrapper.style.opacity = 0, t()
+    //                }) : e == r.Views.LANDING ? l["default"].animateIn(t) : e != r.Views.ABOUT && e != r.Views.CONTACT && e != r.Views.CASES || l["default"].animateIn(t)
+    //            },
+    //            enable: function(t, e, i) {
+    //                var n = this;
+    //                c["default"].getCase(t.params, {
+    //                    onSuccess: function(t) {
+    //                        /*t[0].yoast_meta && (0, m.setMetaTags)({
+    //                            title: t[0].yoast_meta.yoast_wpseo_title,
+    //                            description: t[0].yoast_meta.yoast_wpseo_metadesc,
+    //                            url: t[0].yoast_meta.yoast_wpseo_canonical,
+    //                            og_image: !!t[0].acf.seo_og_image && t[0].acf.seo_og_image.url
+    //                        });*/
+    //                        var i = {
+    //                            //intro: t[0].acf.intro_regular_text_area,
+    //                            modules: /*t[0].acf.modules_case_modules*/{},
+    //                            //id: t[0].id
+    //                        };
+    //                        n.caseLoaded(i, e)
+    //                    },
+    //                    onError: function(t) {
+    //                        console.log(t)
+    //                    }
+    //                })
+    //            },
+    //            caseLoaded: function(t, e) {
+    //                var i = this;
+    //                c["default"].getCases({
+    //                    onSuccess: function(n) {
+    //                        /*var r = n.map(function(t, e) {
+    //                            var i = t.acf;
+    //                            return {*/
+    //                                /*headline: i.featured_case_headline,
+    //                                subheadline: i.featured_case_subheadline,
+    //                                mediaType: i.featured_case_media_type,
+    //                                video: !!i.featured_case_video && i.featured_case_video.url,
+    //                                images: i.featured_case_image.sizes,
+    //                                isLocked: i.featured_locked_case,
+    //                                id: t.id,
+    //                                name: t.slug,
+    //                                url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
+    //                            /*}
+    //                        });*/
+    //                        /*r = r.filter(function(e) {
+    //                            return e.id !== t.id
+    //                        }), r = r.map(function(t, e) {
+    //                            return t.isDark = (e + 1) % 2, t
+    //                        }),*/ i.data = {
+    //                            "case": t,
+    //                            cases: {},
+    //                            introIsDark: "black" == f["default"].getColor() ? 1 : 0
+    //                        };
+    //                        var s = i.wrapper;
+	//						var inner = i.wrapper.innerHTML;
+	//						o["default"].addTemplate(P(), i.data, s), 
+	//						/*console.log(i), console.log("\ndefault\n"),
+	//						i.wrapper.innerHTML = inner,
+	//						console.log(i),*/
+	//						i.initComponents(), i.components["case"].animateIn(.5, function() {
+    //                            /*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
+    //                                container: i.wrapper.querySelector(".smooth-scrollbar"),
+    //                                damping: .3
+    //                            })), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener)/*, i.utils.videoController = new x["default"]({
+    //                                videos: i.wrapper.querySelectorAll("video"),
+    //                                scrollListener: i.utils.scrollBar.scrollListener
+    //                            })*/
+    //                        }), e()
+    //                    }
+    //                })
+    //            },
+    //            disable: function(t, e, i) {
+    //                this._resize.removeListener(this.resizeID), this.utils.videoController && this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
+    //            },
+    //            initComponents: function() {
+    //                var t = this;
+    //                this.components["case"] = new T["default"]({
+    //                    block: "o-case",
+    //                    elements: ["intro-text", "module-0", "divider", "module"],
+    //                    settings: {
+    //                        multiple: !1
+    //                    }
+    //                }), this.objects.cases = new M["default"]({
+    //                    parent: this.wrapper,
+    //                    block: "o-featured",
+    //                    elements: ["case"],
+    //                    settings: {
+    //                        multiple: !1
+    //                    }
+    //                }, {
+    //                    scrollbar: null,
+    //                    delayIn: !1
+    //                }), this.resizeID = this._resize.addListener(function() {
+    //                    t.components["case"].elements.module.forEach(function(t) {
+    //                        t.style.height = "auto", t.offsetHeight, t.style.height = "100%"
+    //                    })
+    //                })
+    //            }
+    //        };
+    //    i["default"] = E
+    //}, {
+    //    "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize": 80,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
+    //    "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
+    //}],
     91: [function(t, e, i) {
         "use strict";
 
