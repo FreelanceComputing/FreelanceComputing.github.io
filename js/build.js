@@ -31054,7 +31054,7 @@
                     return i && t(e.prototype, i), n && t(e, n), e
                 }
             }(),
-            s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix"),
+            s = t(79),
             o = function() {
                 function t(e) {
                     n(this, t), this.smoothScrollBar = e.smoothScrollBar, this._isScrolling = !1, this._scrollTop = 0, this._isScrollingInterval = null, this._scrollListener = this._onScroll.bind(this), this._callbacks = []
@@ -31114,7 +31114,7 @@
             }();
         i["default"] = o
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix": 79
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix": 79
     }],
     83: [function(t, e, i) {
         "use strict";
