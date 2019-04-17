@@ -31311,10 +31311,10 @@
         });
         var n = {
                 LANDING: "LANDING",
-                CASE: "CASE",
+                //CASE: "CASE",
                 CASES: "CASES",
-                ABOUT: "ABOUT",
-                CONTACT: "CONTACT"
+                //ABOUT: "ABOUT",
+                //CONTACT: "CONTACT"
             },
             r = {
                 LANDING: {
@@ -32170,7 +32170,7 @@
             s = t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap/ScrollToPlugin"),
             o = (n(s), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
             a = n(o),
-            l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings"),
+            l = t(86),
             h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
             c = n(h),
             u = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api"),
@@ -32393,7 +32393,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
     }]
 }, {}, [65]);
