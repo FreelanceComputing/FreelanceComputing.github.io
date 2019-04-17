@@ -29458,12 +29458,13 @@
                     key: "init",
                     value: function() {
                         var t = this;
-                        this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio), h["default"].forEach(function(e, i) {
+                        this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio), 
+						h["default"].forEach(function(e, i) {
                             var n = new Image;
                             n.src = e.url_small, n.onload = function() {
                                 i++, e.image = n, i == h["default"].length && (t.currImage = h["default"][t.currImageIndex].image, t.framesLoaded())
-                            }
-                        })
+							}
+                        })//t.framesLoaded()
                     }
                 }, {
                     key: "startLoader",
@@ -29724,12 +29725,13 @@
                     }
                 },
                 getLanding: function(t) {
-                    s["default"].get("" + this.base + this.endpoints.landing, {}, {
+					t.onSuccess(t)
+                    /*s["default"].get("" + this.base + this.endpoints.landing, {}, {
                         onSuccess: t.onSuccess,
                         onError: t.onError,
                         processData: !1,
                         json: !0
-                    })
+                    })*/
                 },
                 getCasePage: function(t) {
                     var e = this;
@@ -32225,7 +32227,7 @@
                         r = this.wrapper;
                     p["default"].getLanding({
                         onSuccess: function(t) {
-                            n.data = {}, n.data.about = t[0].acf, n.data.cases = [], /*t[0].yoast_meta && (0, m.setMetaTags)({
+                            n.data = {}, n.data.about = /*t[0].acf*/"", n.data.cases = [], /*t[0].yoast_meta && (0, m.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
                                 description: t[0].yoast_meta.yoast_wpseo_metadesc,
                                 url: t[0].yoast_meta.yoast_wpseo_canonical
