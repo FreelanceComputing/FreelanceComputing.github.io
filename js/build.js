@@ -31251,7 +31251,7 @@
         "/Users/andreaslorentsson/Projects/new_site/node_modules/handlebars": 42,
         "/Users/andreaslorentsson/Projects/new_site/node_modules/handlebars-helper-equal": 12
     }],
-    85: [function(t, e, i) {
+    /*85: [function(t, e, i) {
         "use strict";
 
         function n(t, e) {
@@ -31303,7 +31303,7 @@
         i["default"] = o
     }, {
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
-    }],
+    }],*/
     86: [function(t, e, i) {
         "use strict";
         Object.defineProperty(i, "__esModule", {
@@ -32184,8 +32184,8 @@
             _ = n(y),
             b = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
             x = n(b),
-            w = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
-            T = n(w),
+            //w = t(85),
+            //T = n(w),
             S = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
             M = n(S),
             /*P = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes"),
@@ -32392,7 +32392,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
         "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
     }]
