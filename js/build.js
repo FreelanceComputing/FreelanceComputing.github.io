@@ -31988,9 +31988,9 @@
                                 title: "Work - Studio Bj�rk",
                                 description: "Studio BJ�RK is a digital design & development studio with tons of experience creating high-end productions for some of the biggest brands & agencies in the business.",
                                 url: "https://studiobjork.com/work"
-                            }),*/ n.data.cases = t.map(function(t, e) {
+                            }),*/ n.data.cases = {}/*t.map(function(t, e) {
                                 var i = t.acf;
-                                return {
+                                return {*/
                                     /*headline: i.featured_case_headline,
                                     subheadline: i.featured_case_subheadline,
                                     mediaType: i.featured_case_media_type,
@@ -32006,8 +32006,8 @@
                                     id: t.id,
                                     name: t.slug,
                                     url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
-                                }
-                            }), /*a["default"].addTemplate(M(), n.data, r),*/ n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
+                                /*}
+                            })*/, /*a["default"].addTemplate(M(), n.data, r),*/ n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
                                 n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
                                     container: n.wrapper.querySelector(".smooth-scrollbar"),
                                     damping: .3
