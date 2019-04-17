@@ -29733,7 +29733,7 @@
                         json: !0
                     })*/
                 },
-                getCasePage: function(t) {
+                /*getCasePage: function(t) {
                     var e = this;
                     this.cache.casePage ? t.onSuccess(this.cache.casePage) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.casePage, {}, {
                         onSuccess: function(i) {
@@ -29743,7 +29743,7 @@
                         processData: !1,
                         json: !0
                     }))
-                },
+                },*/
                 getCases: function (t) {
                     var e = this;
                     this.cache.cases ? t.onSuccess(this.cache.cases) : (this.loader.startLoader(), e.loader.onLoaded(), t.onSuccess({}) /*s["default"].get("" + this.base + this.endpoints.cases, {}, {
