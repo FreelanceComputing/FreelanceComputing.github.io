@@ -32233,9 +32233,9 @@
                                 url: t[0].yoast_meta.yoast_wpseo_canonical
                             }),*/ p["default"].getCases({
                                 onSuccess: function(t) {
-                                    n.data.cases = t.map(function(t, e) {
-                                        var i = t.acf;
-                                        return {
+                                    n.data.cases = {}/*t.map(function(t, e) {*/
+                                        //var i = t.acf;
+                                        /*return {*/
                                             /*headline: i.featured_case_headline,
                                             subheadline: i.featured_case_subheadline,
                                             mediaType: i.featured_case_media_type,
@@ -32246,8 +32246,8 @@
                                             id: t.id,
                                             name: t.slug,
                                             url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
-                                        }
-                                    }), /*c["default"].addTemplate(C(), n.data, r),*/ n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new _["default"]({
+                                        /*}
+                                    })*/, /*c["default"].addTemplate(C(), n.data, r),*/ n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new _["default"]({
                                         container: n.wrapper.querySelector(".smooth-scrollbar"),
                                         damping: .35
                                     })), n.initComponents(), e()
