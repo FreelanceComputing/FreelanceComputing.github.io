@@ -29744,16 +29744,16 @@
                         json: !0
                     }))
                 },
-                getCases: function(t) {
+                getCases: function (t) {
                     var e = this;
-                    this.cache.cases ? t.onSuccess(this.cache.cases) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.cases, {}, {
+                    this.cache.cases ? t.onSuccess(this.cache.cases) : (this.loader.startLoader(), e.loader.onLoaded(), t.onSuccess({}) /*s["default"].get("" + this.base + this.endpoints.cases, {}, {
                         onSuccess: function(i) {
                             e.cache.casePage = i, e.loader.onLoaded(), t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
                         json: !0
-                    }))
+                    })*/)
                 },
                 getAbout: function(t) {
                     var e = this;
@@ -31828,9 +31828,9 @@
                     var i = this;
                     c["default"].getCases({
                         onSuccess: function(n) {
-                            var r = n.map(function(t, e) {
+                            /*var r = n.map(function(t, e) {
                                 var i = t.acf;
-                                return {
+                                return {*/
                                     /*headline: i.featured_case_headline,
                                     subheadline: i.featured_case_subheadline,
                                     mediaType: i.featured_case_media_type,
@@ -31840,15 +31840,15 @@
                                     id: t.id,
                                     name: t.slug,
                                     url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
-                                }
-                            });
+                                /*}
+                            });*/
                             /*r = r.filter(function(e) {
                                 return e.id !== t.id
                             }), r = r.map(function(t, e) {
                                 return t.isDark = (e + 1) % 2, t
                             }),*/ i.data = {
                                 "case": t,
-                                cases: r,
+                                cases: {},
                                 introIsDark: "black" == f["default"].getColor() ? 1 : 0
                             };
                             var s = i.wrapper;
