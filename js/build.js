@@ -28619,8 +28619,8 @@
             m = n(f),
             v = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/case"),
             g = n(v),
-            y = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/about"),
-            _ = n(y),
+            //y = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/about"),
+            //_ = n(y),
             b = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/contact"),
             x = n(b),
             w = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/ui"),
@@ -28630,7 +28630,7 @@
             P = {
                 landing: d["default"],
                 cases: m["default"],
-                about: _["default"],
+                //about: _["default"],
                 "case": g["default"],
                 contact: x["default"]
             },
@@ -28691,7 +28691,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize": 80,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/views/about": 89,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/views/about": 89,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/case": 90,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/cases": 91,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/contact": 92,
@@ -29708,7 +29708,7 @@
                 cache: {
                     landing: null,
                     cases: null,
-                    about: null,
+                    //about: null,
                     contact: null,
                     casePage: null,
                     "case": {}
@@ -29718,7 +29718,7 @@
                     landing: "/pages?slug=startpage",
                     cases: "/case",
                     casePage: "/pages?slug=cases",
-                    about: "/pages?slug=about",
+                    //about: "/pages?slug=about",
                     contact: "/pages?slug=contact",
                     "case": function(t) {
                         return "/case?slug=" + t
@@ -29755,7 +29755,7 @@
                         json: !0
                     })*/)
                 },
-                getAbout: function(t) {
+                /*getAbout: function(t) {
                     var e = this;
                     this.cache.about ? t.onSuccess(this.cache.about) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.about, {}, {
                         onSuccess: function(i) {
@@ -29765,7 +29765,7 @@
                         processData: !1,
                         json: !0
                     }))
-                },
+                },*/
                 getContact: function(t) {
                     var e = this;
                     /*this.cache.contact ? t.onSuccess(this.cache.contact) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.contact, {}, {
@@ -31331,11 +31331,11 @@
                     route: "/case/:id/:locked?",
                     wrapper: document.querySelector(".o-section--case")
                 },
-                ABOUT: {
+                /*ABOUT: {
                     name: n.ABOUT,
                     route: "/about",
                     wrapper: document.querySelector(".o-section--about")
-                },
+                },*/
                 CONTACT: {
                     name: n.CONTACT,
                     route: "/contact",
@@ -31619,7 +31619,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix": 79
     }],
-    89: [function(t, e, i) {
+    /*89: [function(t, e, i) {
         "use strict";
 
         function n(t) {
@@ -31733,7 +31733,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
         "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
         "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    }],
+    }],*/
     90: [function(t, e, i) {
         "use strict";
 
