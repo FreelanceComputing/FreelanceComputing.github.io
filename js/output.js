@@ -29,7 +29,7 @@ $(document).ready(function () {
 	    var rightPos = winWidth > 1400 ? 0.69 * winWidth : 0.65 * winWidth;
 	    var leftPos = winWidth > 1400 ?  0.93 * winWidth : 0.85 * winWidth;
         var cont = $('.c-divider__arrows').eq(0);
-	    console.log(rightPos, cont.offset().left, leftPos);
+	    //console.log(rightPos, cont.offset().left, leftPos);
         return (cont.offset().left > rightPos) && (cont.offset().left < leftPos);
     }
 
