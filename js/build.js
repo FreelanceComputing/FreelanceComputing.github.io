@@ -30924,9 +30924,9 @@
             }
         }();
         i.navigate = s, i.getCurrentRoute = o, i.getCurrentRouteID = a, i.initRoute = l;
-        var c = t("/Users/andreaslorentsson/Projects/new_site/node_modules/grapnel"),
+        var c = t(8),
             u = n(c),
-            p = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings"),
+            p = t(86),
             d = null,
             f = function() {
                 function t(e) {
@@ -31031,8 +31031,8 @@
                 }]), t
             }()
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/grapnel": 8,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86
+        //"/Users/andreaslorentsson/Projects/new_site/node_modules/grapnel": 8,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86
     }],
     82: [function(t, e, i) {
         "use strict";
