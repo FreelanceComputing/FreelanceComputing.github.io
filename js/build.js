@@ -32173,7 +32173,7 @@
             l = t(86),
             //h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
             //c = n(h),
-            u = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api"),
+            u = t(71),
             p = n(u),
             d = t(77),
             f = n(d),
@@ -32385,7 +32385,7 @@
         "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap/ScrollToPlugin": 9,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
         /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
