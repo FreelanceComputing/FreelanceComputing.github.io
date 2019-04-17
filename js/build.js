@@ -32166,9 +32166,9 @@
         Object.defineProperty(i, "__esModule", {
             value: !0
         });
-        var r = t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"),
-            s = t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap/ScrollToPlugin"),
-            o = (n(s), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
+        var r = t(11),
+            s = t(9),
+            o = (n(s), t(2)),
             a = n(o),
             l = t(86),
             //h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
@@ -32380,9 +32380,9 @@
             };
         i["default"] = k
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap/ScrollToPlugin": 9,
+        //"/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
+        //"/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
+        //"/Users/andreaslorentsson/Projects/new_site/node_modules/gsap/ScrollToPlugin": 9,
         //"/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
         /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
         //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
