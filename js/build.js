@@ -28798,7 +28798,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
     }],
-    67: [function(t, e, i) {
+    /*67: [function(t, e, i) {
         "use strict";
 
         function n(t) {
@@ -29396,7 +29396,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/box-textures": 74,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
-    }],
+    }],*/
     68: [function(t, e, i) {
         "use strict";
 
