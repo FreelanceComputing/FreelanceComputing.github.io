@@ -28621,8 +28621,8 @@
             g = n(v),
             //y = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/about"),
             //_ = n(y),
-            b = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/contact"),
-            x = n(b),
+            //b = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/contact"),
+            //x = n(b),
             w = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/ui"),
             T = n(w),
             S = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/loader"),
@@ -28631,8 +28631,8 @@
                 landing: d["default"],
                 cases: m["default"],
                 //about: _["default"],
-                "case": g["default"],
-                contact: x["default"]
+                "case": g["default"]/*,
+                contact: x["default"]*/
             },
             E = {
                 components: {
@@ -28694,7 +28694,7 @@
         //"/Users/andreaslorentsson/Projects/new_site/src/js/views/about": 89,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/case": 90,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/cases": 91,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/views/contact": 92,
+        //"/Users/andreaslorentsson/Projects/new_site/src/js/views/contact": 92,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/landing": 93
     }],
     66: [function(t, e, i) {
@@ -29709,7 +29709,7 @@
                     landing: null,
                     cases: null,
                     //about: null,
-                    contact: null,
+                    //contact: null,
                     casePage: null,
                     "case": {}
                 },
@@ -29719,7 +29719,7 @@
                     cases: "/case",
                     casePage: "/pages?slug=cases",
                     //about: "/pages?slug=about",
-                    contact: "/pages?slug=contact",
+                    //contact: "/pages?slug=contact",
                     "case": function(t) {
                         return "/case?slug=" + t
                     }
@@ -29765,18 +29765,18 @@
                         processData: !1,
                         json: !0
                     }))
-                },*/
+                },
                 getContact: function(t) {
                     var e = this;
-                    /*this.cache.contact ? t.onSuccess(this.cache.contact) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.contact, {}, {
+                    this.cache.contact ? t.onSuccess(this.cache.contact) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.contact, {}, {
                         onSuccess: function(i) {
                             e.cache.contact = i, e.loader.onLoaded(), t.onSuccess(i)
                         },
                         onError: t.onError,
                         processData: !1,
                         json: !0
-                    }))*/
-                },
+                    }))
+                },*/
                 getCase: function(t, e) {
                     var i = this;
                     if (this.cache["case"][t.id]) e.onSuccess(this.cache["case"][t.id]);
@@ -31330,17 +31330,17 @@
                     name: n.CASE,
                     route: "/case/:id/:locked?",
                     wrapper: document.querySelector(".o-section--case")
-                },
-                /*ABOUT: {
+                }/*,
+                ABOUT: {
                     name: n.ABOUT,
                     route: "/about",
                     wrapper: document.querySelector(".o-section--about")
-                },*/
+                },
                 CONTACT: {
                     name: n.CONTACT,
                     route: "/contact",
                     wrapper: document.querySelector(".o-section--contact")
-                }
+                }*/
             };
         i.ViewSettings = r, i.Views = n
     }, {}],
@@ -32059,7 +32059,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
         "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
     }],
-    92: [function(t, e, i) {
+    /*92: [function(t, e, i) {
         "use strict";
 
         function n(t) {
@@ -32118,7 +32118,7 @@
                 },
                 enable: function(t, e, i) {
                     var n = this;
-                    c["default"].getContact(/*{
+                    c["default"].getContact({
                         onSuccess: function(t) {
                             t[0].yoast_meta && (0, g.setMetaTags)({
                                 title: t[0].yoast_meta.yoast_wpseo_title,
@@ -32132,7 +32132,7 @@
                                 damping: .3
                             })), v["default"].initTemplate(n.wrapper, !1), e()
                         }
-                    }*/)
+                    })
                 },
                 disable: function(t, e, i) {
                     this.wrapper.innerHTML = "", e()
@@ -32153,7 +32153,7 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
         "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
         "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    }],
+    }],*/
     93: [function(t, e, i) {
         "use strict";
 
