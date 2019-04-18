@@ -4790,8 +4790,7 @@
         "../exception": 28,
         "../utils": 41,
         "./code-gen": 18
-    }],
-    
+    }],    
     23: [function(t, e, i) {
         "use strict";
 
@@ -5959,8 +5958,7 @@
             };
             throw new Error("unknown environment")
         }())
-    }, {}],
-    
+    }, {}],    
     46: [function(t, e, i) {
         (function(t) {
             function e(t, e) {
@@ -9344,8 +9342,7 @@
         })
     }, {
         amdefine: 1
-    }],
-    
+    }],    
     65: [function(t, e, i) {
         "use strict";
 
@@ -9364,24 +9361,12 @@
             u = n(c),
             p = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/landing"),
             d = n(p),
-            //f = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/cases"),
-            //m = n(f),
-            //v = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/case"),
-            //g = n(v),
-            //y = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/about"),
-            //_ = n(y),
-            //b = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/contact"),
-            //x = n(b),
             w = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/ui"),
             T = n(w),
             S = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/loader"),
             M = n(S),
             P = {
                 landing: d["default"],
-                /*cases: m["default"]/*,
-                //about: _["default"],
-                "case": g["default"],
-                contact: x["default"]*/
             },
             E = {
                 components: {
@@ -9440,712 +9425,8 @@
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize": 80,
         "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/views/about": 89,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/views/case": 90,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/views/cases": 91,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/views/contact": 92,
         "/Users/andreaslorentsson/Projects/new_site/src/js/views/landing": 93
     }],
-    /*66: [function(t, e, i) {
-        "use strict";
-
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-
-        function r(t, e) {
-            if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function s(t, e) {
-            if (!t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !e || "object" != typeof e && "function" != typeof e ? t : e
-        }
-
-        function o(t, e) {
-            if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function, not " + typeof e);
-            t.prototype = Object.create(e && e.prototype, {
-                constructor: {
-                    value: t,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e)
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var a = function() {
-                function t(t, e) {
-                    for (var i = 0; i < e.length; i++) {
-                        var n = e[i];
-                        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(t, n.key, n)
-                    }
-                }
-                return function(e, i, n) {
-                    return i && t(e.prototype, i), n && t(e, n), e
-                }
-            }(),
-            l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper"),
-            c = n(h),
-            u = t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing"),
-            p = (n(u), t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap")),
-            d = function(t) {
-                function e(t, i) {
-                    r(this, e);
-                    var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
-                    return n.isPresent ? (n.dimensions = (0, l.getDimensions)(), n.scrollLimitX = .3 * n.dimensions.width, n.visible = !1, n.animating = !1, n.items = n._getItems(n.block), n) : s(n)
-                }
-                return o(e, t), a(e, [{
-                    key: "animateIn",
-                    value: function() {
-                        var t = this,
-                            e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-                        this.block.style.display = "block", p.TweenLite.to(this.items.headline, .8, {
-                            y: 0,
-                            opacity: 1,
-                            delay: e,
-                            ease: Power4.easeOut,
-                            onComplete: function() {
-                                t.visible = !0, t.animating = !1
-                            }
-                        })
-                    }
-                }, {
-                    key: "animateOut",
-                    value: function() {
-                        var t = this,
-                            e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-                        p.TweenLite.to(this.items.headline, .6, {
-                            y: 15,
-                            opacity: 0,
-                            delay: e + 0,
-                            ease: Power4.easeIn,
-                            onComplete: function() {
-                                t.visible = !1, t.animating = !1
-                            }
-                        })
-                    }
-                }, {
-                    key: "_getItems",
-                    value: function(t) {
-                        return {
-                            elem: t,
-                            headline: this.elements.headline
-                        }
-                    }
-                }]), e
-            }(c["default"]);
-        i["default"] = d
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
-    }],*/
-    /*67: [function(t, e, i) {
-        "use strict";
-
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-
-        function r(t) {
-            if (t && t.__esModule) return t;
-            var e = {};
-            if (null != t)
-                for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
-            return e["default"] = t, e
-        }
-
-        function s(t, e) {
-            if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function o(t, e) {
-            if (!t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !e || "object" != typeof e && "function" != typeof e ? t : e
-        }
-
-        function a(t, e) {
-            if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function, not " + typeof e);
-            t.prototype = Object.create(e && e.prototype, {
-                constructor: {
-                    value: t,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e)
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var l = function() {
-                function t(t, e) {
-                    for (var i = 0; i < e.length; i++) {
-                        var n = e[i];
-                        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(t, n.key, n)
-                    }
-                }
-                return function(e, i, n) {
-                    return i && t(e.prototype, i), n && t(e, n), e
-                }
-            }(),
-            h = t("/Users/andreaslorentsson/Projects/new_site/node_modules/three"),
-            c = r(h),
-            u = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper"),
-            p = n(u),
-            d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/box-textures"),
-            f = n(d),
-            m = t("/Users/andreaslorentsson/Projects/new_site/node_modules/oimo"),
-            v = t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"),
-            g = t("/Users/andreaslorentsson/Projects/new_site/node_modules/raf-loop"),
-            y = n(g),
-            _ = t("/Users/andreaslorentsson/Projects/new_site/node_modules/brindille-resize"),
-            b = n(_),
-            x = t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing"),
-            w = n(x),
-            T = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            S = [{
-                x: 0,
-                y: 0,
-                isLarge: !0,
-                inTheBack: !1,
-                endFrame: 3
-            }, {
-                x: 3,
-                y: 1,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 10
-            }, {
-                x: 5,
-                y: 1,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 2
-            }, {
-                x: 3,
-                y: -1,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 6
-            }, {
-                x: 5,
-                y: -1,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 0
-            }, {
-                x: 3,
-                y: 1,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 0
-            }, {
-                x: 5,
-                y: 1,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 1
-            }, {
-                x: 3,
-                y: -1,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 2
-            }, {
-                x: 5,
-                y: -1,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 11
-            }, {
-                x: -1,
-                y: -3,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 11
-            }, {
-                x: -1,
-                y: -3,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 5
-            }, {
-                x: 2,
-                y: -4,
-                isLarge: !0,
-                inTheBack: !1,
-                endFrame: 8
-            }, {
-                x: 5,
-                y: -3,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 12
-            }, {
-                x: -1,
-                y: -5,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 4
-            }, {
-                x: 5,
-                y: -5,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 5
-            }, {
-                x: 5,
-                y: -3,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 0
-            }, {
-                x: -1,
-                y: -5,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 1
-            }, {
-                x: 5,
-                y: -5,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 7
-            }, {
-                x: 0,
-                y: -8,
-                isLarge: !0,
-                inTheBack: !1,
-                endFrame: 13
-            }, {
-                x: 3,
-                y: -7,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 9
-            }, {
-                x: 5,
-                y: -7,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 2
-            }, {
-                x: 3,
-                y: -9,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 5
-            }, {
-                x: 5,
-                y: -9,
-                isLarge: !1,
-                inTheBack: !1,
-                endFrame: 7
-            }, {
-                x: 3,
-                y: -7,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 11
-            }, {
-                x: 5,
-                y: -7,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 10
-            }, {
-                x: 3,
-                y: -9,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 12
-            }, {
-                x: 5,
-                y: -9,
-                isLarge: !1,
-                inTheBack: !0,
-                endFrame: 4
-            }],
-            M = f["default"],
-            P = function(t) {
-                function e(t, i) {
-                    s(this, e);
-                    var n = o(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
-                    if (n.onFinished = i.onFinished, n.scrollbar = i.scrollbar, !n.isPresent) return o(n);
-                    if (!(0, T.webglDetect)()) return n.onFinished(), o(n);
-                    n.elements.overlay.style.display = "block", n.isRendering = !1, n.container = n.elements.container, n.isTouchDevice = (0, T.isTouchDevice)(), n.fadeValue = n.isTouchDevice ? -5 : 3.5, n.introFinished = !1, n.renderer = !1, n.scene = !1, n.camera = !1, n.controls = !1, n.engine = !1, n.physicWorld = !1, n.directionalLight = null, n.physics = !1, n.applyImpulse = !0, n.boxes = [], n.cameraTween = {
-                        endX: 0,
-                        endZ: 0,
-                        path: null
-                    }, n.impulseZ = 0, n.dimensions = (0, T.getDimensions)(), n.mq = (0, T.getMq)(), n.initRenderer(), n.maxAnisotropy = n.renderer.getMaxAnisotropy(), n.scene = n.initScene(), n.sceneFogFarValue = 500, n.scene.fog = new c.Fog(16777215, .0015, n.sceneFogFarValue), n.camera = n.initCamera(), n.camera.position.set(0, 0, 38), n.initOimo(), n.loadTextures(n.addBoxes.bind(n)), n.addGround(), n.addLights(), n.cameraPanning = !1, n.initialMouseMove = [0, 0], n.decay = .008, n.movement = .007, n.mouseDownInterval = 0, n.mouseDown = !1;
-                    document.querySelector(".o-landing__overlay");
-                    return n.initScroll(), n.setListeners(), n.onResize(), n.start(), n.physics.start(), n
-                }
-                return a(e, t), l(e, [{
-                    key: "start",
-                    value: function() {
-                        this.isRendering = !0, this.engine.start()
-                    }
-                }, {
-                    key: "stop",
-                    value: function() {
-                        this.isRendering = !1, this.engine.stop()
-                    }
-                }, {
-                    key: "initScroll",
-                    value: function() {
-                        this.scrollListenerId = this.scrollbar.scrollListener.addListener(this.onScroll.bind(this))
-                    }
-                }, {
-                    key: "onScroll",
-                    value: function(t) {
-                        if (this.introFinished)
-                            if (t < this.dimensions.width) {
-                                this.isRendering || this.start();
-                                var e = 1.4 * Math.min(t / this.dimensions.width, 1);
-                                if (!this.isTouchDevice) {
-                                    var i = 3.5 * e + this.cameraTween.endX;
-                                    this.camera.position.set(i, 0, this.cameraTween.endZ)
-                                }
-                            } else this.isRendering && this.stop();
-                        else this.isTouchDevice ? window.scrollTo(0, 0) : this.scrollbar.smoothScrollBar.scrollLeft = 0
-                    }
-                }, {
-                    key: "setListeners",
-                    value: function() {
-                        b["default"].addListener(this.onResize.bind(this)), this.engine = (0, y["default"])(this.render.bind(this)), this.physics = (0, y["default"])(this.renderPhysics.bind(this))
-                    }
-                }, {
-                    key: "onDeviceOrientation",
-                    value: function(t) {
-                        this.deviceOrientation = {
-                            x: t.gamma,
-                            y: t.beta
-                        }
-                    }
-                }, {
-                    key: "onPress",
-                    value: function(t) {
-                        var e = this;
-                        this.pressCords = {
-                            x: t.center.x - this.dimensions.width / 2,
-                            y: t.center.y - this.dimensions.height / 2
-                        }, this.physicWorld.setGravity([0, 0, 0]), this.mouseDown = !0, this.mouseDownInterval = setTimeout(function() {
-                            e.physicWorld.setGravity([0, 0, -65]), e.impulseZ = 0, e.mouseDown = !1
-                        }, 3e3)
-                    }
-                }, {
-                    key: "onPressUp",
-                    value: function(t) {
-                        this.physicWorld.setGravity([0, 0, -65]), this.impulseZ = 0, this.mouseDown = !1, clearInterval(this.mouseDownInterval)
-                    }
-                }, {
-                    key: "onPanning",
-                    value: function(t) {
-                        "HTML" !== t.target.parentNode.tagName && this.onPressUp()
-                    }
-                }, {
-                    key: "onResize",
-                    value: function() {
-                        this.camera.aspect = b["default"].width / b["default"].height, this.camera.updateProjectionMatrix(), this.renderer.setSize(b["default"].width, b["default"].height)
-                    }
-                }, {
-                    key: "initRenderer",
-                    value: function() {
-                        this.renderer = new c.WebGLRenderer({
-                            antialias: !1
-                        });
-                        var t = window.devicePixelRatio > 2 ? 2 : (0, T.isTouchDevice)() ? 1.75 : 1.25;
-                        this.renderer.setPixelRatio(t), this.renderer.setClearColor(16777215), this.renderer.shadowMap.enabled = !(0, T.isAndroidBrowser)() && !(0, T.isIE)(), this.renderer.shadowMap.soft = !0, this.renderer.shadowMap.type = c.PCFSoftShadowMap, this.renderer.domElement.className = "c-intro-canvas", this.container.appendChild(this.renderer.domElement)
-                    }
-                }, {
-                    key: "initScene",
-                    value: function() {
-                        return new c.Scene
-                    }
-                }, {
-                    key: "initCamera",
-                    value: function() {
-                        return new c.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1e3)
-                    }
-                }, {
-                    key: "initOimo",
-                    value: function() {
-                        this.physicWorld = new m.World({
-                            gravity: [0, 0, -65]
-                        })
-                    }
-                }, {
-                    key: "addLights",
-                    value: function() {
-                        var t = new c.AmbientLight(16777215, .95);
-                        this.scene.add(t), this.directionalLight = new c.DirectionalLight(16777215), this.directionalLight.position.set(0, 300, 100), this.directionalLight.shadow.bias = 1e-4, this.directionalLight.intensity = .1, this.directionalLight.castShadow = !0, this.directionalLight.shadow.mapSize.width = 512, this.directionalLight.shadow.mapSize.height = 512;
-                        var e = 30;
-                        this.directionalLight.shadow.camera.left = -e, this.directionalLight.shadow.camera.right = e, this.directionalLight.shadow.camera.top = e, this.directionalLight.shadow.camera.bottom = -e, this.directionalLight.shadow.camera.far = 500, this.directionalLight.target = this.ground.mesh, this.scene.add(this.directionalLight)
-                    }
-                }, {
-                    key: "loadTextures",
-                    value: function(t) {
-                        var e = this,
-                            i = new c.TextureLoader;
-                        i.crossOrigin = "";
-                        var n = 0;
-                        M.forEach(function(r) {
-                            i.load(r.url, function(i) {
-                                r.texture = i, r.texture.anisotropy = e.maxAnisotropy, n++, n === M.length && t()
-                            }, function(t) {
-                                console.log(t.loaded / t.total * 100 + "% loaded")
-                            }, function(t) {
-                                console.log("An error happened")
-                            })
-                        })
-                    }
-                }, {
-                    key: "addGround",
-                    value: function() {
-                        var t = new c.BoxGeometry(100, 100, 1),
-                            e = new c.MeshLambertMaterial({
-                                color: 16777215
-                            }),
-                            i = new c.Mesh(t, e);
-                        i.receiveShadow = !0, i.position.set(0, 0, -30);
-                        var n = this.physicWorld.add({
-                            name: "floor",
-                            type: "box",
-                            size: [100, 100, 1],
-                            pos: [i.position.clone().x, i.position.clone().y, i.position.clone().z],
-                            rot: [0, 0, 0],
-                            move: !1,
-                            density: 10,
-                            friction: 10,
-                            restitution: .1,
-                            belongsTo: 1,
-                            collidesWith: 4294967295
-                        });
-                        this.ground = {
-                            mesh: i,
-                            physics: n
-                        }, this.scene.add(this.ground.mesh)
-                    }
-                }, {
-                    key: "addBoxes",
-                    value: function() {
-                        for (var t = 0; t < S.length; t++) {
-                            var e = S[t],
-                                i = e.isLarge ? 4 : 2,
-                                n = e.inTheBack && 2 == i ? -1 : 2 == i ? 1 : 0,
-                                r = new c.BoxGeometry(i, i, i),
-                                s = new c.MeshLambertMaterial({
-                                    map: M[(0, T.randomIntFromInterval)(0, 12)].texture
-                                }),
-                                o = new c.Mesh(r, s);
-                            o.position.set(e.x - 2, e.y + 4, n), o.castShadow = !0, this.boxes.push({
-                                changeIterations: (0, T.randomIntFromInterval)(2, 8),
-                                latestChangeVal: 0,
-                                endFrame: e.endFrame,
-                                size: i,
-                                physics: !1,
-                                mesh: o,
-                                impulse: e.isLarge ? 75 : 40,
-                                isLarge: e.isLarge
-                            }), this.scene.add(o)
-                        }
-                        v.TweenLite.to(this.elements.overlay, .8, {
-                            yPercent: -100,
-                            delay: .5,
-                            onComplete: this.animateBoxes.bind(this),
-                            ease: (0, w["default"])(.77, 0, .175, 1)
-                        })
-                    }
-                }, {
-                    key: "animateBoxes",
-                    value: function() {
-                        var t = this;
-                        this.elements.overlay.style.display = "none";
-                        for (var e = function(e) {
-                                var i = t.boxes[e];
-                                setTimeout(function() {
-                                    i.mesh.material.map = M[i.endFrame].texture
-                                }, (0, T.randomIntFromInterval)(0, 1500))
-                            }, i = 0; i < this.boxes.length; i++) e(i);
-                        setTimeout(function() {
-                            t.initBoxPhysics()
-                        }, 2e3), setTimeout(function() {
-                            t.tweenCamera()
-                        }, 1500)
-                    }
-                }, {
-                    key: "initBoxPhysics",
-                    value: function() {
-                        var t = this;
-                        this.boxes.forEach(function(e) {
-                            e.physics = t.physicWorld.add({
-                                name: "box",
-                                type: "box",
-                                size: [e.size, e.size, e.size],
-                                pos: [e.mesh.position.clone().x, e.mesh.position.clone().y, e.mesh.position.clone().z],
-                                rot: [e.mesh.rotation.clone().x, e.mesh.rotation.clone().y, e.mesh.rotation.clone().z],
-                                move: !0,
-                                density: e.isLarge ? .6 : 2.6,
-                                friction: 1,
-                                restitution: .1,
-                                belongsTo: 1,
-                                collidesWith: 4294967295
-                            })
-                        });
-                        var e = (0, T.getMq)().xsmall ? 30 : 80;
-                        setTimeout(function() {
-                            t.applyImpulse = !1
-                        }, e);
-                        var i = {
-                            val: 500
-                        };
-                        v.TweenLite.to(i, .5, {
-                            val: 300,
-                            onUpdate: function() {
-                                t.directionalLight.position.set(0, i.val, 300)
-                            },
-                            onComplete: function() {
-                                setTimeout(function() {
-                                    t.introFinished = !0, t.onFinished(), t.physics.stop()
-                                }, 3e3)
-                            },
-                            ease: Power1.easeOut
-                        })
-                    }
-                }, {
-                    key: "tweenCamera",
-                    value: function() {
-                        var t = this;
-                        this.cameraTween.endX = (0, T.getMq)().xsmall ? -10 : -20, this.cameraTween.endZ = 5, this.cameraTween.path = new c.CatmullRomCurve3([new c.Vector3(0, 0, 38), new c.Vector3(0, 0, 14), new c.Vector3(this.cameraTween.endX, 0, this.cameraTween.endZ)]);
-                        var e = {
-                            p: 0
-                        };
-                        v.TweenLite.to(e, 5, {
-                            p: 1,
-                            delay: 0,
-                            ease: Power4.easeInOut,
-                            onUpdate: function() {
-                                var i = t.cameraTween.path.getPointAt(e.p);
-                                t.camera.position.set(i.x, i.y, i.z)
-                            },
-                            onComplete: function() {
-                                t.initCameraPanning()
-                            }
-                        }), (0, T.getMq)().small && this.isTouchDevice
-                    }
-                }, {
-                    key: "tweenFog",
-                    value: function() {
-                        var t = this,
-                            e = {
-                                val: 500
-                            };
-                        v.TweenLite.to(e, 2, {
-                            val: 50,
-                            delay: 2.5,
-                            onUpdate: function() {
-                                t.scene.fog.far = e.val
-                            },
-                            ease: Power3.easeOut
-                        })
-                    }
-                }, {
-                    key: "initCameraPanning",
-                    value: function() {
-                        this.cameraPanning = !0, this.initialMouseMove = [(0, T.getMouseMoveCenter)().x, (0, T.getMouseMoveCenter)().y]
-                    }
-                }, {
-                    key: "getMouseMoveCenter",
-                    value: function() {
-                        return this.isTouchDevice ? this.pressCords : (0, T.getMouseMoveCenter)()
-                    }
-                }, {
-                    key: "renderPhysics",
-                    value: function() {
-                        this.physicWorld.step();
-                        for (var t = 0, e = this.boxes.length; t < e; t++) {
-                            var i = this.boxes[t];
-                            if (i.physics) {
-                                if (this.applyImpulse) {
-                                    i.physics.getPosition();
-                                    i.physics.applyImpulse(new c.Vector3(0, 0, 0), new c.Vector3(0, 0, i.impulse))
-                                }
-                                this.introFinished || (i.mesh.position.copy(i.physics.getPosition()), i.mesh.quaternion.copy(i.physics.getQuaternion()))
-                            }
-                        }
-                        this.introFinished || (this.ground.mesh.position.copy(this.ground.physics.getPosition()), this.ground.mesh.quaternion.copy(this.ground.physics.getQuaternion()))
-                    }
-                }, {
-                    key: "animateOut",
-                    value: function(t) {
-                        var e = this;
-                        this.cameraPanning = !1;
-                        var i = this.camera.position.clone(),
-                            n = {
-                                x: i.x
-                            };
-                        v.TweenLite.to(n, 5, {
-                            x: 50,
-                            delay: 0,
-                            ease: Power4.easeInOut,
-                            onUpdate: function() {
-                                e.camera.position.set(n.x, i.y, i.z)
-                            },
-                            onComplete: function() {
-                                t()
-                            }
-                        })
-                    }
-                }, {
-                    key: "animateIn",
-                    value: function(t) {
-                        var e = this,
-                            i = this.camera.position.clone(),
-                            n = {
-                                x: i.x
-                            };
-                        v.TweenLite.to(n, 5, {
-                            x: this.cameraTween.endX,
-                            delay: 0,
-                            ease: Power4.easeInOut,
-                            onUpdate: function() {
-                                e.camera.position.set(n.x, i.y, i.z)
-                            },
-                            onComplete: function() {
-                                e.cameraPanning = !0, e.cameraPanning = !1
-                            }
-                        })
-                    }
-                }, {
-                    key: "render",
-                    value: function() {
-                        this.renderer.render(this.scene, this.camera)
-                    }
-                }]), e
-            }(p["default"]);
-        i["default"] = P
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/brindille-resize": 3,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/oimo": 45,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/raf-loop": 49,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/three": 64,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/box-textures": 74,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
-    }],*/
     68: [function(t, e, i) {
         "use strict";
 
@@ -10201,19 +9482,12 @@
                 function e(t, i) {
                     r(this, e);
                     var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
-                    return n.isPresent ? (n.framesLoaded = i.framesLoaded, /*n.canvas = n.elements.canvas, n.canvasCTX = n.canvas.getContext("2d"),*/ n.currImage = null, n.currImageIndex = 0, n.loadingFrame = n.draw.bind(n), n.requestAnimationFrame = null, n.fps = 15, n.fpsInterval = 0, n.then = 0, n.startTime = 0, n.now = 0, n.elapsed = 0, /*n.loaderWidth = parseInt(window.getComputedStyle(n.canvas).getPropertyValue("width")), n.loaderHeight = parseInt(window.getComputedStyle(n.canvas).getPropertyValue("height")),*/ n.init(), n) : s(n)
+                    return n.isPresent ? (n.framesLoaded = i.framesLoaded, n.currImage = null, n.currImageIndex = 0, n.loadingFrame = n.draw.bind(n), n.requestAnimationFrame = null, n.fps = 15, n.fpsInterval = 0, n.then = 0, n.startTime = 0, n.now = 0, n.elapsed = 0, n.init(), n) : s(n)
                 }
                 return o(e, t), a(e, [{
                     key: "init",
                     value: function() {
                         var t = this;
-                        //this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio), 
-						/*h["default"].forEach(function(e, i) {
-                            var n = new Image;
-                            n.src = e.url_small, n.onload = function() {
-                                i++, e.image = n, i == h["default"].length && (t.currImage = h["default"][t.currImageIndex].image, t.framesLoaded())
-							}
-						})*/
                         t.currImage = new Image,
                         t.framesLoaded()
                     }
@@ -10316,16 +9590,10 @@
                     r(this, e);
                     var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
                     n.setEventListeners();
-                    //return n.isPresent ? (n.isOpen = !1, /*n.navItems = (0, c.mapElems)(n.elements.nav_item_anchor, n.getNavItemAnchor.bind(n)),*/ n.setEventListeners(), n) : s(n)
                 }
                 return o(e, t), a(e, [{
                     key: "getNavItemAnchor",
                     value: function(t) {
-                        /*return {
-                            elem: t,
-                            mobileElem: this.elements.off_canvas_nav_items.querySelector(".js-mobile-nav-item-" + t.getAttribute("data-name")),
-                            name: t.getAttribute("data-name")
-                        }*/
                     }
                 }, {
                     key: "setEventListeners",
@@ -10345,9 +9613,6 @@
                 }, {
                     key: "getItemBydName",
                     value: function(t) {
-                        /*return this.navItems.filter(function(e) {
-                            return e.name == t
-                        })[0]*/
                     }
                 }, {
                     key: "animateIn",
@@ -10361,13 +9626,6 @@
                     key: "setActiveItem",
                     value: function(t) {
                         var e = this;
-                        /*if (t) {
-                            this.navItems.forEach(function(t) {
-                                e.removeChildrenMod(t.mobileElem, "off-canvas-nav-item-anchor", "active"), e.removeChildrenMod(t.elem, "nav-item-anchor", "active")
-                            });
-                            var i = this.getItemBydName(t.toLowerCase());
-                            i && (this.addChildrenMod(i.mobileElem, "off-canvas-nav-item-anchor", "active"), this.addChildrenMod(i.elem, "nav-item-anchor", "active"))
-                        }*/
                     }
                 }]), e
             }(h["default"]);
@@ -10458,111 +9716,18 @@
                 loader: null,
                 cache: {
                     landing: null,
-                    //cases: null,
-                    //about: null,
-                    //contact: null,
-                    //casePage: null,
-                    //"case": {}
                 },
                 base: o.apiBaseUrl + "/wp-json/wp/v2",
                 endpoints: {
                     landing: "/pages?slug=startpage",
-                    //cases: "/case",
-                    //casePage: "/pages?slug=cases",
-                    //about: "/pages?slug=about",
-                    //contact: "/pages?slug=contact",
-                    /*"case": function(t) {
-                        return "/case?slug=" + t
-                    }*/
                 },
                 getLanding: function(t) {
 					t.onSuccess(t)
-                    /*s["default"].get("" + this.base + this.endpoints.landing, {}, {
-                        onSuccess: t.onSuccess,
-                        onError: t.onError,
-                        processData: !1,
-                        json: !0
-                    })*/
                 },
-                /*getCasePage: function(t) {
-                    var e = this;
-                    this.cache.casePage ? t.onSuccess(this.cache.casePage) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.casePage, {}, {
-                        onSuccess: function(i) {
-                            e.cache.casePage = i, e.loader.onLoaded(), t.onSuccess(i)
-                        },
-                        onError: t.onError,
-                        processData: !1,
-                        json: !0
-                    }))
-                },*/
                 getCases: function (t) {
                     var e = this;
-                    this.cache.cases ? t.onSuccess(this.cache.cases) : (/*this.loader.startLoader(), e.loader.onLoaded(),*/ t.onSuccess({}) /*s["default"].get("" + this.base + this.endpoints.cases, {}, {
-                        onSuccess: function(i) {
-                            e.cache.casePage = i, e.loader.onLoaded(), t.onSuccess(i)
-                        },
-                        onError: t.onError,
-                        processData: !1,
-                        json: !0
-                    })*/)
+                    this.cache.cases ? t.onSuccess(this.cache.cases) : ( t.onSuccess({}) )
                 },
-                /*getAbout: function(t) {
-                    var e = this;
-                    this.cache.about ? t.onSuccess(this.cache.about) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.about, {}, {
-                        onSuccess: function(i) {
-                            e.cache.about = i, e.loader.onLoaded(), t.onSuccess(i)
-                        },
-                        onError: t.onError,
-                        processData: !1,
-                        json: !0
-                    }))
-                },
-                getContact: function(t) {
-                    var e = this;
-                    this.cache.contact ? t.onSuccess(this.cache.contact) : (this.loader.startLoader(), s["default"].get("" + this.base + this.endpoints.contact, {}, {
-                        onSuccess: function(i) {
-                            e.cache.contact = i, e.loader.onLoaded(), t.onSuccess(i)
-                        },
-                        onError: t.onError,
-                        processData: !1,
-                        json: !0
-                    }))
-                },*/
-                //getCase: function (t, e) {
-                    //e.onSuccess({});
-                    /*var i = this;
-                    if (this.cache["case"][t.id]) e.onSuccess(this.cache["case"][t.id]);
-                    else {
-                        var n = "";
-                        if ("undefined" != typeof t.locked && "tiger-of-swedens" == t.id) {
-                            var r = (0, o.pwdProtectedArea)();
-                            if (null == r || "" == r) return void(0, a.navigate)("CASES", !1, !0);
-                            n = "&password=" + r
-                        } else {
-                            if ("tiger-of-swedens" == t.id) return void(0, a.navigate)("CASES", !1, !0);
-                            this.loader.startLoader()
-                        }
-                        s["default"].get("" + this.base + this.endpoints["case"](t.id) + n, {}, {
-                            onSuccess: function(n) {
-                                s["default"].get(i.base + "/media?parent=" + n[0].id, {}, {
-                                    onSuccess: function(r) {
-                                        var s = 0;
-                                        r.forEach(function(a) {
-                                            "image" == a.media_type ? (0, o.loadImageAsync)(a.source_url, function() {
-                                                s++, s == r.length && (i.loader.onLoaded(), i.cache["case"][t.id] = n, e.onSuccess(n))
-                                            }) : s++
-                                        })
-                                    }
-                                })
-                            },
-                            onError: function() {
-                                (0, a.navigate)("CASES", !1, !0), e.onError()
-                            },
-                            processData: !1,
-                            json: !0
-                        })
-                    }*/
-                //}
             };
         i["default"] = l
     }, {
@@ -10928,9 +10093,7 @@
             i.onload = e, i.src = t
         }
 
-        function P(t) {
-            //t.title && (document.title = t.title, document.querySelector("meta[property=og\\:title]").setAttribute("content", t.title), document.querySelector("meta[name=title]").setAttribute("content", t.title)), t.url && document.querySelector("meta[property=og\\:url]").setAttribute("content", t.url), t.description && (document.querySelector("meta[name=description]").setAttribute("content", t.description), document.querySelector("meta[property=og\\:description]").setAttribute("content", t.description)), t.og_image && document.querySelector("meta[property=og\\:image]").setAttribute("content", t.og_image)
-        }
+        function P(t) {}
 
         function E() {
             var t = prompt("Please enter password:", "");
@@ -10941,7 +10104,7 @@
         }), i.cancelAnimationFrame = i.requestAnimationFrame = i.apiBaseUrl = i.cdnUrl = void 0, i.getDimensions = r, i.randomIntFromInterval = s, i.getMq = o, i.nodesAsArray = a, i.isIE = l, i.getPrefix = h, i.transformProp = c, i.initMouseHandler = u, i.getMouseMove = p, i.getMouseMoveCenter = d, i.noSmoothScroll = f, i.randomFloatFromInterval = m, i.limitNumber = v, i.getNormalizedValue = g, i.radians = y, i.degrees = _, i.mapElems = b, i.isTouchDevice = x, i.isAndroidBrowser = w, i.webglDetect = T, i.launchIntoFullscreen = S, i.loadImageAsync = M, i.setMetaTags = P, i.pwdProtectedArea = E;
         var A = t("/Users/andreaslorentsson/Projects/new_site/node_modules/mobile-detect"),
             L = n(A),
-            C = (i.cdnUrl = ""/*//172595-499402-raikfcquaxqncofqfm.stackpathdns.com*/, i.apiBaseUrl = ""/*https://studiobjork.com/wp/index.php*/, i.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame, i.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame, {
+            C = (i.cdnUrl = "", i.apiBaseUrl = "", i.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame, i.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame, {
                 x: 0,
                 y: 0
             })
@@ -11647,9 +10810,6 @@
 
         function o() {
             return p.ViewSettings["LANDING"]
-            /*var t = d.grapnel.state.route;
-            for (var e in p.ViewSettings)
-                if (t == p.ViewSettings[e].route) return p.ViewSettings[e]*/
         }
 
         function a() {
@@ -11711,25 +10871,13 @@
                     value: function() {}
                 }, {
                     key: "setEventHandlers",
-                    value: function() {
-                        /*var t = this,
-                            e = [].slice.call(document.querySelectorAll(".js-navigate"));
-                        e.forEach(function(e) {
-                            e.addEventListener("click", t.onNavigate.bind(t))
-                        })*/
-                    }
+                    value: function() {}
                 }, {
                     key: "onNavigate",
-                    value: function(t) {
-                        /*t.preventDefault(), this.navigate(null, t.currentTarget.getAttribute("data-href"))*/
-                    }
+                    value: function(t) {}
                 }, {
                     key: "navigate",
-                    value: function(t) {
-                        /*var e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                            i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        this.animating && !i || (e ? this.grapnel.navigate(e) : (console.log(p.ViewSettings[t].route), this.grapnel.navigate(p.ViewSettings[t].route)))*/
-                    }
+                    value: function(t) {}
                 }, {
                     key: "getRouteByKey",
                     value: function(t) {
@@ -11781,10 +10929,7 @@
                     }
                 }]), t
             }()
-    }, {
-        //"/Users/andreaslorentsson/Projects/new_site/node_modules/grapnel": 8,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86
-    }],
+    }, {}],
     82: [function(t, e, i) {
         "use strict";
 
@@ -11864,9 +11009,7 @@
                 }]), t
             }();
         i["default"] = o
-    }, {
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix": 79
-    }],
+    }, {}],
     83: [function(t, e, i) {
         "use strict";
 
@@ -11959,102 +11102,7 @@
             }), this.scrollListener.init()
         };
         i["default"] = v
-    }, {
-        //"/Users/andreaslorentsson/Projects/new_site/node_modules/smooth-scrollbar": 52,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/overscroll": 78,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/scroll": 82
-    }],
-    /*84: [function(t, e, i) {
-        "use strict";
-
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var r = t("/Users/andreaslorentsson/Projects/new_site/node_modules/handlebars"),
-            s = n(r),
-            o = t("/Users/andreaslorentsson/Projects/new_site/node_modules/handlebars-helper-equal"),
-            a = n(o);
-        s["default"].registerHelper("equal", a["default"]);
-        var l = {
-            templates: {},
-            compile: function(t) {
-                return s["default"].compile(this.templates[t])
-            },
-            getTemplate: function(t, e) {
-                return this.compile(t)(e)
-            },
-            compileTemplate: function(t, e) {
-                return s["default"].compile(t)(e)
-            },
-            addTemplate: function(t, e, i) {
-                var n = this.compileTemplate(t, e);
-				i.innerHTML = n
-            }
-        };
-        i["default"] = l
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/handlebars": 42,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/handlebars-helper-equal": 12
-    }],*/
-    /*85: [function(t, e, i) {
-        "use strict";
-
-        function n(t, e) {
-            if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var r = function() {
-                function t(t, e) {
-                    for (var i = 0; i < e.length; i++) {
-                        var n = e[i];
-                        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(t, n.key, n)
-                    }
-                }
-                return function(e, i, n) {
-                    return i && t(e.prototype, i), n && t(e, n), e
-                }
-            }(),
-            s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            o = function() {
-                function t(e) {
-                    n(this, t), this.videos = (0, s.nodesAsArray)(e.videos), this.videos.length && (this.videoData = (0, s.mapElems)(this.videos, this.getVideoData.bind(this)), this.scrollListener = e.scrollListener, this.scrollListenerID = this.scrollListener.addListener(this.onScroll.bind(this)), this.onScroll(0))
-                }
-                return r(t, [{
-                    key: "onScroll",
-                    value: function(t) {
-                        this.videoData.forEach(function(e) {
-                            e.x < t + window.innerWidth && e.x + e.width > t && !e.isPlaying && (e.isPlaying = !0, e.elem.play()), e.x + e.width < t && e.isPlaying && (e.isPlaying = !1, e.elem.pause()), e.x > t + window.innerWidth && e.isPlaying && (e.isPlaying = !1, e.elem.pause())
-                        })
-                    }
-                }, {
-                    key: "getVideoData",
-                    value: function(t) {
-                        return {
-                            elem: t,
-                            x: t.getBoundingClientRect().left,
-                            width: t.offsetWidth,
-                            isPlaying: !1
-                        }
-                    }
-                }, {
-                    key: "stop",
-                    value: function() {
-                        this.scrollListenerID && this.scrollListener.removeListener(this.scrollListenerID)
-                    }
-                }]), t
-            }();
-        i["default"] = o
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
-    }],*/
+    }, {}],
     86: [function(t, e, i) {
         "use strict";
         Object.defineProperty(i, "__esModule", {
@@ -12077,835 +11125,10 @@
                     name: n.CASES,
                     route: "/work",
                     wrapper: document.querySelector(".o-section--cases")
-                }/*,
-                CASE: {
-                    name: n.CASE,
-                    route: "/case/:id/:locked?",
-                    wrapper: document.querySelector(".o-section--case")
-                },
-                ABOUT: {
-                    name: n.ABOUT,
-                    route: "/about",
-                    wrapper: document.querySelector(".o-section--about")
-                },
-                CONTACT: {
-                    name: n.CONTACT,
-                    route: "/contact",
-                    wrapper: document.querySelector(".o-section--contact")
-                }*/
+                }
             };
         i.ViewSettings = r, i.Views = n
     }, {}],
-    /*87: [function(t, e, i) {
-        "use strict";
-
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-
-        function r(t, e) {
-            if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function s(t, e) {
-            if (!t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !e || "object" != typeof e && "function" != typeof e ? t : e
-        }
-
-        function o(t, e) {
-            if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function, not " + typeof e);
-            t.prototype = Object.create(e && e.prototype, {
-                constructor: {
-                    value: t,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e)
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var a = function() {
-                function t(t, e) {
-                    for (var i = 0; i < e.length; i++) {
-                        var n = e[i];
-                        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(t, n.key, n)
-                    }
-                }
-                return function(e, i, n) {
-                    return i && t(e.prototype, i), n && t(e, n), e
-                }
-            }(),
-            l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper"),
-            c = n(h),
-            u = t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing"),
-            p = (n(u), t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap")),
-            d = function(t) {
-                function e(t, i) {
-                    r(this, e);
-                    var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
-                    return n.isPresent ? n : s(n)
-                }
-                return o(e, t), a(e, [{
-                    key: "animateIn",
-                    value: function() {
-                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-                            e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function() {};
-                        (0, l.isTouchDevice)() && window.scrollTo(0, 0), p.TweenLite.to(this.elements.intro_text, .9, {
-                            x: 0,
-                            opacity: 1,
-                            delay: t,
-                            ease: Power3.easeOut,
-                            onComplete: this.elements.module_0 ? function() {} : e
-                        }), this.elements.module_0 && p.TweenLite.to(this.elements.module_0, 1.6, {
-                            x: 0,
-                            opacity: 1,
-                            delay: t,
-                            ease: Power4.easeOut,
-                            onComplete: e
-                        })
-                    }
-                }]), e
-            }(c["default"]);
-        i["default"] = d
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
-    }],*/
-    /*88: [function(t, e, i) {
-        "use strict";
-
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-
-        function r(t, e) {
-            if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function s(t, e) {
-            if (!t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !e || "object" != typeof e && "function" != typeof e ? t : e
-        }
-
-        function o(t, e) {
-            if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function, not " + typeof e);
-            t.prototype = Object.create(e && e.prototype, {
-                constructor: {
-                    value: t,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e)
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var a = function() {
-                function t(t, e) {
-                    for (var i = 0; i < e.length; i++) {
-                        var n = e[i];
-                        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(t, n.key, n)
-                    }
-                }
-                return function(e, i, n) {
-                    return i && t(e.prototype, i), n && t(e, n), e
-                }
-            }(),
-            l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper"),
-            c = n(h),
-            u = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix"), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
-            p = n(u),
-            d = t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"),
-            f = (0, p["default"])(.435, 0, 0, 1),
-            m = function(t) {
-                function e(t, i) {
-                    r(this, e);
-                    var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
-                    return n.isPresent ? (n.disabled = !1, n.delayIn = i.delayIn, n.onAnimatedIn = i.onAnimatedIn, n.scrollbar = i.scrollbar, n.isWork = i.isWork || !1, n.scrollId = !1, n.cases = (0, l.mapElems)(n.elements["case"], n._getCases.bind(n)), n.activeCase = null, n) : s(n)
-                }
-                return o(e, t), a(e, [{
-                    key: "animateInIntro",
-                    value: function() {
-                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-                            e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function() {};
-                        this.elements.intro_text ? (d.TweenLite.to(this.elements.intro_text, .9, {
-                            x: 0,
-                            opacity: 1,
-                            delay: t,
-                            ease: Power3.easeOut
-                        }), this.elements.module_0 && d.TweenLite.to(this.elements.module_0, 1.6, {
-                            x: 0,
-                            opacity: 1,
-                            delay: t,
-                            ease: Power4.easeOut,
-                            onComplete: e
-                        })) : e()
-                    }
-                }, {
-                    key: "animateOutCase",
-                    value: function(t, e) {
-                        var i = this;
-                        this.stop();
-                        var n = this._getElementByName(t),
-                            r = (0, l.isTouchDevice)(),
-                            s = this.isWork && 0 == n.index && !r;
-                        if (s) {
-                            var o = n.wrapper.offsetWidth / 2,
-                                a = (0, l.getDimensions)().width / 2,
-                                h = r ? window.pageXOffset : this.scrollbar.smoothScrollBar.offset.x,
-                                c = Math.abs(a - o + h);
-                            return void d.TweenLite.to(this.block, .8, {
-                                x: c,
-                                ease: f,
-                                delay: 0,
-                                onComplete: function() {
-                                    i.onScrollAnimationDone(n, e)
-                                }
-                            })
-                        }
-                        if (r) d.TweenLite.to(window, .5, {
-                            scrollTo: {
-                                x: window.pageXOffset + (n.wrapper.getBoundingClientRect().left - (0, l.getDimensions)().width / 2 + n.wrapper.offsetWidth / 2),
-                                autoKill: !1
-                            },
-                            ease: Power3.easeInOut,
-                            onComplete: function() {
-                                i.onScrollAnimationDone(n, e)
-                            }
-                        });
-                        else {
-                            var u = {
-                                    scrollLeft: this.scrollbar.smoothScrollBar.offset.x
-                                },
-                                p = this.scrollbar.smoothScrollBar.offset.x + (n.wrapper.getBoundingClientRect().left - (0, l.getDimensions)().width / 2 + n.wrapper.offsetWidth / 2);
-                            n.wrapper.classList.add("clicked"), n.mediaOverlay.style.willChange = "transform", d.TweenLite.to(u, .8, {
-                                scrollLeft: p,
-                                ease: f,
-                                delay: 0,
-                                onUpdate: function() {
-                                    i.scrollbar.smoothScrollBar.scrollLeft = u.scrollLeft
-                                },
-                                onComplete: function() {
-                                    i.onScrollAnimationDone(n, e)
-                                }
-                            })
-                        }
-                    }
-                }, {
-                    key: "onScrollAnimationDone",
-                    value: function(t, e) {
-                        this.addChildrenMod(t.wrapper, "case", "active"), d.TweenLite.to(t.mediaOverlay, .8, {
-                            yPercent: -100,
-                            ease: f
-                        }), d.TweenLite.to(t.media, 1, {
-                            scale: 1.08,
-                            ease: f
-                        }), d.TweenLite.to(t.info, .8, {
-                            yPercent: 100,
-                            opacity: 0,
-                            ease: f,
-                            onComplete: function() {
-                                e(t.bgColor)
-                            }
-                        })
-                    }
-                }, {
-                    key: "resetCases",
-                    value: function() {
-                        var t = this;
-                        this.scrollbar.smoothScrollBar.scrollLeft = 0, this.cases.forEach(function(e) {
-                            t.removeChildrenMod(e.wrapper, "case", "active"), d.TweenLite.to(e.mediaOverlay, 0, {
-                                yPercent: 0
-                            }), d.TweenLite.to(e.info, 0, {
-                                yPercent: 0,
-                                opacity: 1
-                            })
-                        })
-                    }
-                }, {
-                    key: "_getElementByName",
-                    value: function(t) {
-                        return this.cases.filter(function(e) {
-                            return t.indexOf(e.name) > -1
-                        })[0]
-                    }
-                }, {
-                    key: "_getCases",
-                    value: function(t, e) {
-                        return {
-                            wrapper: t,
-                            index: e,
-                            media: t.querySelector(".o-featured__media"),
-                            mediaOverlay: t.querySelector(".o-featured__media-overlay"),
-                            info: t.querySelector(".o-featured__info"),
-                            name: t.getAttribute("data-name"),
-                            bgColor: window.getComputedStyle(t, null).getPropertyValue("background-color")
-                        }
-                    }
-                }, {
-                    key: "skew",
-                    value: function(t) {}
-                }, {
-                    key: "stop",
-                    value: function() {
-                        this.scrollbar.scrollListener.removeListener(this.scrollId)
-                    }
-                }]), e
-            }(c["default"]);
-        i["default"] = m
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix": 79
-    }],*/
-    /*89: [function(t, e, i) {
-        "use strict";
-
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var r = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings"),
-            s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
-            o = n(s),
-            a = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
-            l = n(a),
-            h = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api")),
-            c = n(h),
-            u = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/router"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll")),
-            p = n(u),
-            d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
-            f = n(d),
-            m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
-            v = n(m),
-            g = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            y = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
-            _ = n(y),
-            b = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/case"),
-            x = n(b),
-            w = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured"),
-            T = (n(w), function() {
-                return '\n    <div class="smooth-scrollbar u-smooth-scrollbar" style="height: 100%;">\n        <div class="o-about o-about--black">\n            <div class="o-about__module o-about__intro o-about__module--intro c-module-intro c-module-intro--about js-invert-cause" data-isdark="1">\n                <div class="o-about__intro-text">\n                    <h1 class="o-about__intro-headline">{{ headline }}</h1>\n                    {{#if body}}\n                        <p>{{ body }}</p>\n                    {{/if}}\n                </div>\n            </div>\n            {{#each modules}}\n                <div class="o-about__module o-about__module-{{@index}} js-invert-cause" data-isdark="{{this.isDark}}">\n                    <video class="o-about__animation" src="{{ this.bodymovin_json.url }}" loop playsinline muted></video>\n                    <div class="o-about__text">\n                        <h3 class="o-about__module-headline">{{ this.about_modules_headline }}</h3>\n                        <p>{{{ this.about_modules_textarea }}}</p>\n                    </div>\n                </div>\n            {{/each}}\n            <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                <div class="c-contact-promo__text">\n                    <h3 class="c-contact-promo__headline">Hello</h3>\n                </div>\n                <div class="c-contact-promo__subheadline-wrapper">\n                    <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                    <div class="c-contact-promo__get-in-touch">\n                        <span>Get in touch</span>\n                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                             viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                            <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                        </svg>\n                    </div>\n                </div>\n            </a>\n        </div>\n    </div>\n'
-            }),
-            S = {
-                route: r.ViewSettings.ABOUT.route,
-                name: r.ViewSettings.ABOUT.name,
-                wrapper: r.ViewSettings.ABOUT.wrapper,
-                data: null,
-                overlay: null,
-                prevRoute: null,
-                player: null,
-                infoVisible: !1,
-                utils: {
-                    scrollBar: null
-                },
-                components: {
-                    "case": null
-                },
-                objects: {
-                    cases: null
-                },
-                onClose: function(t) {},
-                initEventHandlers: function() {},
-                init: function() {},
-                animateIn: function(t, e) {
-                    l["default"].animateOut(t)
-                },
-                animateOut: function(t, e, i) {
-                    f["default"].setColor("white"), l["default"].animateIn(t)
-                },
-                enable: function(t, e, i) {
-                    var n = this;
-                    c["default"].getAbout({
-                        onSuccess: function(t) {
-                            t[0].yoast_meta && (0, g.setMetaTags)({
-                                title: t[0].yoast_meta.yoast_wpseo_title,
-                                description: t[0].yoast_meta.yoast_wpseo_metadesc,
-                                url: t[0].yoast_meta.yoast_wpseo_canonical
-                            }), n.data = {
-                                headline: t[0].acf.intro_about_headline,
-                                body: t[0].acf.intro_about_body,
-                                modules: t[0].acf.intro_about_modules
-                            }, n.data.modules.forEach(function(t, e) {
-                                t.isDark = e % 2
-                            }), o["default"].addTemplate(T(), n.data, n.wrapper), n.initComponents(), n.components["case"].animateIn(.5, function() {
-                                n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new p["default"]({
-                                    container: n.wrapper.querySelector(".smooth-scrollbar"),
-                                    damping: .3
-                                })), v["default"].initTemplate(n.wrapper, n.utils.scrollBar.scrollListener), n.utils.videoController = new _["default"]({
-                                    videos: n.wrapper.querySelectorAll("video"),
-                                    scrollListener: n.utils.scrollBar.scrollListener
-                                })
-                            }), e()
-                        }
-                    })
-                },
-                disable: function(t, e, i) {
-                    this.wrapper.innerHTML = "", e()
-                },
-                initComponents: function() {
-                    this.components["case"] = new x["default"]({
-                        block: "o-about",
-                        elements: ["intro-text", "module-0"],
-                        settings: {
-                            multiple: !1
-                        }
-                    })
-                }
-            };
-        i["default"] = S
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    }],*/
-    //90: [function(t, e, i) {
-    //    "use strict";
-
-    //    function n(t) {
-    //        return t && t.__esModule ? t : {
-    //            "default": t
-    //        }
-    //    }
-    //    Object.defineProperty(i, "__esModule", {
-    //        value: !0
-    //    });
-    //    var r = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings"),
-    //        s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
-    //        o = n(s),
-    //        a = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
-    //        l = n(a),
-    //        h = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api")),
-    //        c = n(h),
-    //        u = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/router"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll")),
-    //        p = n(u),
-    //        d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
-    //        f = n(d),
-    //        m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-    //        v = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize"),
-    //        g = n(v),
-    //        y = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
-    //        _ = n(y),
-    //        b = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
-    //        x = n(b),
-    //        w = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/case"),
-    //        T = n(w),
-    //        S = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured"),
-    //        M = n(S),
-    //        P = function() {
-	//			return '\n    <div class="smooth-scrollbar u-smooth-scrollbar" style="height: 100%;">\n        <div class="o-case">\n            <div class="o-case__module o-case__intro o-case__module--intro c-module-intro js-invert-cause" data-isdark="{{this.introIsDark}}">\n                <div class="c-module-intro__text o-case__intro-text o-editorial">\n                    {{{ case.intro }}}\n                </div>\n            </div>\n            {{#each case.modules}}\n                {{#equal this.acf_fc_layout "case_modules_media_large"}}\n                    <div class="o-case__module o-case__module-{{@index}} o-case__module--media-large c-module-media-large js-invert-cause" data-isdark="{{this.case_modules_media_large_is_dark}}">\n                        {{#equal this.case_modules_media_large_media_type "image"}}\n                            <img class="c-module-media-large__media c-module-media-large__media--image" src="{{ this.case_modules_media_large_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-media-large__media c-module-media-large__media--video" src="{{ this.case_modules_media_large_video.url }}" loop playsinline muted></video>\n                        {{/equal}}\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_textarea"}}\n                    <div style="background-color:#{{ this.case_modules_textarea_bg_color }}; color: #{{this.case_modules_textarea_text_color}}; --text-color:#{{this.case_modules_textarea_text_color}}" class="o-case__module o-case__module-{{@index}} o-case__module--textarea c-module-textarea js-invert-cause" data-isdark="{{this.case_modules_textarea_is_dark}}">\n                        <div class="c-module-textarea__text">\n                            <p>{{{ this.case_modules_textarea_text }}}</p>\n                        </div>\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_video"}}\n                    <div style="background-color:#{{ this.case_modules_video_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--video c-module-video js-invert-cause" data-isdark="{{this.case_modules_video_is_dark}}">\n                        {{#equal this.case_modules_video_media_type \'image\'}}\n                            <img class="c-module-video__media c-module-video__media--image" src="{{ this.case_modules_video_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-video__media c-module-video__media--video" src="{{ this.case_modules_video_file.url }}" loop playsinline muted></video>\n                        {{/equal}}            \n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_image"}}\n                    <div style="background-color:#{{ this.case_modules_image_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--image c-module-image js-invert-cause" data-isdark="{{this.case_modules_image_is_dark}}">\n                        <img class="c-module-image__media c-module-image__media--image" src="{{ this.case_modules_image_file.sizes.xxxlarge }}" />\n                    </div>\n                {{/equal}}\n\n                {{#equal this.acf_fc_layout "case_modules_large_textarea"}}\n                    <div style="background-color:#{{ this.case_modules_large_textarea_bg_color }};" class="o-case__module o-case__module-{{@index}} o-case__module--large-text c-module-large-textarea js-invert-cause" data-isdark="{{this.case_modules_large_textarea_is_dark}}">\n                        {{#equal this.case_modules_large_textarea_media_type \'image\'}}\n                            <img class="c-module-large-textarea__media c-module-large-textarea__media--image" src="{{ this.case_modules_large_textarea_image.sizes.xxxlarge }}" />\n                        {{ else }}\n                            <video class="c-module-large-textarea__media c-module-large-textarea__media--video"o src="{{ this.case_modules_large_textarea_file.url }}" loop playsinline muted></video>\n                        {{/equal}}\n                        <div class="c-module-large-textarea__text">\n                            {{#equal this.case_modules_large_textarea_textcolor \'\'}}\n                                <p style="color: #000">{{ this.case_modules_large_textarea_text }}</p>\n                            {{ else }}\n                                <p style="color: #{{this.case_modules_large_textarea_textcolor}}">{{ this.case_modules_large_textarea_text }}</p>\n                            {{/equal}}\n                        </div>\n                    </div>\n                {{/equal}}\n            {{/each}}\n            </div>\n    </div>\n'; //<div class="c-divider">\n                <span>More cases</span>\n                <div class="c-divider__arrows"></div>\n            </div>\n            <div class="o-featured"> \n                {{#each cases}}\n                    <a class="o-featured__case js-navigate js-invert-cause" data-isDark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                        <div class="o-featured__background"></div>\n                        <div class="o-featured__inner">\n                            <div class="o-featured__media">\n                                <div class="o-featured__media-background"></div>\n                                {{#equal this.mediaType "image"}}\n                                    <img sizes="\n                                    (min-width: 1000px) calc(50vw - 120px),\n                                    calc(100vw - 60px)" \n                                    srcset="\n                                        {{ this.images.xsmall }} 520w,\n                                        {{ this.images.midsize }} 680w,\n                                        {{ this.images.afc_large }} 1020w,\n                                        {{ this.images.xlarge }} 1440w"\n                                    src="{{ this.images.xlarge }}" />\n                                {{/equal}}\n\n                                {{#equal this.mediaType "video"}}\n                                    <video src="{{ this.video }}" loop playsinline muted></video>\n                                {{/equal}}\n\n                                <div class="o-featured__media-overlay"></div>\n                            </div>\n                            <div class="o-featured__info">\n                                <div class="o-featured__info-name">\n                                    <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                    <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                                </div>\n                                {{#equal this.isLocked true}}\n                                    <div class="o-featured__is-locked">\n                                        <span>Locked</span>\n                                        <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                            <g>\n                                                <rect x="4" y="6.7" width="1" height="3"/>\n                                                <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                                h1h5h1V11.7z"/>\n                                            </g>\n                                        </svg>\n                                    </div>\n                                {{/equal}}\n                            </div>\n                        </div>\n                    </a>\n                {{/each}}\n                <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                    <div class="c-contact-promo__text">\n                        <h3 class="c-contact-promo__headline">Hello</h3>\n                    </div>\n                    <div class="c-contact-promo__subheadline-wrapper">\n                        <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                        <div class="c-contact-promo__get-in-touch">\n                            <span>Get in touch</span>\n                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                                 viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                                <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                            </svg>\n                        </div>\n                    </div>\n                </a>\n            </div>\n        
-    //        },
-    //        E = {
-    //            route: r.ViewSettings.CASE.route,
-    //            name: r.ViewSettings.CASE.name,
-    //            wrapper: r.ViewSettings.CASE.wrapper,
-    //            data: null,
-    //            overlay: null,
-    //            prevRoute: null,
-    //            player: null,
-    //            infoVisible: !1,
-    //            _resize: new g["default"],
-    //            utils: {
-    //                scrollBar: null,
-    //                videoController: null
-    //            },
-    //            components: {
-    //                "case": null
-    //            },
-    //            objects: {
-    //                cases: null
-    //            },
-    //            onClose: function(t) {},
-    //            initEventHandlers: function() {},
-    //            init: function() {},
-    //            animateIn: function(t, e) {
-    //                return e == r.Views.ABOUT || e == r.Views.CONTACT ? (this.wrapper.style.opacity = 1, void l["default"].animateOut(t)) : ("undefined" == typeof e && f["default"].setColor("white"), this.wrapper.style.opacity = 1, void t())
-    //            },
-    //            animateOut: function(t, e, i) {
-    //                var n = this;
-    //                e == r.Views.CASE ? this.objects.cases.animateOutCase(i.params.id, function(e) {
-    //                    f["default"].setColorByRGB(e), n.wrapper.style.opacity = 0, t()
-    //                }) : e == r.Views.LANDING ? l["default"].animateIn(t) : e != r.Views.ABOUT && e != r.Views.CONTACT && e != r.Views.CASES || l["default"].animateIn(t)
-    //            },
-    //            enable: function(t, e, i) {
-    //                var n = this;
-    //                c["default"].getCase(t.params, {
-    //                    onSuccess: function(t) {
-    //                        /*t[0].yoast_meta && (0, m.setMetaTags)({
-    //                            title: t[0].yoast_meta.yoast_wpseo_title,
-    //                            description: t[0].yoast_meta.yoast_wpseo_metadesc,
-    //                            url: t[0].yoast_meta.yoast_wpseo_canonical,
-    //                            og_image: !!t[0].acf.seo_og_image && t[0].acf.seo_og_image.url
-    //                        });*/
-    //                        var i = {
-    //                            //intro: t[0].acf.intro_regular_text_area,
-    //                            modules: /*t[0].acf.modules_case_modules*/{},
-    //                            //id: t[0].id
-    //                        };
-    //                        n.caseLoaded(i, e)
-    //                    },
-    //                    onError: function(t) {
-    //                        console.log(t)
-    //                    }
-    //                })
-    //            },
-    //            caseLoaded: function(t, e) {
-    //                var i = this;
-    //                c["default"].getCases({
-    //                    onSuccess: function(n) {
-    //                        /*var r = n.map(function(t, e) {
-    //                            var i = t.acf;
-    //                            return {*/
-    //                                /*headline: i.featured_case_headline,
-    //                                subheadline: i.featured_case_subheadline,
-    //                                mediaType: i.featured_case_media_type,
-    //                                video: !!i.featured_case_video && i.featured_case_video.url,
-    //                                images: i.featured_case_image.sizes,
-    //                                isLocked: i.featured_locked_case,
-    //                                id: t.id,
-    //                                name: t.slug,
-    //                                url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
-    //                            /*}
-    //                        });*/
-    //                        /*r = r.filter(function(e) {
-    //                            return e.id !== t.id
-    //                        }), r = r.map(function(t, e) {
-    //                            return t.isDark = (e + 1) % 2, t
-    //                        }),*/ i.data = {
-    //                            "case": t,
-    //                            cases: {},
-    //                            introIsDark: "black" == f["default"].getColor() ? 1 : 0
-    //                        };
-    //                        var s = i.wrapper;
-	//						var inner = i.wrapper.innerHTML;
-	//						o["default"].addTemplate(P(), i.data, s), 
-	//						/*console.log(i), console.log("\ndefault\n"),
-	//						i.wrapper.innerHTML = inner,
-	//						console.log(i),*/
-	//						i.initComponents(), i.components["case"].animateIn(.5, function() {
-    //                            /*i.objects.cases.block.style.opacity = 1,*/ i.wrapper.querySelectorAll(".smooth-scrollbar").length && (i.utils.scrollBar = new p["default"]({
-    //                                container: i.wrapper.querySelector(".smooth-scrollbar"),
-    //                                damping: .3
-    //                            })), i.objects.cases.scrollbar = i.utils.scrollBar, _["default"].initTemplate(i.wrapper, i.utils.scrollBar.scrollListener)/*, i.utils.videoController = new x["default"]({
-    //                                videos: i.wrapper.querySelectorAll("video"),
-    //                                scrollListener: i.utils.scrollBar.scrollListener
-    //                            })*/
-    //                        }), e()
-    //                    }
-    //                })
-    //            },
-    //            disable: function(t, e, i) {
-    //                this._resize.removeListener(this.resizeID), this.utils.videoController && this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
-    //            },
-    //            initComponents: function() {
-    //                var t = this;
-    //                this.components["case"] = new T["default"]({
-    //                    block: "o-case",
-    //                    elements: ["intro-text", "module-0", "divider", "module"],
-    //                    settings: {
-    //                        multiple: !1
-    //                    }
-    //                }), this.objects.cases = new M["default"]({
-    //                    parent: this.wrapper,
-    //                    block: "o-featured",
-    //                    elements: ["case"],
-    //                    settings: {
-    //                        multiple: !1
-    //                    }
-    //                }, {
-    //                    scrollbar: null,
-    //                    delayIn: !1
-    //                }), this.resizeID = this._resize.addListener(function() {
-    //                    t.components["case"].elements.module.forEach(function(t) {
-    //                        t.style.height = "auto", t.offsetHeight, t.style.height = "100%"
-    //                    })
-    //                })
-    //            }
-    //        };
-    //    i["default"] = E
-    //}, {
-    //    "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize": 80,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    //}],
-    //91: [function(t, e, i) {
-    //    "use strict";
-
-    //    function n(t) {
-    //        return t && t.__esModule ? t : {
-    //            "default": t
-    //        }
-    //    }
-    //    Object.defineProperty(i, "__esModule", {
-    //        value: !0
-    //    });
-    //    var r = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
-    //        s = (n(r), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings")),
-    //        o = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
-    //        a = n(o),
-    //        l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api"),
-    //        h = n(l),
-    //        c = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
-    //        u = n(c),
-    //        p = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-    //        d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
-    //        f = n(d),
-    //        m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll"),
-    //        v = n(m),
-    //        g = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
-    //        y = n(g),
-    //        _ = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller"),
-    //        b = n(_),
-    //        x = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
-    //        /*w = (n(x), t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes")),
-    //        T = (n(w), t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured")),
-    //        S = n(T),*/
-    //        M = function() {
-    //            return '\n    <div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">\n        <div class="o-featured"> \n            {{#each cases}}\n                <a class="o-featured__case js-navigate js-invert-cause o-featured__module-{{@index}} o-featured__module-{{@index}}-no-transform" data-isdark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                    <div class="o-featured__background"></div>\n                    <div class="o-featured__inner">\n                        <div class="o-featured__media">\n                            <div class="o-featured__media-background"></div>\n                            {{#equal this.mediaType "image"}}\n                                <img class="o-featured__media--large" sizes="\n                                (min-width: 1000px) calc(50vw - 120px),\n                                calc(100vw - 60px)" \n                                srcset="\n                                    {{ this.images.large.xsmall }} 520w,\n                                    {{ this.images.large.midsize }} 680w,\n                                    {{ this.images.large.afc_large }} 1020w,\n                                    {{ this.images.large.xlarge }} 1440w"\n                                src="{{ this.images.large.xlarge }}" />\n                            {{/equal}}\n\n                            {{#equal this.mediaType "video"}}\n                                <video class="o-featured__media--large" src="{{ this.video }}" loop playsinline muted></video>\n                            {{/equal}}\n\n                            {{#equal this.mediaTypeMobile "image"}}\n                                <img class="o-featured__media--small" sizes="calc(100vw - 60px)" \n                                srcset="\n                                    {{ this.images.small.midsize }} 680w,\n                                    {{ this.images.small.large }} 1020w"\n                                src="{{ this.images.small.xlarge }}" />\n                            {{/equal}}\n\n                            {{#equal this.mediaTypeMobile "video"}}\n                                <video class="o-featured__media--small" src="{{ this.videoMobile }}" loop playsinline muted></video>\n                            {{/equal}}\n                            <div class="o-featured__media-overlay"></div>\n                        </div>\n                        <div class="o-featured__info">\n                            <div class="o-featured__info-name">\n                                <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                            </div>\n                            {{#equal this.isLocked true}}\n                                <div class="o-featured__is-locked">\n                                    <span>Locked</span>\n                                    <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                        <g>\n                                            <rect x="4" y="6.7" width="1" height="3"/>\n                                            <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                            h1h5h1V11.7z"/>\n                                        </g>\n                                    </svg>\n                                </div>\n                            {{/equal}}\n                        </div>\n                    </div>\n                </a>\n            {{/each}}\n            <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                <div class="c-contact-promo__text">\n                    <h3 class="c-contact-promo__headline">Hello</h3>\n                </div>\n                <div class="c-contact-promo__subheadline-wrapper">\n                    <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                    <div class="c-contact-promo__get-in-touch">\n                        <span>Get in touch</span>\n                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                             viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                            <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                        </svg>\n                    </div>\n                </div>\n            </a>\n        </div>\n    </div>\n'
-    //        },
-    //        P = {
-    //            route: s.ViewSettings.CASES.route,
-    //            name: s.ViewSettings.CASES.name,
-    //            wrapper: s.ViewSettings.CASES.wrapper,
-    //            overlay: null,
-    //            data: {
-    //                cases: null
-    //            },
-    //            featuredVideos: null,
-    //            first: !0,
-    //            components: {
-    //                aboutIntro: null,
-    //                fallingCubes: null
-    //            },
-    //            utils: {
-    //                scrollBar: null,
-    //                videoController: null
-    //            },
-    //            objects: {
-    //                cases: null
-    //            },
-    //            init: function() {},
-    //            animateIn: function(t, e) {
-    //                e == s.Views.CASE || e == s.Views.ABOUT || e == s.Views.CONTACT || e == s.Views.LANDING ? (y["default"].setColor("black"), u["default"].animateOut(t)) : (y["default"].setColor("black"), t())
-    //            },
-    //            animateOut: function(t, e, i) {
-    //                e == s.Views.CASE ? this.objects.cases.animateOutCase(i.params.id, function(e) {
-    //                    y["default"].setColorByRGB(e), t()
-    //                }) : e != s.Views.ABOUT && e != s.Views.CONTACT && e != s.Views.LANDING || (y["default"].setColor("transparent"), u["default"].animateIn(t))
-    //            },
-    //            enable: function(t, e, i) {
-    //                var n = this,
-    //                    r = this.wrapper;
-    //                h["default"].getCases({
-    //                    onSuccess: function(t) {
-    //                        /*(0, p.setMetaTags)({
-    //                            title: "Work - Studio Bj�rk",
-    //                            description: "Studio BJ�RK is a digital design & development studio with tons of experience creating high-end productions for some of the biggest brands & agencies in the business.",
-    //                            url: "https://studiobjork.com/work"
-    //                        }),*/ n.data.cases = {}/*t.map(function(t, e) {
-    //                            var i = t.acf;
-    //                            return {*/
-    //                                /*headline: i.featured_case_headline,
-    //                                subheadline: i.featured_case_subheadline,
-    //                                mediaType: i.featured_case_media_type,
-    //                                mediaTypeMobile: i.featured_case_media_type_mobile,
-    //                                video: !!i.featured_case_video && i.featured_case_video.url,
-    //                                videoMobile: !!i.featured_case_video_mobile && i.featured_case_video_mobile.url,
-    //                                images: {
-    //                                    large: i.featured_case_image.sizes,
-    //                                    small: !!i.featured_case_image_mobile && i.featured_case_image_mobile.sizes
-    //                                },
-    //                                isLocked: i.featured_locked_case,
-    //                                isDark: (e + 1) % 2,
-    //                                id: t.id,
-    //                                name: t.slug,
-    //                                url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
-    //                            /*}
-    //                        })*/, /*a["default"].addTemplate(M(), n.data, r),*/ n.initComponents(), n.objects.cases.animateInIntro(.5, function() {
-    //                            n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new v["default"]({
-    //                                container: n.wrapper.querySelector(".smooth-scrollbar"),
-    //                                damping: .3
-    //                            }), n.objects.cases.scrollbar = n.utils.scrollBar), setTimeout(function() {
-    //                                f["default"].initTemplate(n.wrapper, n.utils.scrollBar.scrollListener), n.utils.videoController = new b["default"]({
-    //                                    videos: n.wrapper.querySelectorAll("video"),
-    //                                    scrollListener: n.utils.scrollBar.scrollListener
-    //                                })
-    //                            }, 1e3)
-    //                        }), e()
-    //                    },
-    //                    onError: function(t) {
-    //                        console.log(t)
-    //                    }
-    //                })
-    //            },
-    //            disable: function(t, e, i) {
-    //                this.utils.videoController.stop(), this.wrapper.innerHTML = "", e()
-    //            },
-    //            initComponents: function() {
-    //                this.objects.cases = new S["default"]({
-    //                    parent: this.wrapper,
-    //                    block: "o-featured",
-    //                    elements: ["case", "intro-text", "module-0"],
-    //                    settings: {
-    //                        multiple: !1
-    //                    }
-    //                }, {
-    //                    scrollbar: null,
-    //                    delayIn: 1,
-    //                    isWork: !0
-    //                })
-    //            }
-    //        };
-    //    i["default"] = P
-    //}, {
-    //    "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-    //    "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
-    //    /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
-    //    "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    //}],
-    /*92: [function(t, e, i) {
-        "use strict";
-
-        function n(t) {
-            return t && t.__esModule ? t : {
-                "default": t
-            }
-        }
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var r = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings"),
-            s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
-            o = n(s),
-            a = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay"),
-            l = n(a),
-            h = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api")),
-            c = n(h),
-            u = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/router"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll")),
-            p = n(u),
-            d = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color"),
-            f = n(d),
-            m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
-            v = n(m),
-            g = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            y = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/case"),
-            _ = (n(y), t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured")),
-            b = (n(_), function() {
-                return '\n    <div class="o-contact js-invert-cause" data-isdark="1">\n        <div class="o-contact__inner">\n            <h1 class="o-contact__headline">{{{ headline }}}</h1>\n            <div class="o-contact__contact-info-wrapper">\n                <div class="o-contact__contact-info">\n                    {{#each modules}}\n                        <div class="o-contact__contact-info-col">\n                            <h3 class="o-contact__contact-info-col-headline">{{ this.contact_module_headline }}</h3>\n                            <p>{{{ this.contact_module_textarea }}}</p>\n                        </div>\n                    {{/each}}\n                </div>\n                <div class="o-contact__social-media">\n                    <a target="_blank" href="https://www.instagram.com/studiobjork/">Instagram</a>\n                    <a target="_blank" href="https://www.facebook.com/studiobjork/">Facebook</a>\n                    <a target="_blank" href="https://www.behance.net/studiobjork">Behance</a>\n                </div>\n            </div>\n        </div>\n    </div>\n'
-            }),
-            x = {
-                route: r.ViewSettings.CONTACT.route,
-                name: r.ViewSettings.CONTACT.name,
-                wrapper: r.ViewSettings.CONTACT.wrapper,
-                data: null,
-                overlay: null,
-                prevRoute: null,
-                player: null,
-                infoVisible: !1,
-                utils: {
-                    scrollBar: null
-                },
-                components: {
-                    "case": null
-                },
-                objects: {
-                    cases: null
-                },
-                onClose: function(t) {},
-                initEventHandlers: function() {},
-                init: function() {},
-                animateIn: function(t, e) {
-                    l["default"].animateOut(t)
-                },
-                animateOut: function(t, e, i) {
-                    f["default"].setColor("transparent"), l["default"].animateIn(t)
-                },
-                enable: function(t, e, i) {
-                    var n = this;
-                    c["default"].getContact({
-                        onSuccess: function(t) {
-                            t[0].yoast_meta && (0, g.setMetaTags)({
-                                title: t[0].yoast_meta.yoast_wpseo_title,
-                                description: t[0].yoast_meta.yoast_wpseo_metadesc,
-                                url: t[0].yoast_meta.yoast_wpseo_canonical
-                            }), n.data = {
-                                headline: t[0].acf.contact_headline,
-                                modules: t[0].acf.contact_contact_modules
-                            }, o["default"].addTemplate(b(), n.data, n.wrapper), n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new p["default"]({
-                                container: n.wrapper.querySelector(".smooth-scrollbar"),
-                                damping: .3
-                            })), v["default"].initTemplate(n.wrapper, !1), e()
-                        }
-                    })
-                },
-                disable: function(t, e, i) {
-                    this.wrapper.innerHTML = "", e()
-                },
-                initComponents: function() {}
-            };
-        i["default"] = x
-    }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/objects/case": 87,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    }],*/
     93: [function(t, e, i) {
         "use strict";
 
@@ -12922,27 +11145,15 @@
             o = (n(s), t(2)),
             a = n(o),
             l = t(86),
-            //h = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating"),
-            //c = n(h),
             u = t(71),
             p = n(u),
             d = t(77),
             f = n(d),
             m = t(75),
-            //v = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert"),
-            //g = n(v),
             y = t(83),
             _ = n(y),
             b = t(72),
             x = n(b),
-            //w = t(85),
-            //T = n(w),
-            //S = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro"),
-            //M = n(S),
-            /*P = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes"),
-            E = n(P),*/
-            //A = t("/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured"),
-            //L = n(A),
             C = function() {
                 return '\n    <div class="o-landing__about">\n        <div class="c-intro-about">\n            <h2 class="c-intro-about__headline">{{{ about.intro_about_headline }}}</h2>\n        </div>\n    </div>\n\n    <div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">\n        <div class="o-landing__featured">\n            <div class="c-divider">\n                <span>Scroll for cases</span>\n                <div class="c-divider__arrows"></div>\n            </div>\n            <div class="o-featured"> \n                {{#each cases}}\n                    <a class="o-featured__case js-navigate js-invert-cause" data-isDark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                        <div class="o-featured__background"></div>\n                        <div class="o-featured__inner">\n                            <div class="o-featured__media">\n                                <div class="o-featured__media-background"></div>\n                                {{#equal this.mediaType "image"}}\n                                    <img sizes="\n                                    (min-width: 1000px) calc(50vw - 120px),\n                                    calc(100vw - 60px)" \n                                    srcset="\n                                        {{ this.images.xsmall }} 520w,\n                                        {{ this.images.midsize }} 680w,\n                                        {{ this.images.afc_large }} 1020w,\n                                        {{ this.images.xlarge }} 1440w"\n                                    src="{{ this.images.xlarge }}" />\n                                {{/equal}}\n\n                                {{#equal this.mediaType "video"}}\n                                    <video src="{{ this.video }}" loop playsinline muted></video>\n                                {{/equal}}\n                                <div class="o-featured__media-overlay"></div>\n                            </div>\n                            <div class="o-featured__info">\n                                <div class="o-featured__info-name">\n                                    <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                    <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                                </div>\n                                {{#equal this.isLocked true}}\n                                    <div class="o-featured__is-locked">\n                                        <span>Locked</span>\n                                        <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                            <g>\n                                                <rect x="4" y="6.7" width="1" height="3"/>\n                                                <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                                h1h5h1V11.7z"/>\n                                            </g>\n                                        </svg>\n                                    </div>\n                                {{/equal}}\n                            </div>\n                        </div>\n                    </a>\n                {{/each}}\n                <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                    <div class="c-contact-promo__text">\n                        <h3 class="c-contact-promo__headline">Hello</h3>\n                    </div>\n                    <div class="c-contact-promo__subheadline-wrapper">\n                        <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                        <div class="c-contact-promo__get-in-touch">\n                            <span>Get in touch</span>\n                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                                 viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                                <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                            </svg>\n                        </div>\n                    </div>\n                </a>\n            </div>\n        </div>\n    </div>\n'
             },
@@ -12979,27 +11190,10 @@
                         r = this.wrapper;
                     p["default"].getLanding({
                         onSuccess: function(t) {
-                            n.data = {}, n.data.about = /*t[0].acf*/"", n.data.cases = [], /*t[0].yoast_meta && (0, m.setMetaTags)({
-                                title: t[0].yoast_meta.yoast_wpseo_title,
-                                description: t[0].yoast_meta.yoast_wpseo_metadesc,
-                                url: t[0].yoast_meta.yoast_wpseo_canonical
-                            }),*/ p["default"].getCases({
+                            n.data = {}, n.data.about = "", n.data.cases = [], p["default"].getCases({
                                 onSuccess: function(t) {
-                                    n.data.cases = {}/*t.map(function(t, e) {*/
-                                        //var i = t.acf;
-                                        /*return {*/
-                                            /*headline: i.featured_case_headline,
-                                            subheadline: i.featured_case_subheadline,
-                                            mediaType: i.featured_case_media_type,
-                                            video: !!i.featured_case_video && i.featured_case_video.url,
-                                            images: i.featured_case_image.sizes,
-                                            isLocked: i.featured_locked_case,
-                                            isDark: (e + 1) % 2,
-                                            id: t.id,
-                                            name: t.slug,
-                                            url: i.featured_locked_case ? "/case/" + t.slug + "/locked" : "/case/" + t.slug*/
-                                        /*}
-                                    })*/, /*c["default"].addTemplate(C(), n.data, r),*/ n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new _["default"]({
+                                    n.data.cases = {}
+                                    , n.wrapper.querySelectorAll(".smooth-scrollbar").length && (n.utils.scrollBar = new _["default"]({
                                         container: n.wrapper.querySelector(".smooth-scrollbar"),
                                         damping: .35
                                     })), n.initComponents(), e()
@@ -13022,7 +11216,6 @@
                 },
 				initComponents: function () {
 					var t = this;
-					//t.components.aboutIntro.animateIn();
 					var e = document.querySelector(".c-ui");
 					r.TweenLite.to(e, .4, {
 						opacity: 1
@@ -13046,105 +11239,8 @@
 							}
 						})
 					}, 1e3)
-				}/*function() {
-                    var t = this;
-					if (this.components.aboutIntro = new M["default"]({
-                            parent: this.wrapper,
-                            block: "c-intro-about",
-                            elements: ["headline"],
-                            settings: {
-                                multiple: !1
-                            }
-                        }, {}), this.utils.videoController = new T["default"]({
-                            videos: this.wrapper.querySelectorAll("video"),
-                            scrollListener: this.utils.scrollBar.scrollListener
-                        }), this.components.fallingCubes) {
-                        this.components.fallingCubes.scrollbar = this.utils.scrollBar, this.components.fallingCubes.initScroll(), this.components.fallingCubes.onScroll(0), this.components.fallingCubes.start(), this.components.fallingCubes.block.style.display = "block", this.components.aboutIntro.animateIn();
-                        var e = (0, m.isTouchDevice)(),
-                            i = {
-                                scrollLeft: 0
-                            };
-                        setTimeout(function() {
-                            e ? r.TweenLite.to(window, 1.2, {
-                                scrollTo: {
-                                    x: .25 * (0, m.getDimensions)().width + 30,
-                                    autoKill: !1
-                                },
-                                ease: Power2.easeOut
-                            }) : 0 == t.utils.scrollBar.smoothScrollBar.scrollLeft && r.TweenLite.to(i, 1.2, {
-                                scrollLeft: .25 * (0, m.getDimensions)().width + 60,
-                                ease: (0, a["default"])(.165, .84, .44, 1),
-                                onUpdate: function() {
-                                    e || (t.utils.scrollBar.smoothScrollBar.scrollLeft = i.scrollLeft)
-                                }
-                            })
-                        }, 1e3)
-                    } else this.components.fallingCubes = new E["default"]({
-                        block: "c-falling-cubes",
-                        settings: {
-                            multiple: !1
-                        },
-                        elements: ["container", "overlay"]
-                    }, {
-                        scrollbar: this.utils.scrollBar,
-                        onFinished: function() {
-                            t.components.aboutIntro.animateIn();
-                            var e = document.querySelector(".c-ui");
-                            r.TweenLite.to(e, .4, {
-                                opacity: 1
-                            });
-                            var i = (0, m.isTouchDevice)(),
-                                n = {
-                                    scrollLeft: 0
-                                };
-                            setTimeout(function() {
-                                i ? r.TweenLite.to(window, 1.2, {
-                                    scrollTo: {
-                                        x: .25 * (0, m.getDimensions)().width + 30,
-                                        autoKill: !1
-                                    },
-                                    ease: Power2.easeOut
-                                }) : 0 == t.utils.scrollBar.smoothScrollBar.scrollLeft && r.TweenLite.to(n, 1.2, {
-                                    scrollLeft: .25 * (0, m.getDimensions)().width + 60,
-                                    ease: (0, a["default"])(.165, .84, .44, 1),
-                                    onUpdate: function() {
-                                        i || (t.utils.scrollBar.smoothScrollBar.scrollLeft = n.scrollLeft)
-                                    }
-                                })
-                            }, 1e3)
-                        }
-                    });
-                    this.objects.cases = new L["default"]({
-                        parent: this.wrapper,
-                        block: "o-featured",
-                        elements: ["case"],
-                        settings: {
-                            multiple: !1
-                        }
-                    }, {
-                        scrollbar: this.utils.scrollBar,
-                        delayIn: 1
-                    }), setTimeout(function() {
-                        g["default"].initTemplate(t.wrapper, t.utils.scrollBar.scrollListener)
-                    }, 500)
-                }*/
+				}
             };
         i["default"] = k
-    }, {
-        //"/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        //"/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        //"/Users/andreaslorentsson/Projects/new_site/node_modules/gsap/ScrollToPlugin": 9,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/components/about-intro": 66,
-        /*"/Users/andreaslorentsson/Projects/new_site/src/js/components/falling-cubes": 67,*/
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/bg-color": 72,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/overlay": 77,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/smooth-scroll": 83,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/templating": 84,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/video-controller": 85,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/modules/views-settings": 86,
-        //"/Users/andreaslorentsson/Projects/new_site/src/js/objects/featured": 88
-    }]
+    }, {}]
 }, {}, [65]);
