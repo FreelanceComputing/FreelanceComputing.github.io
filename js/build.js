@@ -9470,8 +9470,6 @@
                     return i && t(e.prototype, i), n && t(e, n), e
                 }
             }(),
-            l = t("box-textures"),
-            h = n(l),
             c = t("block-helper"),
             u = n(c),
             p = t("router"),
@@ -9522,9 +9520,7 @@
                     }
                 }, {
                     key: "changeImageFrame",
-                    value: function() {
-                        this.currImageIndex == h["default"].length - 1 && (this.currImageIndex = -1), this.currImageIndex++, this.currImage = h["default"][this.currImageIndex].image
-                    }
+                    value: function() {}
                 }]), e
             }(u["default"]);
         i["default"] = v
@@ -9532,7 +9528,6 @@
         "bezier-easing": 2,
         "gsap": 11,
         "block-helper": 73,
-        "box-textures": 74,
         "helpers": 75,
         "prefix": 79,
         "router": 81
@@ -9872,87 +9867,6 @@
             }();
         i["default"] = o
     }, {}],
-    74: [function(t, e, i) {
-        "use strict";
-        Object.defineProperty(i, "__esModule", {
-            value: !0
-        });
-        var n = t("helpers"),
-            r = [{
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/1.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/1_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/2.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/2_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/3.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/3_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/4.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/4_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/5.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/5_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/6.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/6_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/7.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/7_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/8.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/8_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/9.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/9_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/10.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/10_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/11.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/11_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/12.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/12_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/13.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/13_small.jpg",
-                texture: !1,
-                image: !1
-            }, {
-                url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/14.jpg",
-                url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/14_small.jpg",
-                texture: !1,
-                image: !1
-            }];
-        i["default"] = r
-    }, {
-        "helpers": 75
-    }],
     75: [function(t, e, i) {
         "use strict";
 
