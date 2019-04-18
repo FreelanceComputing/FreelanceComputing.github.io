@@ -10201,19 +10201,21 @@
                 function e(t, i) {
                     r(this, e);
                     var n = s(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t));
-                    return n.isPresent ? (n.framesLoaded = i.framesLoaded, n.canvas = n.elements.canvas, n.canvasCTX = n.canvas.getContext("2d"), n.currImage = null, n.currImageIndex = 0, n.loadingFrame = n.draw.bind(n), n.requestAnimationFrame = null, n.fps = 15, n.fpsInterval = 0, n.then = 0, n.startTime = 0, n.now = 0, n.elapsed = 0, n.loaderWidth = parseInt(window.getComputedStyle(n.canvas).getPropertyValue("width")), n.loaderHeight = parseInt(window.getComputedStyle(n.canvas).getPropertyValue("height")), n.init(), n) : s(n)
+                    return n.isPresent ? (n.framesLoaded = i.framesLoaded, /*n.canvas = n.elements.canvas, n.canvasCTX = n.canvas.getContext("2d"),*/ n.currImage = null, n.currImageIndex = 0, n.loadingFrame = n.draw.bind(n), n.requestAnimationFrame = null, n.fps = 15, n.fpsInterval = 0, n.then = 0, n.startTime = 0, n.now = 0, n.elapsed = 0, /*n.loaderWidth = parseInt(window.getComputedStyle(n.canvas).getPropertyValue("width")), n.loaderHeight = parseInt(window.getComputedStyle(n.canvas).getPropertyValue("height")),*/ n.init(), n) : s(n)
                 }
                 return o(e, t), a(e, [{
                     key: "init",
                     value: function() {
                         var t = this;
-                        this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio), 
-						h["default"].forEach(function(e, i) {
+                        //this.canvas.width = this.loaderWidth * window.devicePixelRatio, this.canvas.height = this.loaderHeight * window.devicePixelRatio, this.canvas.style.width = this.loaderWidth + "px", this.canvas.style.height = this.loaderHeight + "px", this.canvasCTX.scale(window.devicePixelRatio, window.devicePixelRatio), 
+						/*h["default"].forEach(function(e, i) {
                             var n = new Image;
                             n.src = e.url_small, n.onload = function() {
                                 i++, e.image = n, i == h["default"].length && (t.currImage = h["default"][t.currImageIndex].image, t.framesLoaded())
 							}
-                        })//t.framesLoaded()
+						})*/
+                        t.currImage = new Image,
+                        t.framesLoaded()
                     }
                 }, {
                     key: "startLoader",
@@ -10495,7 +10497,7 @@
                 },*/
                 getCases: function (t) {
                     var e = this;
-                    this.cache.cases ? t.onSuccess(this.cache.cases) : (this.loader.startLoader(), e.loader.onLoaded(), t.onSuccess({}) /*s["default"].get("" + this.base + this.endpoints.cases, {}, {
+                    this.cache.cases ? t.onSuccess(this.cache.cases) : (/*this.loader.startLoader(), e.loader.onLoaded(),*/ t.onSuccess({}) /*s["default"].get("" + this.base + this.endpoints.cases, {}, {
                         onSuccess: function(i) {
                             e.cache.casePage = i, e.loader.onLoaded(), t.onSuccess(i)
                         },
@@ -10939,7 +10941,7 @@
         }), i.cancelAnimationFrame = i.requestAnimationFrame = i.apiBaseUrl = i.cdnUrl = void 0, i.getDimensions = r, i.randomIntFromInterval = s, i.getMq = o, i.nodesAsArray = a, i.isIE = l, i.getPrefix = h, i.transformProp = c, i.initMouseHandler = u, i.getMouseMove = p, i.getMouseMoveCenter = d, i.noSmoothScroll = f, i.randomFloatFromInterval = m, i.limitNumber = v, i.getNormalizedValue = g, i.radians = y, i.degrees = _, i.mapElems = b, i.isTouchDevice = x, i.isAndroidBrowser = w, i.webglDetect = T, i.launchIntoFullscreen = S, i.loadImageAsync = M, i.setMetaTags = P, i.pwdProtectedArea = E;
         var A = t("/Users/andreaslorentsson/Projects/new_site/node_modules/mobile-detect"),
             L = n(A),
-            C = (i.cdnUrl = "//172595-499402-raikfcquaxqncofqfm.stackpathdns.com", i.apiBaseUrl = "https://studiobjork.com/wp/index.php", i.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame, i.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame, {
+            C = (i.cdnUrl = ""/*//172595-499402-raikfcquaxqncofqfm.stackpathdns.com*/, i.apiBaseUrl = ""/*https://studiobjork.com/wp/index.php*/, i.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame, i.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame, {
                 x: 0,
                 y: 0
             })
