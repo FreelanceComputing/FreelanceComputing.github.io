@@ -377,67 +377,20 @@
                     this.runCallback = !0,
                     this.callbackRan = !1
                     this.propagateEvent = !0,
-                    this.value = "/"/*t.path()*/;
-                    //for (var i in e) this[i] = e[i];
+                    this.value = "/";
                     return this
                 }
-
-                //function o(t) {
-                //    //this.route = t, this.keys = [], this.regex = r.regexRoute(t, this.keys)
-                //}
-                //r.regexRoute = function(t, e, i, n) {
-                //    return t instanceof RegExp ? t : (t instanceof Array && (t = "(" + t.join("|") + ")"), t = t.concat(n ? "" : "/?").replace(/\/\(/g, "(?:/").replace(/\+/g, "__plus__").replace(/(\/)?(\.)?:(\w+)(?:(\(.*?\)))?(\?)?/g, function(t, i, n, r, s, o) {
-                //        return e.push({
-                //            name: r,
-                //            optional: !!o
-                //        }), i = i || "", "" + (o ? "" : i) + "(?:" + (o ? i : "") + (n || "") + (s || n && "([^/.]+?)" || "([^/]+?)") + ")" + (o || "")
-                //    }).replace(/([\/.])/g, "\\$1").replace(/__plus__/g, "(.+)").replace(/\*/g, "(.*)"), new RegExp("^" + t + "$", i ? "" : "i"))
-                //}, r._forEach = function(t, e) {
-                //    return "function" == typeof Array.prototype.forEach ? Array.prototype.forEach.call(t, e) : function(t, e) {
-                //        for (var i = 0, n = this.length; i < n; ++i) t.call(e, this[i], i, this)
-                //    }.call(t, e)
-                //},
                 r.prototype.get = r.prototype.add = function (t) {
                     var e = this,
                         i = Array.prototype.slice.call(arguments, 1, -1),
                         n = Array.prototype.slice.call(arguments, -1)[0],
-                        //r = new o(t),
                         a = function() {
-                            //var o = r.parse(e.path());
-                            //if (o.match) {
-                                //var a = {
-                                //        route: t,
-                                //        params: {}/*o.params*/,
-                                //        req: {}/*o*/,
-                                //        regex: []//o.match
-                                //    },
-                                    l = new s(e, {}/*a*/).enqueue(i.concat(n));
-                                //if
-                                //(
-                                //    e.trigger("match", l, {}/*o*/),
-                                //    !l.runCallback
-                                //)
-                                //    return e;
-                                //if
-                                //(
-                                //    l.previousState = e.state,
-                                //    e.state = l,
-                                //    l.parent() && l.parent().propagateEvent === !1
-                                //)
-                                //    return l.propagateEvent = !1, e;
-                                l.callback()
-                            //}
+                            l = new s(e, {}).enqueue(i.concat(n));
+                            l.callback()
                             return e
-                        }/*,
-                        l = "pushState" !== e.options.mode && "server" !== e.options.env ? "hashchange" : "navigate"*/;
-                    return a() //.on(l, a)
-                }, /*r.prototype.trigger = function(t) {
-                    var e = this,
-                        i = Array.prototype.slice.call(arguments, 1);
-                    return this.events[t] && r._forEach(this.events[t], function(t) {
-                        t.apply(e, i)
-                    }), this
-                },*/ r.prototype.on = r.prototype.bind = function(t, e) {
+                        };
+                    return a()
+                }, r.prototype.on = r.prototype.bind = function(t, e) {
                     var i = this,
                         n = t.split(" ");
                     return r._forEach(n, function(t) {
@@ -462,10 +415,7 @@
                     }
                 }, r.prototype.navigate = function(t) {
                     return this.path(t).trigger("navigate")
-                }, /*r.prototype.path = function(t) {
-                    var e, i = this;
-                    return "string" == typeof t ? ("pushState" === i.options.mode ? (e = i.options.root ? i.options.root + t : t, n.history.pushState({}, null, e)) : n.location ? n.location.hash = (i.options.hashBang ? "!" : "") + t : n._pathname = t || "", this) : "undefined" == typeof t ? e = "pushState" === i.options.mode ? n.location.pathname.replace(i.options.root, "") : "pushState" !== i.options.mode && n.location ? n.location.hash ? n.location.hash.split(i.options.hashBang ? "#!" : "#")[1] : "" : n._pathname || "" : t === !1 ? ("pushState" === i.options.mode ? n.history.pushState({}, null, i.options.root || "/") : n.location && (n.location.hash = i.options.hashBang ? "!" : ""), i) : void 0
-                },*/ r.listen = function() {
+                }, r.listen = function() {
                     var t, e;
                     return arguments[0] && arguments[1] ? (t = arguments[0], e = arguments[1]) : e = arguments[0],
                         function() {
@@ -489,20 +439,7 @@
                     return this.stack.shift().call(this.router, this.req, this, function() {
                         t.next.call(t)
                     })
-                }, /*o.prototype.parse = function(t) {
-                    var e = t.match(this.regex),
-                        i = this,
-                        n = {
-                            params: {},
-                            keys: this.keys,
-                            matches: (e || []).slice(1),
-                            match: e
-                        };
-                    return r._forEach(n.matches, function(t, e) {
-                        var r = i.keys[e] && i.keys[e].name ? i.keys[e].name : e;
-                        n.params[r] = t ? decodeURIComponent(t) : void 0
-                    }), n
-                },*/ r.CallStack = s, /*r.Request = o,*/ "function" != typeof n.define || n.define.amd.grapnel ? "object" == typeof e && "object" == typeof e.exports ? e.exports = i = r : n.Grapnel = r : n.define(function(t, e, i) {
+                }, r.CallStack = s, "function" != typeof n.define || n.define.amd.grapnel ? "object" == typeof e && "object" == typeof e.exports ? e.exports = i = r : n.Grapnel = r : n.define(function(t, e, i) {
                     return n.define.amd.grapnel = !0, r
                 })
             }.call({}, "object" == typeof window ? window : this)
@@ -9400,12 +9337,7 @@
                     n.forEach(function(t) {
                         h["default"].addInvert(t)
                     });
-                    /*var o = (0, s.nodesAsArray)(document.querySelectorAll(".js-constant-anchor"));
-                    o.forEach(function(t) {
-                        t.addEventListener("click", function(t) {
-                            //t.preventDefault(), (0, r.navigate)(null, t.currentTarget.getAttribute("data-href"))
-                        })
-                    }),*/ this.components.UI = new T["default"]({
+                    this.components.UI = new T["default"]({
                         block: "c-ui",
                         elements: ["logo", "nav", "burger", "nav-item-anchor", "off-canvas-nav-items"],
                         settings: {
@@ -9425,7 +9357,7 @@
                                 initialRoute: e,
                                 onHashChange: E.onHashChange.bind(t),
                                 UI: t.components.UI
-                            }), /*"LANDING" !== (0, r.getCurrentRoute)().name &&*/ t.components.UI.animateIn()
+                            }), t.components.UI.animateIn()
                         }
                     })
                 },
@@ -10782,10 +10714,7 @@
                 return h(t, [{
                     key: "init",
                     value: function () {
-                        /*var t = this;
-                        t.animateRoute.bind(t)*/
                         this.declareRoutes()
-                        /*this.initRoutes(), this.declareRoutes(), this.setRouteEventHandlers(), this.initialRoute && this.navigate(this.initialRoute)*/
                     }
                 }, {
                     key: "declareRoutes",
@@ -10812,42 +10741,17 @@
                     value: function(t) {}
                 }, {
                     key: "getRouteByKey",
-                    value: function(t) {
-                        //var e = this,
-                        //    i = Object.keys(this.routes).filter(function(i) {
-                        //        return e.routes[i].route == t
-                        //    });
-                        //return this.routes[i]
-                    }
+                    value: function(t) {}
                 }, {
                     key: "animateRoute",
                     value: function(t, e, i) {
                         var n = this,
                             r = null !== e.previousState && e.previousState !== !1 && "undefined" != typeof e.previousState;
-                        //if (this.animating = !0, r) {
-                        //    var s = this.getRouteByKey(e.previousState.route),
-                        //        o = this.getRouteByKey(e.route);
-                        //    if (s.name == o.name && "CASE" != s.name) return void(this.animating = !1);
-                        //    p.ViewSettings[o.name];
-                        //    this.UI.setActiveItem(o.name), s.animateOut(function() {
-                        //        s.disable(t, function() {
-                        //            n.hideRoute(s.wrapper), n.onHashChange(function() {
-                        //                o.enable(t, function() {
-                        //                    window.prerenderReady = !0, n.showRoute(o.wrapper), n.setEventHandlers(), o.animateIn(function() {
-                        //                        n.animating = !1
-                        //                    }, s.name)
-                        //                }, s.name)
-                        //            })
-                        //        }, o.name)
-                        //    }, o.name, t)
-                        //} else {
-                            //var a = this.getRouteByKey(e.route);
-                            this.UI.setActiveItem(z.name), z.enable(t, function() {
+                        this.UI.setActiveItem(z.name), z.enable(t, function() {
                                 n.showRoute(z.wrapper), n.setEventHandlers(), z.animateIn(function() {
                                     n.animating = !1
                                 })
                             })
-                        //}
                     }
                 }, {
                     key: "showRoute",
