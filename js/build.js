@@ -9351,19 +9351,19 @@
                 "default": t
             }
         }
-        var r = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/router"),
-            s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            o = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize"),
+        var r = t("router"),
+            s = t("helpers"),
+            o = t("resize"),
             a = n(o),
-            l = (t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert")),
+            l = (t("gsap"), t("invert")),
             h = n(l),
-            c = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/api"),
+            c = t("api"),
             u = n(c),
-            p = t("/Users/andreaslorentsson/Projects/new_site/src/js/views/landing"),
+            p = t("landing"),
             d = n(p),
-            w = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/ui"),
+            w = t("ui"),
             T = n(w),
-            S = t("/Users/andreaslorentsson/Projects/new_site/src/js/components/loader"),
+            S = t("loader"),
             M = n(S),
             P = {
                 landing: d["default"],
@@ -9417,15 +9417,15 @@
             };
         E.init()
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/components/loader": 68,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/components/ui": 69,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/api": 71,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/invert": 76,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize": 80,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/views/landing": 93
+        "gsap": 11,
+        "loader": 68,
+        "ui": 69,
+        "api": 71,
+        "helpers": 75,
+        "invert": 76,
+        "resize": 80,
+        "router": 81,
+        "landing": 93
     }],
     68: [function(t, e, i) {
         "use strict";
@@ -9470,14 +9470,14 @@
                     return i && t(e.prototype, i), n && t(e, n), e
                 }
             }(),
-            l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/box-textures"),
+            l = t("box-textures"),
             h = n(l),
-            c = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper"),
+            c = t("block-helper"),
             u = n(c),
-            p = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/router"),
-            d = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
-            f = (n(d), t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap")),
-            m = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix"),
+            p = t("router"),
+            d = (t("helpers"), t("bezier-easing")),
+            f = (n(d), t("gsap")),
+            m = t("prefix"),
             v = function(t) {
                 function e(t, i) {
                     r(this, e);
@@ -9529,13 +9529,13 @@
             }(u["default"]);
         i["default"] = v
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/box-textures": 74,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix": 79,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81
+        "bezier-easing": 2,
+        "gsap": 11,
+        "block-helper": 73,
+        "box-textures": 74,
+        "helpers": 75,
+        "prefix": 79,
+        "router": 81
     }],
     69: [function(t, e, i) {
         "use strict";
@@ -9580,11 +9580,11 @@
                     return i && t(e.prototype, i), n && t(e, n), e
                 }
             }(),
-            l = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper"),
+            l = t("block-helper"),
             h = n(l),
-            c = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            u = t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing"),
-            p = (n(u), t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap")),
+            c = t("helpers"),
+            u = t("bezier-easing"),
+            p = (n(u), t("gsap")),
             d = function(t) {
                 function e(t, i) {
                     r(this, e);
@@ -9631,10 +9631,10 @@
             }(h["default"]);
         i["default"] = d
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/block-helper": 73,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
+        "bezier-easing": 2,
+        "gsap": 11,
+        "block-helper": 73,
+        "helpers": 75
     }],
     70: [function(t, e, i) {
         "use strict";
@@ -9708,10 +9708,10 @@
         Object.defineProperty(i, "__esModule", {
             value: !0
         });
-        var r = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/ajax"),
+        var r = t("ajax"),
             s = n(r),
-            o = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
-            a = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/router"),
+            o = t("helpers"),
+            a = t("router"),
             l = {
                 loader: null,
                 cache: {
@@ -9731,9 +9731,9 @@
             };
         i["default"] = l
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/ajax": 70,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/router": 81
+        "ajax": 70,
+        "helpers": 75,
+        "router": 81
     }],
     72: [function(t, e, i) {
         "use strict";
@@ -9877,7 +9877,7 @@
         Object.defineProperty(i, "__esModule", {
             value: !0
         });
-        var n = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"),
+        var n = t("helpers"),
             r = [{
                 url: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/1.jpg",
                 url_small: n.cdnUrl + "/wp/wp-content/themes/boilerplate/images/box-material/1_small.jpg",
@@ -9951,7 +9951,7 @@
             }];
         i["default"] = r
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
+        "helpers": 75
     }],
     75: [function(t, e, i) {
         "use strict";
@@ -10102,14 +10102,14 @@
         Object.defineProperty(i, "__esModule", {
             value: !0
         }), i.cancelAnimationFrame = i.requestAnimationFrame = i.apiBaseUrl = i.cdnUrl = void 0, i.getDimensions = r, i.randomIntFromInterval = s, i.getMq = o, i.nodesAsArray = a, i.isIE = l, i.getPrefix = h, i.transformProp = c, i.initMouseHandler = u, i.getMouseMove = p, i.getMouseMoveCenter = d, i.noSmoothScroll = f, i.randomFloatFromInterval = m, i.limitNumber = v, i.getNormalizedValue = g, i.radians = y, i.degrees = _, i.mapElems = b, i.isTouchDevice = x, i.isAndroidBrowser = w, i.webglDetect = T, i.launchIntoFullscreen = S, i.loadImageAsync = M, i.setMetaTags = P, i.pwdProtectedArea = E;
-        var A = t("/Users/andreaslorentsson/Projects/new_site/node_modules/mobile-detect"),
+        var A = t("mobile-detect"),
             L = n(A),
             C = (i.cdnUrl = "", i.apiBaseUrl = "", i.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame, i.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame, {
                 x: 0,
                 y: 0
             })
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/mobile-detect": 44
+        "mobile-detect": 44
     }],
     76: [function(t, e, i) {
         "use strict";
@@ -10126,9 +10126,9 @@
         Object.defineProperty(i, "__esModule", {
             value: !0
         });
-        var s = t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize"),
+        var s = t("resize"),
             o = n(s),
-            a = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix"), t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers")),
+            a = (t("prefix"), t("helpers")),
             l = {
                 causes: [],
                 inverts: [],
@@ -10191,9 +10191,9 @@
             };
         i["default"] = l
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/prefix": 79,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/resize": 80
+        "helpers": 75,
+        "prefix": 79,
+        "resize": 80
     }],
     77: [function(t, e, i) {
         "use strict";
@@ -10206,8 +10206,8 @@
         Object.defineProperty(i, "__esModule", {
             value: !0
         });
-        var r = t("/Users/andreaslorentsson/Projects/new_site/node_modules/gsap"),
-            s = (t("/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers"), t("/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing")),
+        var r = t("gsap"),
+            s = (t("helpers"), t("bezier-easing")),
             o = n(s),
             a = {
                 mask: document.querySelector(".c-overlay-mask"),
@@ -10234,9 +10234,9 @@
             };
         i["default"] = a
     }, {
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/bezier-easing": 2,
-        "/Users/andreaslorentsson/Projects/new_site/node_modules/gsap": 11,
-        "/Users/andreaslorentsson/Projects/new_site/src/js/modules/helpers": 75
+        "bezier-easing": 2,
+        "gsap": 11,
+        "helpers": 75
     }],
     78: [function(t, e, i) {
         "use strict";
@@ -10835,9 +10835,9 @@
             }
         }();
         i.navigate = s, i.getCurrentRoute = o, i.getCurrentRouteID = a, i.initRoute = l;
-        var c = t(8),
+        var c = t("grapnel"),
             u = n(c),
-            p = t(86),
+            p = t("views-settings"),
             d = null,
             f = function() {
                 function t(e) {
@@ -10929,7 +10929,10 @@
                     }
                 }]), t
             }()
-    }, {}],
+    }, {
+        "grapnel": 8,
+        "views-settings": 86
+    }],
     82: [function(t, e, i) {
         "use strict";
 
@@ -10950,7 +10953,7 @@
                     return i && t(e.prototype, i), n && t(e, n), e
                 }
             }(),
-            s = t(79),
+            s = t("prefix"),
             o = function() {
                 function t(e) {
                     n(this, t), this.smoothScrollBar = e.smoothScrollBar, this._isScrolling = !1, this._scrollTop = 0, this._isScrollingInterval = null, this._scrollListener = this._onScroll.bind(this), this._callbacks = []
@@ -11009,7 +11012,9 @@
                 }]), t
             }();
         i["default"] = o
-    }, {}],
+    }, {
+        "prefix": 79
+    }],
     83: [function(t, e, i) {
         "use strict";
 
@@ -11053,13 +11058,13 @@
                     return i && t(e.prototype, i), n && t(e, n), e
                 }
             }(),
-            l = t(52),
+            l = t("smooth-scrollbar"),
             h = n(l),
-            c = t(78),
+            c = t("overscroll"),
             u = n(c),
-            p = t(82),
+            p = t("scroll"),
             d = n(p),
-            f = t(75),
+            f = t("helpers"),
             m = function(t) {
                 function e() {
                     return r(this, e), s(this, (e.__proto__ || Object.getPrototypeOf(e)).apply(this, arguments))
@@ -11102,7 +11107,12 @@
             }), this.scrollListener.init()
         };
         i["default"] = v
-    }, {}],
+    }, {
+        "smooth-scrollbar": 52,
+        "overscroll": 78,
+        "scroll": 82,
+        "helpers": 75
+    }],
     86: [function(t, e, i) {
         "use strict";
         Object.defineProperty(i, "__esModule", {
@@ -11140,19 +11150,19 @@
         Object.defineProperty(i, "__esModule", {
             value: !0
         });
-        var r = t(11),
-            s = t(9),
-            o = (n(s), t(2)),
+        var r = t("gsap"),
+            s = t("ScrollToPlugin"),
+            o = (n(s), t("bezier-easing")),
             a = n(o),
-            l = t(86),
-            u = t(71),
+            l = t("views-settings"),
+            u = t("api"),
             p = n(u),
-            d = t(77),
+            d = t("overlay"),
             f = n(d),
-            m = t(75),
-            y = t(83),
+            m = t("helpers"),
+            y = t("smooth-scroll"),
             _ = n(y),
-            b = t(72),
+            b = t("bg-color"),
             x = n(b),
             C = function() {
                 return '\n    <div class="o-landing__about">\n        <div class="c-intro-about">\n            <h2 class="c-intro-about__headline">{{{ about.intro_about_headline }}}</h2>\n        </div>\n    </div>\n\n    <div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">\n        <div class="o-landing__featured">\n            <div class="c-divider">\n                <span>Scroll for cases</span>\n                <div class="c-divider__arrows"></div>\n            </div>\n            <div class="o-featured"> \n                {{#each cases}}\n                    <a class="o-featured__case js-navigate js-invert-cause" data-isDark="{{this.isDark}}" data-name="{{ this.name }}" href="{{ this.url }}" data-href="{{ this.url }}">\n                        <div class="o-featured__background"></div>\n                        <div class="o-featured__inner">\n                            <div class="o-featured__media">\n                                <div class="o-featured__media-background"></div>\n                                {{#equal this.mediaType "image"}}\n                                    <img sizes="\n                                    (min-width: 1000px) calc(50vw - 120px),\n                                    calc(100vw - 60px)" \n                                    srcset="\n                                        {{ this.images.xsmall }} 520w,\n                                        {{ this.images.midsize }} 680w,\n                                        {{ this.images.afc_large }} 1020w,\n                                        {{ this.images.xlarge }} 1440w"\n                                    src="{{ this.images.xlarge }}" />\n                                {{/equal}}\n\n                                {{#equal this.mediaType "video"}}\n                                    <video src="{{ this.video }}" loop playsinline muted></video>\n                                {{/equal}}\n                                <div class="o-featured__media-overlay"></div>\n                            </div>\n                            <div class="o-featured__info">\n                                <div class="o-featured__info-name">\n                                    <h3 class="o-featured__headline">{{ this.headline }}</h3>\n                                    <h3 class="o-featured__subheadline">{{{ this.subheadline }}}</h3>\n                                </div>\n                                {{#equal this.isLocked true}}\n                                    <div class="o-featured__is-locked">\n                                        <span>Locked</span>\n                                        <svg class="o-featured__lock-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9 12.7" style="enable-background:new 0 0 9 12.7;" xml:space="preserve">\n                                            <g>\n                                                <rect x="4" y="6.7" width="1" height="3"/>\n                                                <path d="M8,3.7V3.5C8,1.6,6.4,0,4.5,0S1,1.6,1,3.5v0.2H0v9h9v-9H8z M2,3.5C2,2.1,3.1,1,4.5,1S7,2.1,7,3.5v0.2H2V3.5z M8,11.7H1v-7\n                                                h1h5h1V11.7z"/>\n                                            </g>\n                                        </svg>\n                                    </div>\n                                {{/equal}}\n                            </div>\n                        </div>\n                    </a>\n                {{/each}}\n                <a class="c-contact-promo js-invert-cause js-navigate" data-isdark="true" data-href="/contact" href="/contact">\n                    <div class="c-contact-promo__text">\n                        <h3 class="c-contact-promo__headline">Hello</h3>\n                    </div>\n                    <div class="c-contact-promo__subheadline-wrapper">\n                        <h3 class="o-featured__headline c-contact-promo__subheadline">Want to know more?</h3>\n                        <div class="c-contact-promo__get-in-touch">\n                            <span>Get in touch</span>\n                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n                                 viewBox="0 0 76 47.1" style="enable-background:new 0 0 76 47.1;" xml:space="preserve">\n                                <polygon points="66.5,21.1 0,21.1 0,26.1 66.5,26.1 48.9,43.6 52.4,47.1 76,23.5 52.4,0 48.9,3.5 "/>\n                            </svg>\n                        </div>\n                    </div>\n                </a>\n            </div>\n        </div>\n    </div>\n'
@@ -11242,5 +11252,15 @@
 				}
             };
         i["default"] = k
-    }, {}]
+    }, {
+        "gsap": 11,
+        "ScrollToPlugin": 9,
+        "bezier-easing": 2,
+        "views-settings": 86,
+        "api": 71,
+        "overlay": 77,
+        "helpers": 75,
+        "smooth-scroll": 83,
+        "bg-color": 72
+    }]
 }, {}, [65]);
