@@ -8828,7 +8828,7 @@
 								autoKill: !1
 							},
 							ease: Power2.easeOut
-						}) : 0 == t.utils.scrollBar.smoothScrollBar.scrollLeft && r.TweenLite.to(n, 1.2, {
+						}) : t.utils.scrollBar && 0 == t.utils.scrollBar.smoothScrollBar.scrollLeft && r.TweenLite.to(n, 1.2, {
 							scrollLeft: .25 * (0, m.getDimensions)().width + 60,
 							ease: (0, a["default"])(.165, .84, .44, 1),
 							onUpdate: function () {
